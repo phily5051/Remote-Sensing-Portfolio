@@ -10,7 +10,7 @@ Information about physical objects or areas are emitted in a form of electromagn
 
 # Application
 
-Remote sensing is widely used in various fields of domain, such as forestry, urban planning and so on \[@aggarwal2004\]. In the context of climate change, monitoring forest degradation can be done using remote sensing. According to @lambin1999, combining different types of resolution - spectral, spatial and temporal - enables a comprehensive forest monitoring. @rosenqvist2003 acknowledged the role of remote sensing in assisting with achieving the requirements of Kyoto Protocol by quantifying the land cover change and biomass stocks.
+Remote sensing is widely used in various fields of domain, such as forestry, urban planning and so on [@aggarwal2004]. In the context of climate change, monitoring forest degradation can be done using remote sensing. According to @lambin1999, combining different types of resolution - spectral, spatial and temporal - enables a comprehensive forest monitoring. @rosenqvist2003 acknowledged the role of remote sensing in assisting with achieving the requirements of Kyoto Protocol by quantifying the land cover change and biomass stocks.
 
 # Personal reflection
 
