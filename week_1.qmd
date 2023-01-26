@@ -4,14 +4,32 @@ bibliography: references.bib
 editor: visual
 ---
 
-# Summary
+# Introduction to Remote Sensing
+
+## Summary
+
+<h3>Definition of Remote Sensing</h3>
+
+According to NASA, remote sensing refers to information obtained at a distance. These sensors are placed on satellites or aircrafts and they detect and document reflected or emitted energy.
+
+<h3>What kinds of energy?</h3>
+
+TO cut it short, the answer is electromagnetic energy. This energy travels in different forms of waves through the atmosphere. While human eyes only detects visible light, the sensors can utilise the full range of the electromagnetic spectrum to collect data.
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/light_spec.jpeg')
+```
+
+Electromagnetic Spectrum (Source: NASA Science)
+
+<h3>Sensor Types</h3>
 
 Information about physical objects or areas are emitted in a form of electromagnetic radiation. However, these radiations are often influenced by Earth's surface and atmospheric conditions, which might distort the original information. In particular, each surface material has a unique 'Spectral Signature' that determines which radiation can be reflected for each wavelength. Each features' unique patterns of absorption and reflection of wavelength allow scientist to differentiate between different materials. In addition, it is important to choose a sensor which aligns with a research question. The factors that should be considered are cost and frequency of data, pixel size, and spectral resolution.
 
-# Application
+## Application
 
 Remote sensing is widely used in various fields of domain, such as forestry, urban planning and so on [@aggarwal2004]. In the context of climate change, monitoring forest degradation can be done using remote sensing. According to @lambin1999, combining different types of resolution - spectral, spatial and temporal - enables a comprehensive forest monitoring. @rosenqvist2003 acknowledged the role of remote sensing in assisting with achieving the requirements of Kyoto Protocol by quantifying the land cover change and biomass stocks.
 
-# Personal reflection
+## Personal reflection
 
 As a person who is interested in urban green spaces, the spectral resolution was an interesting concept. Vegetation shows a huge spike in near infrared radiation. This questions me whether the health of urban parks in a city (bad and good) can result in a difference in reflectance rate. @little2012 discovered that different reflectance was detected between healthy and stressed leaves. I reckon this can be a good indicator of monitoring urban green space's health apart from physical measuring. This will be more cost- and time-efficient.
