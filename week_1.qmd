@@ -1,5 +1,5 @@
 ---
-title: "week 1"
+title: "Week 1"
 bibliography: references.bib
 editor: visual
 ---
@@ -10,13 +10,13 @@ editor: visual
 
 <h3>Definition of Remote Sensing</h3>
 
-According to NASA, remote sensing refers to information obtained at a distance. These sensors are placed on satellites or aircrafts and they detect and document reflected or emitted energy.
+According to NASA, remote sensing refers to **information obtained at a distance**. These sensors are placed on satellites or aircrafts and they detect and document reflected or emitted energy.
 
 <h3>What kinds of energy?</h3>
 
-TO cut it short, the answer is electromagnetic energy. This energy travels in different forms of waves through the atmosphere. While human eyes only detects visible light, the sensors can utilise the full range of the electromagnetic spectrum to collect data.
+TO cut it short, the answer is **Dlectromagnetic Radiation (EMR)**. This energy travels in different forms of waves through the atmosphere. While human eyes only detects visible light, the sensors can utilise the full range of the electromagnetic spectrum to collect data.
 
-```{r echo=FALSE, out.width='60%', fig.align='center'}
+```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/light_spec.jpeg')
 ```
 
@@ -24,7 +24,57 @@ Electromagnetic Spectrum (Source: NASA Science)
 
 <h3>Sensor Types</h3>
 
-Information about physical objects or areas are emitted in a form of electromagnetic radiation. However, these radiations are often influenced by Earth's surface and atmospheric conditions, which might distort the original information. In particular, each surface material has a unique 'Spectral Signature' that determines which radiation can be reflected for each wavelength. Each features' unique patterns of absorption and reflection of wavelength allow scientist to differentiate between different materials. In addition, it is important to choose a sensor which aligns with a research question. The factors that should be considered are cost and frequency of data, pixel size, and spectral resolution.
+There are two types of remote sensors: active and passive sensors.
+
+-   Active sensor:
+
+    -   emits electromagnetic energy and receives the reflected energy
+    -   can observe areas under most conditions as most active sensors operate in the microwave band of the electromagnetic spectrum
+    -   requires power source - solar energy
+    -   affected by space weather - solar flares
+
+-   Passive sensor:
+
+    -   usually detects reflected energy
+    -   used for measuring physical attributes, such as land/sea surface temperature and vegetation cover
+    -   has limitations in observing areas in the presence of dense cloud cover
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/sensor_type.png')
+```
+
+Passive and Active Sensors (Source: NASA)
+
+<h3>Does EMR interact with other factors?</h3>
+
+Yes, these radiations are often influenced by Earth's surface and atmospheric conditions, which might distort the original information.
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/interaction.jpg')
+```
+
+EMR's interaction with surface and atmosphere (Source: Daneshgar, 2015)
+
+<h3>4 Resolutions of Remote Sensing Data</h3>
+
+-   Spatial resolution: sizes of the raster cells
+
+-   Spectral resolution: 
+ 
+        - Values for each wavelength across the electromagnetic spectrum creates a spectral signature
+        - Every object has its own unique spectral signature, thus it can be used for identifying a specific object
+        - But spectral resolution is often affected by atmospheric particles which absorb parts of the spectrum
+        
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/Atmospheric-Electromagnetic-Opacity.png')
+```
+
+Atmospheric Electromagnetic Opacity (Source: GIS Geography)
+
+-   Temporal resolution: frequency of the recorded data
+
+- Radiometric resolution: sensor's ability to detect subtle differences in energy which determines the quality of images
+ 
 
 ## Application
 
