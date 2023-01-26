@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Phil’s remote sensing learning diary - 1&nbsp; week 1</title>
+<title>Phil’s remote sensing learning diary - 1&nbsp; Week 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">week 1</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -119,12 +119,12 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week_1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">week 1</span></a>
+  <a href="./week_1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week 2</span></a>
+  <a href="./week_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -155,7 +155,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">week 1</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1</span></h1>
 </div>
 
 
@@ -176,16 +176,16 @@ div.csl-indent {
 <h3 class="anchored">
 Definition of Remote Sensing
 </h3>
-<p>According to NASA, remote sensing refers to information obtained at a distance. These sensors are placed on satellites or aircrafts and they detect and document reflected or emitted energy.</p>
+<p>According to NASA, remote sensing refers to <strong>information obtained at a distance</strong>. These sensors are placed on satellites or aircrafts and they detect and document reflected or emitted energy.</p>
 <h3 class="anchored">
 What kinds of energy?
 </h3>
-<p>TO cut it short, the answer is electromagnetic energy. This energy travels in different forms of waves through the atmosphere. While human eyes only detects visible light, the sensors can utilise the full range of the electromagnetic spectrum to collect data.</p>
+<p>TO cut it short, the answer is <strong>Dlectromagnetic Radiation (EMR)</strong>. This energy travels in different forms of waves through the atmosphere. While human eyes only detects visible light, the sensors can utilise the full range of the electromagnetic spectrum to collect data.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/light_spec.jpeg" class="img-fluid figure-img" style="width:60.0%"></p>
+<p><img src="img/light_spec.jpeg" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -194,7 +194,70 @@ What kinds of energy?
 <h3 class="anchored">
 Sensor Types
 </h3>
-<p>Information about physical objects or areas are emitted in a form of electromagnetic radiation. However, these radiations are often influenced by Earth’s surface and atmospheric conditions, which might distort the original information. In particular, each surface material has a unique ‘Spectral Signature’ that determines which radiation can be reflected for each wavelength. Each features’ unique patterns of absorption and reflection of wavelength allow scientist to differentiate between different materials. In addition, it is important to choose a sensor which aligns with a research question. The factors that should be considered are cost and frequency of data, pixel size, and spectral resolution.</p>
+<p>There are two types of remote sensors: active and passive sensors.</p>
+<ul>
+<li><p>Active sensor:</p>
+<ul>
+<li>emits electromagnetic energy and receives the reflected energy</li>
+<li>can observe areas under most conditions as most active sensors operate in the microwave band of the electromagnetic spectrum</li>
+<li>requires power source - solar energy</li>
+<li>affected by space weather - solar flares</li>
+</ul></li>
+<li><p>Passive sensor:</p>
+<ul>
+<li>usually detects reflected energy</li>
+<li>used for measuring physical attributes, such as land/sea surface temperature and vegetation cover</li>
+<li>has limitations in observing areas in the presence of dense cloud cover</li>
+</ul></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/sensor_type.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Passive and Active Sensors (Source: NASA)</p>
+<h3 class="anchored">
+Does EMR interact with other factors?
+</h3>
+<p>Yes, these radiations are often influenced by Earth’s surface and atmospheric conditions, which might distort the original information.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/interaction.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>EMR’s interaction with surface and atmosphere (Source: Daneshgar, 2015)</p>
+<h3 class="anchored">
+4 Resolutions of Remote Sensing Data
+</h3>
+<ul>
+<li><p>Spatial resolution: sizes of the raster cells</p></li>
+<li><p>Spectral resolution:</p>
+<pre><code>- Values for each wavelength across the electromagnetic spectrum creates a spectral signature
+- Every object has its own unique spectral signature, thus it can be used for identifying a specific object
+- But spectral resolution is often affected by atmospheric particles which absorb parts of the spectrum</code></pre></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/Atmospheric-Electromagnetic-Opacity.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Atmospheric Electromagnetic Opacity (Source: GIS Geography)</p>
+<ul>
+<li><p>Temporal resolution: frequency of the recorded data</p></li>
+<li><p>Radiometric resolution: sensor’s ability to detect subtle differences in energy which determines the quality of images</p></li>
+</ul>
 </section>
 <section id="application" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="application"><span class="header-section-number">2.2</span> Application</h2>
@@ -329,7 +392,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./week_2.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week 2</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
