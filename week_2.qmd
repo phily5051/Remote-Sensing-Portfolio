@@ -6,4 +6,4 @@ editor: visual
 
 Week 2 Presentation URL:
 
-<https://phily5051.github.io/rcse_diary/wk2.html#1>
+<https://phily5051.github.io/CASA0023_wk2_slides/#1>
