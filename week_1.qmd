@@ -53,7 +53,7 @@ Yes, these radiations are often influenced by Earth's surface and atmospheric co
 knitr::include_graphics('img/interaction.jpg')
 ```
 
-EMR's interaction with surface and atmosphere (Source: @daneshgar2015)
+EMR's interaction with surface and atmosphere (Source: Daneshgar, 2015)
 
 <h3>4 Resolutions of Remote Sensing Data</h3>
 
@@ -83,7 +83,7 @@ In the context of climate change, the ability to map tree types are important as
 knitr::include_graphics('img/tree_species.jpg')
 ```
 
-Spectral signatures of each tree (Source: @durgante2013)
+Spectral signatures of each tree (Source: Durgante et al., 2013)
 
 The potential of spectral signature can also be found in the business sector. @yang2012 suggested that spectral signatures could be employed to blueberry yield estimation system. The research team confirmed six-class blueberry classification - 233, 551, 554, 691, 699, 1373 nm - yielded the best results. This showed the potential of the spectral signature in developing fast and low cost blueberry detector. Furthermore, this research expands the use of spectral signatures from academia to industry, and suggests that the use of spectral signature can be boundless.
 
@@ -91,13 +91,15 @@ The potential of spectral signature can also be found in the business sector. @y
 knitr::include_graphics('img/blueberry.jpg')
 ```
 
-Different absorbance rate depending on blueberry's growth (Source: @yang2012)
+Different absorbance rate depending on blueberry's growth (Source: Yang and Williamson, 2012)
 
 <h2>Personal Reflection</h2>
 
 As a person who is interested in urban green spaces, the spectral resolution was an interesting concept. After understanding how it can be applied in both academia and industry, I wondered whether the health of green spaces in a city can also be measured with it. Furthermore, I was wondering whether there are any methods that improves the quality of data obtained from passive sensors as they cannot obtain a good quality data in the presence of bad weather. Under the circumstances where we have passive sensors, are there any techniques that could correct images?
 
+
 <h2>References</h2>
 
 NASA EarthData. (n.d.) https://www.earthdata.nasa.gov/. (Accessed: 26.01.2023)
+
 GIS Geography. (2022) https://gisgeography.com/atmospheric-window/. (Accessed: 26.01.2023)
