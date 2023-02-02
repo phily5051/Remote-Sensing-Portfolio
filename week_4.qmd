@@ -61,7 +61,7 @@ The said urban forest types can be grouped into 3 types of urban forests in term
     -   to enable the outflow of congregated PM within the city due to vehicles and household heating.
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
-knitr::include_graphics('img/foresttype.png')
+knitr::include_graphics('img/type.png')
 ```
 
 3 Types of PM Mitigation Urban Forest Types (Source: Korea Forest Service)
@@ -70,7 +70,7 @@ knitr::include_graphics('img/foresttype.png')
 
 Remote sensing can come into play a key role in identifying what PM mitigation urban forest types are most suitable to a particular site within a city, and quantifying the amounts of PM absorbed by urban forests.
 
-Remote sensing is an effective measure to map and monitor PM concentrations [@zhang2021]. This indicates that areas with routinely high PM concentrations can be detected by satellite images. Thus, government officials could take data-informed decisions and select the most suitable PM mitigation urban forest types for each particular area. 
+Remote sensing is an effective measure to map and monitor PM concentrations [@zhang2021]. This indicates that areas with routinely high PM concentrations can be detected by satellite images. Thus, government officials could take data-informed decisions and select the most suitable PM mitigation urban forest types for each particular area.
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/pmmapping.jpg')
@@ -90,13 +90,13 @@ Documentation of 1-year change of PM2.5 mass concentration in five study regions
 
 According to [United Nations 2030 Sustainable Development Goals (SDGs)](https://sdgs.un.org/goals), the use of remote sensing could contribute to achieving 2 SDGs goals.
 
-- SDG 3. Good Health and Well-Being
+-   SDG 3. Good Health and Well-Being
 
-    - PM causes various health problems, such as lung and heart diseases. The reduction in PM could improve citizen's health and quality of life. 
+    -   PM causes various health problems, such as lung and heart diseases. The reduction in PM could improve citizen's health and quality of life.
 
-- SDG 11. Sustainable Cities and Communities
+-   SDG 11. Sustainable Cities and Communities
 
-    - Creating urban forests, as a measure to mitigate PM, could not only reduce aereal PM but also contribute to building a safe and resilient built environment from other natural hazards.
+    -   Creating urban forests, as a measure to mitigate PM, could not only reduce aereal PM but also contribute to building a safe and resilient built environment from other natural hazards.
 
 <h2>Reflection</h2>
 
