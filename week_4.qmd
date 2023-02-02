@@ -86,5 +86,18 @@ knitr::include_graphics('img/pmlevels.jpg')
 
 Documentation of 1-year change of PM2.5 mass concentration in five study regions (Source: Gupta et al.)
 
+<h3>**Link to UN SDG Goals**</h3>
+
+According to [United Nations 2030 Sustainable Development Goals (SDGs)](https://sdgs.un.org/goals), the use of remote sensing could contribute to achieving 2 SDGs goals.
+
+- SDG 3. Good Health and Well-Being
+
+    - PM causes various health problems, such as lung and heart diseases. The reduction in PM could improve citizen's health and quality of life. 
+
+- SDG 11. Sustainable Cities and Communities
+
+    - Creating urban forests, as a measure to mitigate PM, could not only reduce aereal PM but also contribute to building a safe and resilient built environment from other natural hazards.
+
 <h2>Reflection</h2>
 
+This week's contents were somewhat different from what we have learnt past few months. Understanding policy and how remote sensing could come into play its part in realising the policy's objective was interesting. The contemplation upon how remote sensing can be applied at a particular context and a site broadened my understanding. Of course, I am aware that remote sensing is one of many solutions that could assist in achieving policy's goals, and 1-size-fits-all approach is not sufficient to solve similar problems in different contexts. Thanks to this week's lecture, however, I could say that I came to understand how we can apply our theoretical and technical knowledge about remote sensing to solve the real problems.
