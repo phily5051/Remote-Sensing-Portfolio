@@ -12,7 +12,7 @@ In this diary, I am going to talk about the biggest city plan in South Korea and
 
 <h3>Brief Information about 2030 Seoul Plan</h3>
 
-[2030 Seoul Plan](https://urban.seoul.go.kr/view/html/PMNU2020000000) is the highest level city plan in Seoul, South Korea. Provided that Seoul is a capital city in South Korea, its city plan is often considered as significant and determinant as a government-led plan, in terms of its impacts on citizens of Seoul and the country. The plan covers a number of sectors which include housing, transport and environment. The city plan presents Seoul's future vision and outlines the city's development plan for the next 10 years.
+[**2030 Seoul Plan**](https://urban.seoul.go.kr/view/html/PMNU2020000000) is the highest level city plan in Seoul, South Korea. Provided that Seoul is a capital city in South Korea, its city plan is often considered as significant and determinant as a government-led plan, in terms of its impacts on citizens of Seoul and the country. The plan covers a number of sectors which include housing, transport and environment. The city plan presents Seoul's future vision and outlines the city's development plan for the next 10 years.
 
 With regards to environment, the plan specifies 3 Targets and 11 Strategies. The 3 targets are as follows:
 
@@ -23,14 +23,22 @@ With regards to environment, the plan specifies 3 Targets and 11 Strategies. The
 Among the illustrated targets, Strategy 1-4 under Target 1 suggests a number of ways to deal with particulate matter, which is one of the biggest environmental issues in South Korea and highly related to citizen's life. One of the mitigation actions to deal with the air pollutants identified by the Seoul government is creating urban forests on those areas which are specifically vulnerable to fine dust.
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
-knitr::include_graphics('img/seoulplan.png')
+knitr::include_graphics('img/seoulplan1.png')
 ```
 
 2030 Seoul Plan (Source: Seoul Metropolitan Government)
 
 <h3>Urban Forest Guideline for PM Mitigation</h3>
 
-[Urban Forest Guideline for PM Mitigation](https://news.seoul.go.kr/env/square/tree_planting_project/guideline) is a low-level city plan which entails types of activities that will be executed in line with the 2030 Seoul Plan. The guideline categorised six types of urban forests that could mitigate the concentration of PM. These are street trees, urban parks, forests around the city, vegetations in schools and river, and green spaces within proximity to residential areas.
+[**Urban Forest Guideline for PM Mitigation**](https://news.seoul.go.kr/env/square/tree_planting_project/guideline) is a low-level city plan which entails types of activities that will be executed in line with the 2030 Seoul Plan. The guideline specified a number of technical rules to follow regarding types of trees to plant, which areas are targeted for urban forests implementation, and suitable distance between each tree stand and so on.
+
+Furthermore, the guideline categorised six types of urban forests that could mitigate the concentration of PM. These are street trees, urban parks, forests around the city, vegetations in schools and river, and green spaces within proximity to residential areas.
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/distancetree.png')
+```
+
+Distance between trees in residential areas (Source: Seoul Metropolitan Government)
 
 <h4>3 Functional Urban Forest Types for PM Mitigation</h4>
 
@@ -56,4 +64,27 @@ The said urban forest types can be grouped into 3 types of urban forests in term
 knitr::include_graphics('img/urbforesttype.jpg')
 ```
 
-PM Mitigation Urban Forest Types (Source: Korea Forest Service)
+3 Types of PM Mitigation Urban Forest Types (Source: Korea Forest Service)
+
+<h2>Application</h2>
+
+Remote sensing can come into play a key role in identifying what PM mitigation urban forest types are most suitable to a particular site within a city, and quantifying the amounts of PM absorbed by urban forests.
+
+Remote sensing is an effective measure to map and monitor PM concentrations [@zhang2021]. This indicates that areas with routinely high PM concentrations can be detected by satellite images. Thus, government officials could take data-informed decisions and select the most suitable PM mitigation urban forest types for each particular area. 
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/pmmapping.jpg')
+```
+
+Average PM2.5 concentration between 2001 and 2006 mapped by remote sensing (Source: Zhang et al.)
+
+In addition, @gupta2006 found that remote sensing can capture the movement of air pollutants over a large area as satellite measurements are available globally. Their findings allude to us that remote sensing could enable us to understand how much PM have been absorbed by urban forests by measuring the size of PM mass between areas. The policymakers could draw on these quantified data as a basis for future policies.
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/pmlevels.jpg')
+```
+
+Documentation of 1-year change of PM2.5 mass concentration in five study regions (Source: Gupta et al.)
+
+<h2>Reflection</h2>
+
