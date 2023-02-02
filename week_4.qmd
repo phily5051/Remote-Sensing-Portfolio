@@ -3,3 +3,15 @@ title: "Week 4"
 bibliography: references.bib
 editor: visual
 ---
+
+<h1>2030 Seoul Plan - Focus on Particulate Matter (PM) Policy</h1>
+
+<h2>Summary</h2>
+
+In this diary, I am going to talk about the biggest city plan in South Korea and how a low-level city plan guideline is aligned with its upper-level plan. In particular, I will focus on the implementation of the plan regarding environment and whether there is any implementation that can be benefited from using remote sensing.
+
+<h3>Brief Information about 2030 Seoul Plan</h3>
+
+[2030 Seoul Plan](https://urban.seoul.go.kr/view/html/PMNU2020000000) is the highest level city plan in Seoul, South Korea. Provided that Seoul is a capital city in South Korea, its city plan is often considered as significant and determinant as a government-led plan, in terms of its impacts on citizens of Seoul and the country. The plan covers a number of sectors which include housing, transport and environment. The city plan presents Seoul's future vision and outlines the city's development plan for the next 10 years.
+
+<h3>Brief Information about</h3>
