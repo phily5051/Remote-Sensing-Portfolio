@@ -99,6 +99,6 @@ As a person who is interested in urban green spaces, the spectral resolution was
 
 <h2>References</h2>
 
-NASA EarthData. (n.d.) https://www.earthdata.nasa.gov/. (Accessed: 26.01.2023)
+NASA EarthData. (n.d.) <https://www.earthdata.nasa.gov/> (Accessed: 26.01.2023)
 
-GIS Geography. (2022) https://gisgeography.com/atmospheric-window/. (Accessed: 26.01.2023)
+GIS Geography. (2022) <https://gisgeography.com/atmospheric-window/> (Accessed: 26.01.2023)
