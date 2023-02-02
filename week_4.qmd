@@ -14,4 +14,46 @@ In this diary, I am going to talk about the biggest city plan in South Korea and
 
 [2030 Seoul Plan](https://urban.seoul.go.kr/view/html/PMNU2020000000) is the highest level city plan in Seoul, South Korea. Provided that Seoul is a capital city in South Korea, its city plan is often considered as significant and determinant as a government-led plan, in terms of its impacts on citizens of Seoul and the country. The plan covers a number of sectors which include housing, transport and environment. The city plan presents Seoul's future vision and outlines the city's development plan for the next 10 years.
 
-<h3>Brief Information about</h3>
+With regards to environment, the plan specifies 3 Targets and 11 Strategies. The 3 targets are as follows:
+
+-   Target 1: Ecological city with numerous urban parks
+-   Target 2: Energy-efficient city
+-   Target 3: Disaster-free city
+
+Among the illustrated targets, Strategy 1-4 under Target 1 suggests a number of ways to deal with particulate matter, which is one of the biggest environmental issues in South Korea and highly related to citizen's life. One of the mitigation actions to deal with the air pollutants identified by the Seoul government is creating urban forests on those areas which are specifically vulnerable to fine dust.
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/seoulplan.png')
+```
+
+2030 Seoul Plan (Source: Seoul Metropolitan Government)
+
+<h3>Urban Forest Guideline for PM Mitigation</h3>
+
+[Urban Forest Guideline for PM Mitigation](https://news.seoul.go.kr/env/square/tree_planting_project/guideline) is a low-level city plan which entails types of activities that will be executed in line with the 2030 Seoul Plan. The guideline categorised six types of urban forests that could mitigate the concentration of PM. These are street trees, urban parks, forests around the city, vegetations in schools and river, and green spaces within proximity to residential areas.
+
+<h4>3 Functional Urban Forest Types for PM Mitigation</h4>
+
+The said urban forest types can be grouped into 3 types of urban forests in terms of their objective and functionality. These are PM blockage urban forests, PM mitigation urban forests and Wind corridor urban forests.
+
+-   PM blockage urban forests:
+
+    -   dense urban forests with 1,800 trees per ha
+    -   to block PM diffusion
+
+-   PM mitigation urban forests:
+
+    -   between 800 and 1,000 trees per ha
+    -   to enhance PM absorption by urban forests
+
+-   Wind corridor urban forests:
+
+    -   500 trees per ha
+    -   to introduce clean air to city centre
+    -   to enable the outflow of congregated PM within the city due to vehicles and household heating.
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/urbforesttype.jpg')
+```
+
+PM Mitigation Urban Forest Types (Source: Korea Forest Service)
