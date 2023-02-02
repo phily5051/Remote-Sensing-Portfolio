@@ -95,8 +95,7 @@ Different absorbance rate depending on blueberry's growth (Source: Yang and Will
 
 <h2>Personal Reflection</h2>
 
-As a person who is interested in urban green spaces, the spectral resolution was an interesting concept. After understanding how it can be applied in both academia and industry, I wondered whether the health of green spaces in a city can also be measured with it. Furthermore, I was wondering whether there are any methods that improves the quality of data obtained from passive sensors as they cannot obtain a good quality data in the presence of bad weather. Under the circumstances where we have passive sensors, are there any techniques that could correct images?
-
+As a person who is interested in urban green spaces, the spectral resolution was an interesting concept. After understanding how it can be applied in both academia and industry, I wondered whether the health of green spaces in a city can also be measured with it. Furthermore, I was wondering whether there are any methods that improve the quality of data obtained from passive sensors as they cannot obtain a good quality data in the presence of bad weather. Under the circumstances where we have passive sensors, are there any techniques that could correct images?
 
 <h2>References</h2>
 
