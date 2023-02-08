@@ -12,16 +12,15 @@ editor: visual
 
 Remotely sensed images often require corrections to be available for analysis. The image distortions occur due to the following factors:
 
-- View angle: depending on the angle of the sensor, the area of interest might look different.
+-   View angle: depending on the angle of the sensor, the area of interest might look different.
 
 ```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/view_angle.jpeg')
 ```
 
-View angle (Source: Shen et al.)
+View angle (Source: [Shen et al. 2021](https://www.mdpi.com/2072-4292/13/24/5094))
 
-
-- Topography: the shape of terrain might cause some flaws in the image.
+-   Topography: the shape of terrain might cause some flaws in the image.
 
 ```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/topography.png')
@@ -29,8 +28,7 @@ knitr::include_graphics('img/topography.png')
 
 The impact of topography on remote sensing images (Source: [Julia Lenhardt](https://community.esri.com/t5/imagery-and-remote-sensing-blog/bg-p/imagery-and-remote-sensing-blog/page/4))
 
-
-- Earth rotation: Earth's spinning motion poses another difficulty. Straight lines of an image can appear to be unnaturally curved or deformed.
+-   Earth rotation: Earth's spinning motion poses another difficulty. Straight lines of an image can appear to be unnaturally curved or deformed.
 
 ```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/rotation.gif')
@@ -38,16 +36,15 @@ knitr::include_graphics('img/rotation.gif')
 
 Effect of Earth's motion (Source: [National Learning Network for Remote Sensing](https://www.nln.geos.ed.ac.uk/courses/english/frs/f3400/f3400005.htm))
 
-
-- Wind, and so on.
+-   Wind, and so on.
 
 <h3>Data Corrections</h3>
 
-4 types of data correction methods are available for distorted images. These are Geometric, Atmospheric, Orthorectification, and Radiometric corrections! 
+4 types of data correction methods are available for distorted images. These are Geometric, Atmospheric, Orthorectification corrections!
 
 First, we can kick off with Geometric Correction!
 
-<h4>*Geometric Correction*</h4>
+<h4>**Geometric Correction**</h4>
 
 *Geometric error*s are normally introduced by internal and external factors (attitude and altitude change). And Ground Control Points (GPS) can be used for correcting the errors! This means, basically, we are identifying so-called "known points" in both sensed image and a reference data and use them to build regression models! But we need each GCP, which are "image coordinate" and "map coordinate".
 
@@ -57,6 +54,7 @@ knitr::include_graphics('img/geomet.png')
 
 GPS points from a map and Landsat image (Source: [GeoLearn](https://geolearn.in/geometric-corrections-in-remote-sensing-images/))
 
+-   Solution:
 
 *Linear Regression* in a "Backward mapping" fashion can be an answer to this problem. Backward mapping is going from output image to input image. This method goes through one pixel at a time and for each position in output image to calculate where in the input image a pixel must come from.
 
@@ -66,8 +64,7 @@ The result can be verified by using RMSE. The lower the value is, the more accur
 knitr::include_graphics('img/Geometric.png')
 ```
 
-Geometric Correction (Source: Abdul Basith)
-
+Geometric Correction (Source: [Abdul Basith](https://www.researchgate.net/figure/Geometric-correction-procedures_fig7_320710942))
 
 ```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/resampling.png')
@@ -75,7 +72,98 @@ knitr::include_graphics('img/resampling.png')
 
 Nearest Neighbour Resampling method (Source: [AWF-WIKI](http://wiki.awf.forst.uni-goettingen.de/wiki/index.php/Geometric_corrections))
 
+<h4>**Atmospheric Correction**</h4>
 
-<h4>*Atmospheric Correction*</h4>
+Atmospheric correction removes scattering and absorption effects of the atmosphere to improve the image. Absorption and scattering makes an image somewhat blurry as they reduce contrast of image.
 
-Atmospheric correction removes scattering and absorption effects of the atmosphere to improve the image.
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/atmos.jpeg')
+```
+
+Example of an image before and after atmospheric correction (Source: NASA)
+
+-   Solution: there are two kinds of approaches - *relative* and *absolute*.
+
+**Relative atmospheric correction** typically consists of two methods.
+
+    - Dark Object Subtraction (DOS): searches each band for the darkest pixel value. The scattering is removed by subtracting this value from every pixel in the band.
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/dos.png')
+```
+
+An improved image after DOS (Source: [Wang et al. 2019](https://link.springer.com/chapter/10.1007/978-981-13-9917-6_41))
+
+
+    - Pseudo-Invariant Features (PIFs): is grounded upon statistical invariance of artificial elements, which do not exhibit seasonal variation. The differences in PIFs reflectance between dates are assumed to be due to atmospheric conditions and are linearly related.
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/pif.png')
+```
+
+An improved image after employing PIFs (Source: [Schott et al. 1988](https://doi.org/10.1016/0034-4257(88)90116-2))
+
+
+**Relative atmospheric correction** convert digital brightness values into scaled surface reflectance by using atmospheric radiative transfer models.
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/absolute.jpg')
+```
+
+Before and after atmospheric correction using radiative transfer method (Source: [Advanced Remote Sensing](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/atmospheric-correction#:~:text=Atmospheric%20correction%20of%20the%20radiative,the%20atmospheric%E2%80%93surface%20remote%20sensor.)) 
+
+
+<h4>**Orthorectification Correction**</h4>
+
+This method removes distortions by making the images looked right above (at nadir). This correction necessiates sensor geometry and an elevation model. 
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/ortho.jpg')
+```
+
+An example of orthorectification correction (Source: [Esri Insider, 2016](https://www.esri.com/about/newsroom/insider/what-is-orthorectified-imagery/))
+
+
+<h3>Data Join</h3>
+
+Joining remote sensed images are coined as "*Mosaicking*". Using histogram matching algorithm, similar brightness values are given to two images that are overlapped, and then the feathering is conducted.
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/mosaicking.gif')
+```
+
+Six raster dattsets are joined into one image (Source: [ArcMap](https://desktop.arcgis.com/en/arcmap/10.3/manage-data/raster-and-images/what-is-a-mosaic.htm))
+
+
+<h3>Image Enhancement</h3>
+
+Materials reflect different amounts of energy in the same wavelengths. However, sensors have a fixed range of Digital Number (DN) values between 4 to 105. If we expand this range, we could enhance the visual appearance of images. There are several methods to do this, which include Minimum-Maximum, Percentage Linear and Standard Deviation, and Piecewise Linear Contrast Stretch.
+
+- *Minimum-Maximum*: utilises the full range of available brightness values
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/minmax.png')
+```
+
+Minimum-Maximum Linear Stretch (Source: [OneStopGIS](https://www.onestopgis.com/Aerial-Photography/Digital-Imaging/Imaging-by-Scanning-Techniques/3-Contrast-Stretch.html))
+
+
+- *Percentage Linear and Standard Deviation Stretch*: is similar to the Minimum-Maximum linear contrast stretch but this method uses a specified minimum and maximum values that situate between a certain percentage of pixels from the mean of the histogram.
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/percentage_stretch.png')
+```
+
+Percentage Linear Contrast Stretch (Source: [OneStopGIS](https://www.onestopgis.com/Aerial-Photography/Digital-Imaging/Imaging-by-Scanning-Techniques/3-Contrast-Stretch.html))
+
+- *Piecewise Linear Contrast Stretch*: is used when the distribution of a histogram in an image is bi or trimodal ([Jensen and Schill, n.d.](http://knightlab.org/rscc/legacy/RSCC_Contrast_Enhancement.pdf)).
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/piecewise.png')
+```
+
+Piecewise Linear Contrast Stretch (Source: [Tsai and Yeh, 2008](http://dx.doi.org/10.1109/TCE.2008.4560077))
+
+
+<h2>3.2 Application</h2>
+
