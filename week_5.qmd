@@ -94,11 +94,13 @@ knitr::include_graphics('img/reduce_ex.png')
 
 Results of reducing images by region on GEE Code Editor - Mean values of Tree loss & Tree cover 
 
-    2) By neighbourhoods: The neighbourhoods of a pixel in an image can be used to reduce the image.
+  2) By neighbourhoods: The neighbourhoods of a pixel in an image can be used to reduce the image.
  
 ```{r echo=FALSE, out.width='100%', fig.align='left'}
 knitr::include_graphics('img/Reduce_Neighborhood.png')
 ```   
     
-
+Reducing Images by neighbourhoods ([Google Earth Engine](https://developers.google.com/earth-engine/guides/reducers_reduce_neighborhood))
+    
+<h2>5.2 Application</h2>
 
