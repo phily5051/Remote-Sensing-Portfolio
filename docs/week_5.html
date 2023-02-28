@@ -208,7 +208,6 @@ ul.task-list li input[type="checkbox"] {
 5.1.3 Aggregating Pixels in GEE
 </h3>
 <p><em>To allow large computations</em>, GEE provides users with <strong>various scale</strong> options to choose from. When an image is fed into GEE, many lower resolution versions of the image are pre-computed, and these are known as <strong>Image Pyramids</strong>.</p>
-<p>The lowest level of the image pyramid represents native resolution. The ingested image data are aggregated to a higher pyramid levels until it reaches 256 * 256 pixel tiles. At this aggregation process, GEE uses nearest neighbors by default <a href="https://developers.google.com/earth-engine/guides/scale#image-pyramids">Google Earth Engine</a>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -219,6 +218,31 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>GEE Image Pyramids (Source: <a href="https://developers.google.com/earth-engine/guides/scale#image-pyramids">Google Earth Engine</a>)</p>
+<p>The lowest level of the image pyramid represents native resolution. The ingested image data are aggregated to a higher pyramid levels until it reaches 256 * 256 pixel tiles. At this aggregation process, GEE uses nearest neighbors by default <a href="https://developers.google.com/earth-engine/guides/scale#image-pyramids">Google Earth Engine</a>. By default, the pyramid tiles are created by calculating <em>mean</em> values. This is called <strong>resampling</strong>.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="img/resampling_ex.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Example of resampling (Source: <a href="https://spatialthoughts.com/2021/05/13/aggregating-population-data-gee/">SpatialThoughts</a>)</p>
+<h3 class="anchored">
+5.1.4 Objects in GEE
+</h3>
+<p>There are 9 object classes in GEE. Each class has its own class-specific functions to load and manipulate data.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="img/classtype.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Earth Engine Class Types (Source: <a href="https://developers.google.com/earth-engine/guides/objects_methods_overview">Google Earth Engine</a>)</p>
 
 
 
