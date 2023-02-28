@@ -52,11 +52,26 @@ GEE Data Catalog (Source: [Google Earth Engine](https://developers.google.com/ea
 
 *To allow large computations*, GEE provides users with **various scale** options to choose from. When an image is fed into GEE, many lower resolution versions of the image are pre-computed, and these are known as **Image Pyramids**.
 
-The lowest level of the image pyramid represents native resolution. The ingested image data are aggregated to a higher pyramid levels until it reaches 256 * 256 pixel tiles. At this aggregation process, GEE uses nearest neighbors by default [Google Earth Engine](https://developers.google.com/earth-engine/guides/scale#image-pyramids).
-
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/Pyramids.png')
 ```
 
 GEE Image Pyramids (Source: [Google Earth Engine](https://developers.google.com/earth-engine/guides/scale#image-pyramids)) 
 
+The lowest level of the image pyramid represents native resolution. The ingested image data are aggregated to a higher pyramid levels until it reaches 256 * 256 pixel tiles. At this aggregation process, GEE uses nearest neighbors by default [Google Earth Engine](https://developers.google.com/earth-engine/guides/scale#image-pyramids). By default, the pyramid tiles are created by calculating *mean* values. This is called **resampling**.
+
+```{r echo=FALSE, out.width='100%', fig.align='left'}
+knitr::include_graphics('img/resampling_ex.png')
+```
+
+Example of resampling (Source: [SpatialThoughts](https://spatialthoughts.com/2021/05/13/aggregating-population-data-gee/))
+
+<h3>5.1.4 Objects in GEE</h3>
+
+There are 9 object classes in GEE. Each class has its own class-specific functions to load and manipulate data.
+
+```{r echo=FALSE, out.width='100%', fig.align='left'}
+knitr::include_graphics('img/classtype.png')
+```
+
+Earth Engine Class Types (Source: [Google Earth Engine](https://developers.google.com/earth-engine/guides/objects_methods_overview))
