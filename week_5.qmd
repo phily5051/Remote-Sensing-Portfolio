@@ -75,3 +75,30 @@ knitr::include_graphics('img/classtype.png')
 ```
 
 Earth Engine Class Types (Source: [Google Earth Engine](https://developers.google.com/earth-engine/guides/objects_methods_overview))
+
+<h3>5.1.5 Applicable Processes in GEE</h3>
+
+- Reducing images: 
+
+    1) By region(s): It reduces all the pixels in the region(s) to a statistic of the pixel data in the region(s). We can take an image and generate statistics for it. The images of code and result below are adjusted from Andy's Material. I used the Global Forest Change datasets to see the average reflectance for each band within Sierra Nevada, USA.
+
+```{r echo=FALSE, out.width='100%', fig.align='left'}
+knitr::include_graphics('img/reduce_ex_code.png')
+```
+
+Code for reducing images by region - Mean values of Tree loss & Tree cover 
+
+```{r echo=FALSE, out.width='100%', fig.align='left'}
+knitr::include_graphics('img/reduce_ex.png')
+```
+
+Results of reducing images by region on GEE Code Editor - Mean values of Tree loss & Tree cover 
+
+    2) By neighbourhoods: The neighbourhoods of a pixel in an image can be used to reduce the image.
+ 
+```{r echo=FALSE, out.width='100%', fig.align='left'}
+knitr::include_graphics('img/Reduce_Neighborhood.png')
+```   
+    
+
+

@@ -243,6 +243,45 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Earth Engine Class Types (Source: <a href="https://developers.google.com/earth-engine/guides/objects_methods_overview">Google Earth Engine</a>)</p>
+<h3 class="anchored">
+5.1.5 Applicable Processes in GEE
+</h3>
+<ul>
+<li><p>Reducing images:</p>
+<ol type="1">
+<li>By region(s): It reduces all the pixels in the region(s) to a statistic of the pixel data in the region(s). We can take an image and generate statistics for it. The images of code and result below are adjusted from Andy’s Material. I used the Global Forest Change datasets to see the average reflectance for each band within Sierra Nevada, USA.</li>
+</ol></li>
+</ul>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="img/reduce_ex_code.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Code for reducing images by region - Mean values of Tree loss &amp; Tree cover</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="img/reduce_ex.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Results of reducing images by region on GEE Code Editor - Mean values of Tree loss &amp; Tree cover</p>
+<pre><code>2) By neighbourhoods: The neighbourhoods of a pixel in an image can be used to reduce the image.</code></pre>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="img/Reduce_Neighborhood.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 
