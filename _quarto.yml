@@ -12,6 +12,7 @@ book:
     - week_2.qmd
     - week_3.qmd
     - week_4.qmd
+    - weej_5.qmd
     - references.qmd
 
 bibliography: references.bib
