@@ -160,6 +160,6 @@ Lastly, after doing a research on the application of GEE, I noticed that most of
 
 <h2>References</h2>
 
-Google Earth Engine (n.d.) <https://earthengine.google.com/> (Accessed: 28.02.2023)
+Google Earth Engine. (n.d.) <https://earthengine.google.com/> (Accessed: 28.02.2023)
 
-SpatialThoughts (2021) <https://spatialthoughts.com/2021/05/13/aggregating-population-data-gee/> (Accessed: 28.02.2023)
+SpatialThoughts. (2021) <https://spatialthoughts.com/2021/05/13/aggregating-population-data-gee/> (Accessed: 28.02.2023)
