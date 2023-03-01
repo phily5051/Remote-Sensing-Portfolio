@@ -310,7 +310,7 @@ div.csl-indent {
 <h2 class="anchored">
 5.2 Application
 </h2>
-<p>Google Earth Engine has been widely applied, ranging from forest and vegetation studies to medical fields such as malaria <span class="citation" data-cites="rs10101509">(<a href="references.html#ref-rs10101509" role="doc-biblioref">Kumar and Mutanga 2018</a>)</span>. In this section, I will focus on how GEE can be applied in collaboration with Machine Learning technologies, and what are the benefits of considering technological fusion.</p>
+<p>Google Earth Engine has been widely applied, ranging from forest and vegetation studies to medical fields such as malaria <span class="citation" data-cites="rs10101509">(<a href="references.html#ref-rs10101509" role="doc-biblioref">Kumar and Mutanga 2018</a>)</span>. The display of satellite imagery on GEE has enabled us to identify any change occurred during a certain period of time. However, I was wondering whether detecting changes in land cover is the only thing that GEE can offer. In this section, I will focus on how GEE can be applied in collaboration with Machine Learning technologies, and what are the benefits of considering technological fusion.</p>
 <p>GEE can be an effective way of monitoring and mapping land cover. <span class="citation" data-cites="ijgi9100580">Brovelli, Sun, and Yordanov (<a href="references.html#ref-ijgi9100580" role="doc-biblioref">2020</a>)</span> mapped and monitored the rainforest change in Brazil from 2000 and 2019. The forest cover was mapped at a 5-year period by using a Machine Learning algorithm on GEE platform.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -323,50 +323,61 @@ div.csl-indent {
 </div>
 <p>Work Flow of the research (Source: <span class="citation" data-cites="ijgi9100580">Brovelli, Sun, and Yordanov (<a href="references.html#ref-ijgi9100580" role="doc-biblioref">2020</a>)</span>)</p>
 <p>The <strong>Random Forest (RF)</strong> was used to classify past and present land cover - forest and non-forest. The whole process of building the model was conducted on GEE platform. 80% of the datasets were used for training the model, and the rest was withheld for testing the accuracy of the model. Then, the output classification results were validated through high-resolution satellite images.</p>
-<div class="cell" data-layout-align="left">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-left">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/classification_rf.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="img/classification_rf.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>RF Classification results (Source: <span class="citation" data-cites="ijgi9100580">Brovelli, Sun, and Yordanov (<a href="references.html#ref-ijgi9100580" role="doc-biblioref">2020</a>)</span>)</p>
-<div class="cell" data-layout-align="right">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-right">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/validation_sample.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="img/validation_sample.png" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Validation samples for RF model (Source: <span class="citation" data-cites="ijgi9100580">Brovelli, Sun, and Yordanov (<a href="references.html#ref-ijgi9100580" role="doc-biblioref">2020</a>)</span>)</p>
 <p>To estimate the future state of the forests, <strong>Artificial Neural Network (ANN)</strong> was used to simulate forest cover.</p>
-<div class="cell" data-layout-align="right">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-right">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/sim14.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="img/sim14.png" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>ANN simulation result between 2010 and 2014 (Source: <span class="citation" data-cites="ijgi9100580">Brovelli, Sun, and Yordanov (<a href="references.html#ref-ijgi9100580" role="doc-biblioref">2020</a>)</span>)</p>
-<div class="cell" data-layout-align="right">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-right">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/sim28.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="img/sim28.png" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>ANN simulation result between 2019 and 2028 (Source: <span class="citation" data-cites="ijgi9100580">Brovelli, Sun, and Yordanov (<a href="references.html#ref-ijgi9100580" role="doc-biblioref">2020</a>)</span>)</p>
+<p>The above research was utilising GEE as a main platform to build a ML model. By building a model, it allowed us for predicting the future state of the forests. The research also elaborated how they tested the RF model’s performance. However, if there is an issue of over-fitting in a model, is there any way that we could deal with this issue?</p>
+<p>Furthermore, the authors did not explain how they validated the ANN model. While the simulation results could provide us to predict the future state of the forests, there was no dataset or method that tested the model’s performance which casts a doubt on the ANN model.</p>
 <h2 class="anchored">
 5.3 Reflection
 </h2>
+<p>This week’s content was an introductory lecture for the GEE. As I have not heard of GEE before, the whole concept was somewhat very new and interesting for me.</p>
+<p>The use of Javascript to write code looked similar to Python, but it was quite different in terms of defining variables. In particular, the fact that datasets are stored within GEE server was very convenient. Storing data always took up a lot of memory in my computer and sometimes it was hard to set up or remember a directory whenever I had to proceess data on R. The datasets on server saved so much space in my computer as well as the ready-made code to import the datasets was really easy.</p>
+<p>In addition, spatial join and reducing images were much faster on GEE. With a few lines of code, I was able to get the results I wanted which would require lots of lines in other programming languages.</p>
+<p>Lastly, after doing a research on the application of GEE, I noticed that most of datasets stored within the GEE server were mostly about environment-related datasets, and many of the on-going research were mainly focusing on identifying change in the environment. Thus, I was wondering whether there is any current research in the context of urban environment. The change in an urban setting might not be as distinctive as deforestation or change in temperature. However, cities are growing and urban infrastructures are always changing. This gives us enough reason to make use of GEE to better understand fast-changing cities. Therefore, in the next session, I would love to do more research about how GEE can be potentially utilised in the urban environment.</p>
+<h2 class="anchored">
+References
+</h2>
+<p>Google Earth Engine (n.d.) <a href="https://earthengine.google.com/" class="uri">https://earthengine.google.com/</a>(Accessed: 28.02.2023)</p>
+<p>SpatialThoughts (2021) <a href="https://spatialthoughts.com/2021/05/13/aggregating-population-data-gee/" class="uri">https://spatialthoughts.com/2021/05/13/aggregating-population-data-gee/</a>(Accessed: 28.02.2023)</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">

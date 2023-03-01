@@ -106,7 +106,7 @@ Reducing Images by neighbourhoods ([Google Earth Engine](https://developers.goog
 
 <h2>5.2 Application</h2>
 
-Google Earth Engine has been widely applied, ranging from forest and vegetation studies to medical fields such as malaria [@rs10101509]. In this section, I will focus on how GEE can be applied in collaboration with Machine Learning technologies, and what are the benefits of considering technological fusion.
+Google Earth Engine has been widely applied, ranging from forest and vegetation studies to medical fields such as malaria [@rs10101509]. The display of satellite imagery on GEE has enabled us to identify any change occurred during a certain period of time. However, I was wondering whether detecting changes in land cover is the only thing that GEE can offer. In this section, I will focus on how GEE can be applied in collaboration with Machine Learning technologies, and what are the benefits of considering technological fusion.
 
 
 GEE can be an effective way of monitoring and mapping land cover. @ijgi9100580 mapped and monitored the rainforest change in Brazil from 2000 and 2019. The forest cover was mapped at a 5-year period by using a Machine Learning algorithm on GEE platform. 
@@ -119,29 +119,47 @@ Work Flow of the research (Source: @ijgi9100580)
 
 The **Random Forest (RF)** was used to classify past and present land cover - forest and non-forest. The whole process of building the model was conducted on GEE platform. 80% of the datasets were used for training the model, and the rest was withheld for testing the accuracy of the model. Then, the output classification results were validated through high-resolution satellite images. 
 
-```{r echo=FALSE, out.width='50%', fig.align='left'}
+```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/classification_rf.jpg')
 ```
 
 RF Classification results (Source: @ijgi9100580)
 
-```{r echo=FALSE, out.width='50%', fig.align='right'}
+```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/validation_sample.png')
 ```
 
 Validation samples for RF model (Source: @ijgi9100580)
 
 To estimate the future state of the forests, **Artificial Neural Network (ANN)** was used to simulate forest cover.  
-```{r echo=FALSE, out.width='50%', fig.align='right'}
+```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/sim14.png')
 ```
 
 ANN simulation result between 2010 and 2014 (Source: @ijgi9100580)
 
-```{r echo=FALSE, out.width='50%', fig.align='right'}
+```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/sim28.png')
 ```
 
 ANN simulation result between 2019 and 2028 (Source: @ijgi9100580)
 
+The above research was utilising GEE as a main platform to build a ML model. By building a model, it allowed us for predicting the future state of the forests. The research also elaborated how they tested the RF model's performance. However, if there is an issue of over-fitting in a model, is there any way that we could deal with this issue? 
+
+Furthermore, the authors did not explain how they validated the ANN model. While the simulation results could provide us to predict the future state of the forests, there was no dataset or method that tested the model's performance which casts a doubt on the ANN model.
+
 <h2>5.3 Reflection</h2>
+
+This week's content was an introductory lecture for the GEE. As I have not heard of GEE before, the whole concept was somewhat very new and interesting for me. 
+
+The use of Javascript to write code looked similar to Python, but it was quite different in terms of defining variables. In particular, the fact that datasets are stored within GEE server was very convenient. Storing data always took up a lot of memory in my computer and sometimes it was hard to set up or remember a directory whenever I had to proceess data on R. The datasets on server saved so much space in my computer as well as the ready-made code to import the datasets was really easy.
+
+In addition, spatial join and reducing images were much faster on GEE. With a few lines of code, I was able to get the results I wanted which would require lots of lines in other programming languages. 
+
+Lastly, after doing a research on the application of GEE, I noticed that most of datasets stored within the GEE server were mostly about environment-related datasets, and many of the on-going research were mainly focusing on identifying change in the environment. Thus, I was wondering whether there is any current research in the context of urban environment. The change in an urban setting might not be as distinctive as deforestation or change in temperature. However, cities are growing and urban infrastructures are always changing. This gives us enough reason to make use of GEE to better understand fast-changing cities. Therefore, in the next session, I would love to do more research about how GEE can be potentially utilised in the urban environment.    
+
+<h2>References</h2>
+
+Google Earth Engine (n.d.) <https://earthengine.google.com/>(Accessed: 28.02.2023)
+
+SpatialThoughts (2021) <https://spatialthoughts.com/2021/05/13/aggregating-population-data-gee/>(Accessed: 28.02.2023)
