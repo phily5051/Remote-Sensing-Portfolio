@@ -131,7 +131,7 @@ knitr::include_graphics('img/validation_sample.png')
 
 Validation samples for RF model (Source: @ijgi9100580)
 
-To estimate the future state of the forests, **Artificial Neural Network (ANN)** was used to simulate forest cover.  
+**Artificial Neural Network (ANN)** was used to estimate the future state of the forests, which simulated the future forest cover.  
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/sim14.png')
 ```
