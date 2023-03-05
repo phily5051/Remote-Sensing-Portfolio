@@ -26,7 +26,11 @@ Supervised Classification Process in Remote Sensing (Source: [GISgeography](http
 
 <h3>6.1.1 **Classification and Regression Trees (CART)**</h3>
 
-<h4>(1)  General Information about CART</h4>
+<h4>
+
+(1) General Information about CART
+
+    </h4>
 
 **CART** is a binary split and it consists of *classification trees* and *regression trees*. My interpretation of CART is that when we put our data on a 2D graph, we can see that data points cannot be solely captured by a single straight line.
 
@@ -44,7 +48,11 @@ knitr::include_graphics('img/cart_ssr.png')
 
 CART SSR Threshold (Source: [DataDrivenInvestor](https://medium.datadriveninvestor.com/how-do-regression-trees-work-94999c5105d))
 
-<h4>(2)  How to prevent over-fitting in CART?</h4>
+<h4>
+
+(2) How to prevent over-fitting in CART?
+
+    </h4>
 
 There are two methods to prevent over-fitting in CART.
 
@@ -70,9 +78,11 @@ CART with Pruning (Source: [Towards Data Science](https://towardsdatascience.com
 
 <h3>6.1.2 **Random Forests (RF)**</h3>
 
+<h4>
 
+(1) General Information about RF
 
-<h4>(1)  General Information about RF</h4>
+    </h4>
 
 **RF** simply means that many are better than one. We do "*bootstrap*" samples (*bagging* - only 70% of data is used), and create nodes with random number of variables and on and on. Eventually, we will make many decision trees from random number of variables. These different decision trees are called a forest.
 
@@ -82,7 +92,11 @@ knitr::include_graphics('img/rf_flowchart.jpg')
 
 Random Forests Classification (Source: [Feng et al, 2018](https://doi.org/10.1080/01431161.2018.1479794))
 
-<h4>(2)  How a decision is generated in RF?</h4>
+<h4>
+
+(2) How a decision is generated in RF?
+
+    </h4>
 
 We test this forest with the samples that were not used to create the decision trees. These samples are called "*Out of Bag (OOB)*" (30%). The **majority of decisions** made on the OOB are chosen, and the proportion fo OOB incorrectly classified are called OOB error. For example, when we want to classify a pixel, if the majority of decision trees says it is an urban area, the pixel is categorised as an urban area. One thing to note is that OOB is different from test data as test data are never included in building decision trees.
 
@@ -92,7 +106,11 @@ We test this forest with the samples that were not used to create the decision t
 
 <h3>6.1.4 **Support Vector Machine (SVM)**</h3>
 
-<h4>(1)  General Information about SVM</h4>
+<h4>
+
+(1) General Information about SVM
+
+    </h4>
 
 **SVM** is a maximum margin classifier. SVM looks for a place where it can separate datasets most effectively. The benefit of SVM is that it uses structural risk minimisation which minimises errors on unseen data.
 
@@ -110,7 +128,11 @@ knitr::include_graphics('img/svm_margin.png')
 
 Hard and Soft margin (Source: [Velocity Business Solutions](https://www.vebuso.com/2020/02/a-top-machine-learning-algorithm-explained-support-vector-machines-svms/)
 
-<h4>(2)  How to wiggle SVM?</h4>
+<h4>
+
+(2) How to wiggle SVM?
+
+    </h4>
 
 There are 3 hyper-parameters that we can control to wiggle SVM.
 
@@ -134,11 +156,66 @@ Illustration of how change in gamma affects the decision boundary (Source: [Anal
 
 The best values for C and gamma can be searched through using grid search, which tests every possible values for the hyper-parameters
 
-<h4>(3)  What is the example of the application of SVM?</h4>
+<h4>
+
+(3) What is the example of the application of SVM?
+
+    </h4>
 
 Let's say 'pixel 1' has values for band 1, band 2, band 3, and so on. For reference, a pixel which has a number of band values is called **Pattern vector**. If there are forests, they will have many pattern vectors. If we put these into a feature space, these pattern vectors will be very close and on top of each other. This is the moment where SVM can come into play and separate them by allowing some misclassification.
 
 <h2>6.2 Applications</h2>
+
+<h3>6.2.1 General Background</h3>
+
+Some land covers, such as wetland, are hard to classify due to unclear distinction with other surrounding land covers, massive seasonal changes in vegetation and hydrological variation. In this section, I looked into how somewhat classification-wise challenging land covers can be classified in conjunction with ML algorithms.
+
+<h3>6.2.2 Brief Information about a Research</h3>
+
+@rs8110954 aimed to classify wetland land cover by **fusing** the `Pléiade-1B data` with `multi-date Landsat-8 data`. The former was performed based on an *object-oriented approach*, and the *geometric* and *spectral features* were extracted. From the latter, the *normalized difference vegetation index (NDVI)* data were calculated and this enabled to reflect phenological changes in vegetation. The feature datasets obtained from two sensors were optimised and used to build a `RF model`.
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/wk6_application_abstract.png')
+```
+
+Flowchart of building a RF Model (Source: @rs8110954)
+
+The RF classifier obtained an overall accuracy of 93 % and the research team found out that the inclusion of the *geometric shapes* improved the *classification accuracy of the farming lands and water bodies by 5% - 10%*. In addition, often times there was a challenge in classifying wetland due to similar spectral features of vegetation covers. By making use of the *phenological difference* and the *textual information*, the team reduced the classification errors and improved the overall accuracy about 10%.
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/wk6_result_contribution.png')
+```
+
+Importance of Features in the RF model (Source: @rs8110954)
+
+The classification result of the RF model was compared with other ML classification methods such as Support Vector Machine (SVM) and Artificial Neural Network (ANN). The research team found that the overall accuracy of the RF model was 10% higher than that of the SVM and ANN classifiers.
+
+<h3>6.2.3 Insight from the findings</h3>
+
+The classification results bring us back to a question we had in the lecture. 
+
+*'Does the most advanced ML classification method always achieves the best results?'* 
+
+As shown in the results, the most advanced ML algorithms - SVM and ANN - did not achieve the best classification results. They were 10% behind the overall accuracy compared to the RF model's result. 
+
+The author stated that the way that RF model builds each decision tree was significant in achieving a higher accuracy. In the RF model, each decision tree is a **"specialist tree"** which considers the `feature domain` - the data from geometric and textual features.
+
+For instance, the lakes which are characterised as being large and in a circular shape with a smoother shoreline, which are rather easy to classify. However, marshes and ponds inherit heterogeneous features, and are in irregular shape, which pose difficulties in classifying them. 
+
+Therefore, the **specialist trees** grown with considerations for these features in the RF model explain why the RF model achieved a higher accuracy.
+What we can learn from this research is that the location- and context-specific ML algorithm is required to achieve a better classification accuracy. The most advanced and state-of-the-art algorithms do not guarantee the best results.
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/wk6_research_area.png')
+```
+
+Research Area (Source: @rs8110954)
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('img/wk6_application_results.png')
+```
+
+The Classification Results of Different ML Methods - (a) RF; (b) SVM; (c) ANN (Source: @rs8110954)
 
 <h2>6.3 Reflections</h2>
 
@@ -150,7 +227,7 @@ Secondly, we need to consider why we are using a specific ML algorithm to classi
 
 The last but not the least, we have to think about classification itself. In reality, one pixel is not solely composed of one type of land cover types. It can co-exist with other types of land cover types. Therefore, we need to contemplate on to what extent we have to classify or ignore the values in a pixel.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='70%', fig.align='center'}
 knitr::include_graphics('img/mixed_pixels.png')
 ```
 
