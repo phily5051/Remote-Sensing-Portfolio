@@ -17,17 +17,20 @@ Supervised ML follows the following process:
     - Training
     - Pixel assignment
     - Accuracy assessment
-    
+
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/supervised_process.png')
 ```
 
 Supervised Classification Process in Remote Sensing (Source: [GISgeography](https://gisgeography.com/supervised-unsupervised-classification-arcgis/))
 
-
 <h3>6.1.1 **Classification and Regression Trees (CART)**</h3>
 
-<h4>1) General Information about CART</h4>
+<h4>
+
+1)  General Information about CART
+
+    </h4>
 
 **CART** is a binary split and it consists of *classification trees* and *regression trees*. My interpretation of CART is that when we put our data on a 2D graph, we can see that data points cannot be solely captured by a single straight line.
 
@@ -45,11 +48,15 @@ knitr::include_graphics('img/cart_ssr.png')
 
 CART SSR Threshold (Source: [DataDrivenInvestor](https://medium.datadriveninvestor.com/how-do-regression-trees-work-94999c5105d))
 
-<h4>2) How to prevent over-fitting in CART?</h4>
+<h4>
+
+2)  How to prevent over-fitting in CART?
+
+    </h4>
 
 There are two methods to prevent over-fitting in CART.
 
-- Setting Maximum Tree Depth: can limit how much trees can grow. 20 is default.
+-   Setting Maximum Tree Depth: can limit how much trees can grow. 20 is default.
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/cart_max_depth.png')
@@ -57,10 +64,10 @@ knitr::include_graphics('img/cart_max_depth.png')
 
 CART with Maximum Tree Depth (Source: [Towards Data Science](https://towardsdatascience.com/3-techniques-to-avoid-overfitting-of-decision-trees-1e7d3d985a09))
 
-- Weakest link pruning: basically means that we use a full size regression tree and we see if removing a leaf (a chunk of nodes) gives a lower tree score. We start with 0 for the value of $\alpha$, and increase it until we get a lower tree score. The equation for tree score is as below:
+-   Weakest link pruning: basically means that we use a full size regression tree and we see if removing a leaf (a chunk of nodes) gives a lower tree score. We start with 0 for the value of $\alpha$, and increase it until we get a lower tree score. The equation for tree score is as below:
 
-$Tree score = SSR + $\alpha$ * T(Number of leaves)
-    
+$Tree-score$ = $SSR$ + $\alpha$ \* $T(Number-of-leaves)$
+
 Once we have those values for $\alpha$, we divide our data into training and test data. We take training data with all the values for $\alpha$ and calculate the SSR. Then, we look for which $\alpha$ value returns the lowest SSR. We repeat this process several times and look for the average value until we get the lowest SSR.
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
@@ -68,12 +75,16 @@ knitr::include_graphics('img/cart_pruning.png')
 ```
 
 CART with Pruning (Source: [Towards Data Science](https://towardsdatascience.com/3-techniques-to-avoid-overfitting-of-decision-trees-1e7d3d985a09))
-    
+
 <h3>6.1.2 **Random Forests (RF)**</h3>
 
-<h4>1) General Information about RF</h4>
+<h4>
 
-**RF** simply means that many are better than one. We do "*bootstrap*" samples (*bagging* - only 70% of data is used), and create nodes with random number of variables and on and on. Eventually, we will make many decision trees from random number of variables. These different decision trees are called a forest. 
+1)  General Information about RF
+
+    </h4>
+
+**RF** simply means that many are better than one. We do "*bootstrap*" samples (*bagging* - only 70% of data is used), and create nodes with random number of variables and on and on. Eventually, we will make many decision trees from random number of variables. These different decision trees are called a forest.
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/rf_flowchart.jpg')
@@ -81,7 +92,11 @@ knitr::include_graphics('img/rf_flowchart.jpg')
 
 Random Forests Classification (Source: [Feng et al, 2018](https://doi.org/10.1080/01431161.2018.1479794))
 
-<h4>2) How a decision is generated in RF?</h4>
+<h4>
+
+2)  How a decision is generated in RF?
+
+    </h4>
 
 We test this forest with the samples that were not used to create the decision trees. These samples are called "*Out of Bag (OOB)*" (30%). The **majority of decisions** made on the OOB are chosen, and the proportion fo OOB incorrectly classified are called OOB error. For example, when we want to classify a pixel, if the majority of decision trees says it is an urban area, the pixel is categorised as an urban area. One thing to note is that OOB is different from test data as test data are never included in building decision trees.
 
@@ -91,7 +106,11 @@ We test this forest with the samples that were not used to create the decision t
 
 <h3>6.1.4 **Support Vector Machine (SVM)**</h3>
 
-<h4>1) General Information about SVM</h4>
+<h4>
+
+1)  General Information about SVM
+
+    </h4>
 
 **SVM** is a maximum margin classifier. SVM looks for a place where it can separate datasets most effectively. The benefit of SVM is that it uses structural risk minimisation which minimises errors on unseen data.
 
@@ -109,47 +128,53 @@ knitr::include_graphics('img/svm_margin.png')
 
 Hard and Soft margin (Source: [Velocity Business Solutions](https://www.vebuso.com/2020/02/a-top-machine-learning-algorithm-explained-support-vector-machines-svms/)
 
-<h4>2) How to wiggle SVM?</h4>
+<h4>
+
+2)  How to wiggle SVM?
+
+    </h4>
 
 There are 3 hyper-parameters that we can control to wiggle SVM.
 
-- C: can determine the extent of misclassification that SVM can allow. If 'C' is large, SVM has a hard margin. On the contrary, if 'C' is small, SVM has a soft margin.
-    
-- Kernel: transforms the data when the data cannot be linearly separated.
-    
+-   C: can determine the extent of misclassification that SVM can allow. If 'C' is large, SVM has a hard margin. On the contrary, if 'C' is small, SVM has a soft margin.
+
+-   Kernel: transforms the data when the data cannot be linearly separated.
+
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/svm_kernel.png')
-```    
+```
 
 Kernel trick which projects data to a higher dimensional space (Source: [Towards Data Science](https://towardsdatascience.com/support-vector-machines-svm-clearly-explained-a-python-tutorial-for-classification-problems-29c539f3ad8))
 
-- gamma: defines the decision boundary. The larger the 'gamma' is, the higher probability of overfitting is. The smaller the 'gamma' is, the more linear the decision boundary is, which might cause underfitting issues.
-    
+-   gamma: defines the decision boundary. The larger the 'gamma' is, the higher probability of overfitting is. The smaller the 'gamma' is, the more linear the decision boundary is, which might cause underfitting issues.
+
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/svm_gamma.png')
-```       
+```
 
 Illustration of how change in gamma affects the decision boundary (Source: [Analytics Vidhya](https://www.analyticsvidhya.com/blog/2021/06/support-vector-machine-better-understanding/))
 
 The best values for C and gamma can be searched through using grid search, which tests every possible values for the hyper-parameters
 
-<h4>3) What is the example of the application of SVM?</h4>
+<h4>
+
+3)  What is the example of the application of SVM?
+
+    </h4>
 
 Let's say 'pixel 1' has values for band 1, band 2, band 3, and so on. For reference, a pixel which has a number of band values is called **Pattern vector**. If there are forests, they will have many pattern vectors. If we put these into a feature space, these pattern vectors will be very close and on top of each other. This is the moment where SVM can come into play and separate them by allowing some misclassification.
 
 <h2>6.2 Applications</h2>
 
-
-
 <h2>6.3 Reflections</h2>
 
-The week 6's lecture covers a number of ML algorithms that are being used in satellite imagery classification. These classification methods are employed to better distinguish one band from the other band which help classifying land cover in the image. They essentially do the same functionality in classifying data but they do it in different ways. 
+The week 6's lecture covers a number of ML algorithms that are being used in satellite imagery classification. These classification methods are employed to better distinguish one band from the other band which help classifying land cover in the image. They essentially do the same functionality in classifying data but they do it in different ways.
 
-However, there are some aspects that we have to ponder. Firstly, these classifiers often make things very complicated. While state-of-the-art ML algorithms are highly accurate, they are very difficult to interpret. 
+However, there are some aspects that we have to ponder. Firstly, these classifiers often make things very complicated. While state-of-the-art ML algorithms are highly accurate, they are very difficult to interpret.
 
 Secondly, we need to consider why we are using a specific ML algorithm to classify our data. If we could differentiate one band from the other with a simple method, is there still a necessity to use a highly developed classification method?
 
-The last but not the least, we have to think about classification itself. In reality, one pixel is not solely composed of one type of land cover types. It can co-exist with other types of land cover types. Therefore, we need to contemplate on to what extent we have to classify or ignore the values in a pixel. 
+The last but not the least, we have to think about classification itself. In reality, one pixel is not solely composed of one type of land cover types. It can co-exist with other types of land cover types. Therefore, we need to contemplate on to what extent we have to classify or ignore the values in a pixel.
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/mixed_pixels.png')
