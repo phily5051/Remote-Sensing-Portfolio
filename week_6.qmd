@@ -57,11 +57,11 @@ knitr::include_graphics('img/cart_max_depth.png')
 
 CART with Maximum Tree Depth (Source: [Towards Data Science](https://towardsdatascience.com/3-techniques-to-avoid-overfitting-of-decision-trees-1e7d3d985a09))
 
-- Weakest link pruning: basically means that we use a full size regression tree and we see if removing a leaf (a chunk of nodes) gives a lower tree score. We start with 0 for the value of $\alpha, and increase it until we get a lower tree score. The equation for tree score is as below:
+- Weakest link pruning: basically means that we use a full size regression tree and we see if removing a leaf (a chunk of nodes) gives a lower tree score. We start with 0 for the value of $\alpha$, and increase it until we get a lower tree score. The equation for tree score is as below:
 
-$Tree score = SSR + $\alpha * T(Number of leaves)
+$Tree score = SSR + $\alpha$ * T(Number of leaves)
     
-Once we have those values for $\alpha, we divide our data into training and test data. We take training data with all the values for $\alpha and calculate the SSR. Then, we look for which $\alpha value returns the lowest SSR. We repeat this process several times and look for the average value until we get the lowest SSR.
+Once we have those values for $\alpha$, we divide our data into training and test data. We take training data with all the values for $\alpha$ and calculate the SSR. Then, we look for which $\alpha$ value returns the lowest SSR. We repeat this process several times and look for the average value until we get the lowest SSR.
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/cart_pruning.png')
@@ -113,9 +113,9 @@ Hard and Soft margin (Source: [Velocity Business Solutions](https://www.vebuso.c
 
 There are 3 hyper-parameters that we can control to wiggle SVM.
 
-    - C: can determine the extent of misclassification that SVM can allow. If 'C' is large, SVM has a hard margin. On the contrary, if 'C' is small, SVM has a soft margin.
+- C: can determine the extent of misclassification that SVM can allow. If 'C' is large, SVM has a hard margin. On the contrary, if 'C' is small, SVM has a soft margin.
     
-    - Kernel: transforms the data when the data cannot be linearly separated.
+- Kernel: transforms the data when the data cannot be linearly separated.
     
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/svm_kernel.png')
@@ -123,7 +123,7 @@ knitr::include_graphics('img/svm_kernel.png')
 
 Kernel trick which projects data to a higher dimensional space (Source: [Towards Data Science](https://towardsdatascience.com/support-vector-machines-svm-clearly-explained-a-python-tutorial-for-classification-problems-29c539f3ad8))
 
-    - gamma: defines the decision boundary. The larger the 'gamma' is, the higher probability of overfitting is. The smaller the 'gamma' is, the more linear the decision boundary is, which might cause underfitting issues.
+- gamma: defines the decision boundary. The larger the 'gamma' is, the higher probability of overfitting is. The smaller the 'gamma' is, the more linear the decision boundary is, which might cause underfitting issues.
     
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/svm_gamma.png')

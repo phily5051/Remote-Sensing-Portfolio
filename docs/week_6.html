@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -232,10 +233,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>CART with Maximum Tree Depth (Source: <a href="https://towardsdatascience.com/3-techniques-to-avoid-overfitting-of-decision-trees-1e7d3d985a09">Towards Data Science</a>)</p>
 <ul>
-<li>Weakest link pruning: basically means that we use a full size regression tree and we see if removing a leaf (a chunk of nodes) gives a lower tree score. We start with 0 for the value of $, and increase it until we get a lower tree score. The equation for tree score is as below:</li>
+<li>Weakest link pruning: basically means that we use a full size regression tree and we see if removing a leaf (a chunk of nodes) gives a lower tree score. We start with 0 for the value of <span class="math inline">\(\alpha\)</span>, and increase it until we get a lower tree score. The equation for tree score is as below:</li>
 </ul>
-<p>$Tree score = SSR + $T(Number of leaves)</p>
-<p>Once we have those values for $, we divide our data into training and test data. We take training data with all the values for $and calculate the SSR. Then, we look for which $value returns the lowest SSR. We repeat this process several times and look for the average value until we get the lowest SSR.</p>
+<p>$Tree score = SSR + <span class="math inline">\(\alpha\)</span> * T(Number of leaves)</p>
+<p>Once we have those values for <span class="math inline">\(\alpha\)</span>, we divide our data into training and test data. We take training data with all the values for <span class="math inline">\(\alpha\)</span> and calculate the SSR. Then, we look for which <span class="math inline">\(\alpha\)</span> value returns the lowest SSR. We repeat this process several times and look for the average value until we get the lowest SSR.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -311,9 +312,10 @@ ul.task-list li input[type="checkbox"] {
 </li></ol></h4>
 
 <p>There are 3 hyper-parameters that we can control to wiggle SVM.</p>
-<pre><code>- C: can determine the extent of misclassification that SVM can allow. If 'C' is large, SVM has a hard margin. On the contrary, if 'C' is small, SVM has a soft margin.
-
-- Kernel: transforms the data when the data cannot be linearly separated.</code></pre>
+<ul>
+<li><p>C: can determine the extent of misclassification that SVM can allow. If ‘C’ is large, SVM has a hard margin. On the contrary, if ‘C’ is small, SVM has a soft margin.</p></li>
+<li><p>Kernel: transforms the data when the data cannot be linearly separated.</p></li>
+</ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -324,7 +326,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Kernel trick which projects data to a higher dimensional space (Source: <a href="https://towardsdatascience.com/support-vector-machines-svm-clearly-explained-a-python-tutorial-for-classification-problems-29c539f3ad8">Towards Data Science</a>)</p>
-<pre><code>- gamma: defines the decision boundary. The larger the 'gamma' is, the higher probability of overfitting is. The smaller the 'gamma' is, the more linear the decision boundary is, which might cause underfitting issues.</code></pre>
+<ul>
+<li>gamma: defines the decision boundary. The larger the ‘gamma’ is, the higher probability of overfitting is. The smaller the ‘gamma’ is, the more linear the decision boundary is, which might cause underfitting issues.</li>
+</ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
