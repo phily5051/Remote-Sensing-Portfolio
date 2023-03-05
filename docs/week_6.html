@@ -188,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 </h3>
 <h4 class="anchored">
 <ol type="1">
-<li>General Information about CART
+<li><p>General Information about CART</p>
 </li></ol></h4>
 
 <p><strong>CART</strong> is a binary split and it consists of <em>classification trees</em> and <em>regression trees</em>. My interpretation of CART is that when we put our data on a 2D graph, we can see that data points cannot be solely captured by a single straight line.</p>
@@ -215,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
 <p>CART SSR Threshold (Source: <a href="https://medium.datadriveninvestor.com/how-do-regression-trees-work-94999c5105d">DataDrivenInvestor</a>)</p>
 <h4 class="anchored">
 <ol start="2" type="1">
-<li>How to prevent over-fitting in CART?
+<li><p>How to prevent over-fitting in CART?</p>
 </li></ol></h4>
 
 <p>There are two methods to prevent over-fitting in CART.</p>
@@ -235,7 +235,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Weakest link pruning: basically means that we use a full size regression tree and we see if removing a leaf (a chunk of nodes) gives a lower tree score. We start with 0 for the value of <span class="math inline">\(\alpha\)</span>, and increase it until we get a lower tree score. The equation for tree score is as below:</li>
 </ul>
-<p>$Tree score = SSR + <span class="math inline">\(\alpha\)</span> * T(Number of leaves)</p>
+<p><span class="math inline">\(Tree-score\)</span> = <span class="math inline">\(SSR\)</span> + <span class="math inline">\(\alpha\)</span> * <span class="math inline">\(T(Number-of-leaves)\)</span></p>
 <p>Once we have those values for <span class="math inline">\(\alpha\)</span>, we divide our data into training and test data. We take training data with all the values for <span class="math inline">\(\alpha\)</span> and calculate the SSR. Then, we look for which <span class="math inline">\(\alpha\)</span> value returns the lowest SSR. We repeat this process several times and look for the average value until we get the lowest SSR.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -252,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
 </h3>
 <h4 class="anchored">
 <ol type="1">
-<li>General Information about RF
+<li><p>General Information about RF</p>
 </li></ol></h4>
 
 <p><strong>RF</strong> simply means that many are better than one. We do “<em>bootstrap</em>” samples (<em>bagging</em> - only 70% of data is used), and create nodes with random number of variables and on and on. Eventually, we will make many decision trees from random number of variables. These different decision trees are called a forest.</p>
@@ -268,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Random Forests Classification (Source: <a href="https://doi.org/10.1080/01431161.2018.1479794">Feng et al, 2018</a>)</p>
 <h4 class="anchored">
 <ol start="2" type="1">
-<li>How a decision is generated in RF?
+<li><p>How a decision is generated in RF?</p>
 </li></ol></h4>
 
 <p>We test this forest with the samples that were not used to create the decision trees. These samples are called “<em>Out of Bag (OOB)</em>” (30%). The <strong>majority of decisions</strong> made on the OOB are chosen, and the proportion fo OOB incorrectly classified are called OOB error. For example, when we want to classify a pixel, if the majority of decision trees says it is an urban area, the pixel is categorised as an urban area. One thing to note is that OOB is different from test data as test data are never included in building decision trees.</p>
@@ -281,7 +281,7 @@ ul.task-list li input[type="checkbox"] {
 </h3>
 <h4 class="anchored">
 <ol type="1">
-<li>General Information about SVM
+<li><p>General Information about SVM</p>
 </li></ol></h4>
 
 <p><strong>SVM</strong> is a maximum margin classifier. SVM looks for a place where it can separate datasets most effectively. The benefit of SVM is that it uses structural risk minimisation which minimises errors on unseen data.</p>
@@ -308,7 +308,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Hard and Soft margin (Source: <a href="https://www.vebuso.com/2020/02/a-top-machine-learning-algorithm-explained-support-vector-machines-svms/">Velocity Business Solutions</a></p>
 <h4 class="anchored">
 <ol start="2" type="1">
-<li>How to wiggle SVM?
+<li><p>How to wiggle SVM?</p>
 </li></ol></h4>
 
 <p>There are 3 hyper-parameters that we can control to wiggle SVM.</p>
@@ -342,7 +342,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The best values for C and gamma can be searched through using grid search, which tests every possible values for the hyper-parameters</p>
 <h4 class="anchored">
 <ol start="3" type="1">
-<li>What is the example of the application of SVM?
+<li><p>What is the example of the application of SVM?</p>
 </li></ol></h4>
 
 <p>Let’s say ‘pixel 1’ has values for band 1, band 2, band 3, and so on. For reference, a pixel which has a number of band values is called <strong>Pattern vector</strong>. If there are forests, they will have many pattern vectors. If we put these into a feature space, these pattern vectors will be very close and on top of each other. This is the moment where SVM can come into play and separate them by allowing some misclassification.</p>
