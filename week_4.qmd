@@ -76,7 +76,7 @@ Remote sensing is an effective measure to map and monitor PM concentrations [@zh
 knitr::include_graphics('img/pmmapping.jpg')
 ```
 
-Average PM2.5 concentration between 2001 and 2006 mapped by remote sensing (Source: Zhang et al.)
+Average PM2.5 concentration between 2001 and 2006 mapped by remote sensing (Source: @zhang2021)
 
 In addition, @gupta2006 found that remote sensing can capture the movement of air pollutants over a large area as satellite measurements are available globally. Their findings allude to us that remote sensing could enable us to understand how much PM have been absorbed by urban forests by measuring the size of PM mass between areas. The policymakers could draw on these quantified data as a basis for future policies.
 
@@ -84,7 +84,7 @@ In addition, @gupta2006 found that remote sensing can capture the movement of ai
 knitr::include_graphics('img/pmlevels.jpg')
 ```
 
-Documentation of 1-year change of PM2.5 mass concentration in five study regions (Source: Gupta et al.)
+Documentation of 1-year change of PM2.5 mass concentration in five study regions (Source: @gupta2006)
 
 <h3>**Link to UN SDG Goals**</h3>
 
