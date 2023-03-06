@@ -64,7 +64,7 @@ The said urban forest types can be grouped into 3 types of urban forests in term
 knitr::include_graphics('img/type.png')
 ```
 
-3 Types of PM Mitigation Urban Forest Types (Source: Korea Forest Service)
+3 Types of PM Mitigation Urban Forest Types (Adjusted from Korea Forest Service)
 
 <h2>Application</h2>
 
