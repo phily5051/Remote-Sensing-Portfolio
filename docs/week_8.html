@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Phil’s remote sensing learning diary - 4&nbsp; Week 4</title>
+<title>Phil’s remote sensing learning diary - 7&nbsp; Week 8</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 
@@ -49,8 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week_5.html" rel="next">
-<link href="./week_3.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./week_6.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -89,7 +70,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 8</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -134,7 +115,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week_4.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4</span></a>
+  <a href="./week_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -149,7 +130,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week_8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 8</span></a>
+  <a href="./week_8.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 8</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -169,7 +150,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 8</span></h1>
 </div>
 
 
@@ -184,140 +165,153 @@ div.csl-indent {
 </header>
 
 <h1>
-2030 Seoul Plan - Focus on Particulate Matter (PM) Policy
+8 Urban Heat Island
 </h1>
+<p>In this diary, I am going to give general information about Urban Heat Island (UHI) with some on-going UHI mitigation examples all around the world.</p>
+<p>Then, I will explain how UHI-related policies at a global-, metropolitan-, and local-level vary in terms of its goal and implementation scale, and ponder how we could bridge the gap that exists between these different levels of policies.</p>
 <h2 class="anchored">
-Summary
+8.1 Summary
 </h2>
-<p>In this diary, I am going to talk about the biggest city plan in South Korea and how a low-level city plan guideline is aligned with its upper-level plan. In particular, I will focus on the implementation of the plan regarding environment and whether there is any implementation that can be benefited from using remote sensing.</p>
 <h3 class="anchored">
-Brief Information about 2030 Seoul Plan
+What is Urban Heat Island?
 </h3>
-<p><a href="https://urban.seoul.go.kr/view/html/PMNU2020000000"><strong>2030 Seoul Plan</strong></a> is the highest level city plan in Seoul, South Korea. Provided that Seoul is a capital city in South Korea, its city plan is often considered as significant and determinant as a government-led plan, in terms of its impacts on citizens of Seoul and the country. The plan covers a number of sectors which include housing, transport and environment. The city plan presents Seoul’s future vision and outlines the city’s development plan for the next 10 years.</p>
-<p>With regards to environment, the plan specifies 3 Targets and 11 Strategies. The 3 targets are as follows:</p>
 <ul>
-<li>Target 1: Ecological city with numerous urban parks</li>
-<li>Target 2: Energy-efficient city</li>
-<li>Target 3: Disaster-free city</li>
+<li>Definition: UHI is a phenomenon where the temperature in an urban area is much warmer than its rural areas.</li>
 </ul>
-<p>Among the illustrated targets, Strategy 1-4 under Target 1 suggests a number of ways to deal with particulate matter, which is one of the biggest environmental issues in South Korea and highly related to citizen’s life. One of the mitigation actions to deal with the air pollutants identified by the Seoul government is creating urban forests on those areas which are specifically vulnerable to fine dust.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/seoulplan.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="img/uhi_diagram.jpg" class="img-fluid figure-img" style="width:60.0%"></p>
+<p></p><figcaption class="figure-caption">Difference in Temperature due to Urban Heat Island (Source: <a href="https://www.epa.gov/heatislands/learn-about-heat-islands">US EPA</a>, 2022)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>2030 Seoul Plan (Source: Seoul Metropolitan Government)</p>
-<h3 class="anchored">
-Urban Forest Guideline for PM Mitigation
-</h3>
-<p><a href="https://news.seoul.go.kr/env/square/tree_planting_project/guideline"><strong>Urban Forest Guideline for PM Mitigation</strong></a> is a low-level city plan which entails types of activities that will be executed in line with the 2030 Seoul Plan. The guideline specified a number of technical rules to follow regarding types of trees to plant, which areas are targeted for urban forests implementation, and suitable distance between each tree stand and so on.</p>
-<p>Furthermore, the guideline categorised six types of urban forests that could mitigate the concentration of PM. These are street trees, urban parks, forests around the city, vegetations in schools and river, and green spaces within proximity to residential areas.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/dist.png" class="img-fluid figure-img" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Distance between trees in residential areas (Source: Seoul Metropolitan Government)</p>
-<h4 class="anchored">
-3 Functional Urban Forest Types for PM Mitigation
-</h4>
-<p>The said urban forest types can be grouped into 3 types of urban forests in terms of their objective and functionality. These are PM blockage urban forests, PM mitigation urban forests and Wind corridor urban forests.</p>
 <ul>
-<li><p>PM blockage urban forests:</p>
+<li><p>Causes:</p>
 <ul>
-<li>dense urban forests with 1,800 trees per ha</li>
-<li>to block PM diffusion</li>
-</ul></li>
-<li><p>PM mitigation urban forests:</p>
-<ul>
-<li>between 800 and 1,000 trees per ha</li>
-<li>to enhance PM absorption by urban forests</li>
-</ul></li>
-<li><p>Wind corridor urban forests:</p>
-<ul>
-<li>500 trees per ha</li>
-<li>to introduce clean air to city centre</li>
-<li>to enable the outflow of congregated PM within the city due to vehicles and household heating.</li>
+<li><p>Urban materials which reflect less solar energy and absorb more sun’s heat - building roofs, pavements and parking lots (<a href="https://www.epa.gov/heatislands/learn-about-heat-islands">US EPA</a>, 2022)</p></li>
+<li><p>Lack of urban green spaces which do evapo-transpiration and solar blocking (<a href="https://www.epa.gov/heatislands/learn-about-heat-islands">US EPA</a>, 2022)</p></li>
+<li><p>Heat generating human activities, such as A/C, industrial activities and vehicles, etc) (<a href="https://www.epa.gov/heatislands/learn-about-heat-islands">US EPA</a>, 2022)</p></li>
+<li><p>Urban geometry which blocks wind corridor - tall buildings and narrow streets create urban canyons (<a href="https://www.epa.gov/heatislands/learn-about-heat-islands">US EPA</a>, 2022)</p></li>
 </ul></li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/type.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="img/uhi_cause.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p></p><figcaption class="figure-caption">Urban Heat Island Effects and Factors (Source: <a href="https://blogs.worldbank.org/sustainablecities/3-ways-beat-heat-european-cities">World Bank Blogs</a>, 2020)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>3 Types of PM Mitigation Urban Forest Types (Adjusted from Korea Forest Service)</p>
-<h2 class="anchored">
-Application
-</h2>
-<p>Remote sensing can come into play a key role in identifying what PM mitigation urban forest types are most suitable to a particular site within a city, and quantifying the amounts of PM absorbed by urban forests.</p>
-<p>Remote sensing is an effective measure to map and monitor PM concentrations <span class="citation" data-cites="zhang2021">(<a href="references.html#ref-zhang2021" role="doc-biblioref">Zhang et al. 2021</a>)</span>. This indicates that areas with routinely high PM concentrations can be detected by satellite images. Thus, government officials could take data-informed decisions and select the most suitable PM mitigation urban forest types for each particular area.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/pmmapping.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Average PM2.5 concentration between 2001 and 2006 mapped by remote sensing (Source: <span class="citation" data-cites="zhang2021">Zhang et al. (<a href="references.html#ref-zhang2021" role="doc-biblioref">2021</a>)</span>)</p>
-<p>In addition, <span class="citation" data-cites="gupta2006">Gupta et al. (<a href="references.html#ref-gupta2006" role="doc-biblioref">2006</a>)</span> found that remote sensing can capture the movement of air pollutants over a large area as satellite measurements are available globally. Their findings allude to us that remote sensing could enable us to understand how much PM have been absorbed by urban forests by measuring the size of PM mass between areas. The policymakers could draw on these quantified data as a basis for future policies.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/pmlevels.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Documentation of 1-year change of PM2.5 mass concentration in five study regions (Source: <span class="citation" data-cites="gupta2006">Gupta et al. (<a href="references.html#ref-gupta2006" role="doc-biblioref">2006</a>)</span>)</p>
-<h3 class="anchored">
-<strong>Link to UN SDG Goals</strong>
-</h3>
-<p>According to <a href="https://sdgs.un.org/goals">United Nations 2030 Sustainable Development Goals (SDGs)</a>, the use of remote sensing could contribute to achieving 2 SDGs goals.</p>
 <ul>
-<li><p>SDG 3. Good Health and Well-Being</p>
+<li><p>Impacts:</p>
 <ul>
-<li>PM causes various health problems, such as lung and heart diseases. The reduction in PM could improve citizen’s health and quality of life.</li>
+<li><p>Social impacts:</p>
+<ul>
+<li><p>Increased energy consumption, which cause a positive feedback loop</p></li>
+<li><p>Heat-related illness and increased mortality rate due to heat stroke</p></li>
 </ul></li>
-<li><p>SDG 11. Sustainable Cities and Communities</p>
+<li><p>Environmental impacts:</p>
 <ul>
-<li>Creating urban forests, as a measure to mitigate PM, could not only reduce aereal PM but also contribute to building a safe and resilient built environment from other natural hazards.</li>
+<li><p>Higher temperature during the daytime and reduced nighttime cooling effects</p></li>
+<li><p>Increased green house gas emissions</p></li>
+</ul></li>
+<li><p>Economic impacts:</p>
+<ul>
+<li><p>Increased price of electricity</p></li>
+<li><p>Rise in food price due to dry and hot weather</p></li>
+</ul></li>
 </ul></li>
 </ul>
 <h2 class="anchored">
-Reflection
+8.2 Application
 </h2>
-<p>This week’s contents were somewhat different from what we have learnt past few months. Understanding policy and how remote sensing could come into play its part in realising the policy’s objective was interesting. The contemplation upon how remote sensing can be applied at a particular context and a site broadened my understanding. Of course, I am aware that remote sensing is one of many solutions that could assist in achieving policy’s goals, and 1-size-fits-all approach is not sufficient to solve similar problems in different contexts. Thanks to this week’s lecture, however, I could say that I came to understand how we can apply our theoretical and technical knowledge about remote sensing to solve the real problems.</p>
+<p>In this section, I am going to introduce Seoul’s urban planning policy with respect to UHI, and see how UHI mitigation activities under the metropolitan policy is in line with global policy.</p>
+<p><strong>Seoul Plan</strong> is a <code>metropolitan-level urban planning policy</code> in Seoul, South Korea. The plan consists of 5 focal points, and one of which is environment. Under the environment part, there are 3 targets and 11 strategies. The strategy 1-2: Enhancement of Urban Climate Control Capacity specifies UHI. The strategy lists a number of UHI reduction activities which are as follows:</p>
+<ul>
+<li>Enabling <strong>wind corridor</strong> which brings fresh air from forests to city centre</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/windforest.jpg" class="img-fluid figure-img" style="width:60.0%"></p>
+<p></p><figcaption class="figure-caption">Wind corridor forest map. (Source: <a href="https://flexible.img.hani.co.kr/flexible/normal/970/689/imgdb/original/2020/1014/20201014502292.jpg?_ga=2.54985771.1264888021.1678839871-1975413597.1678839871">Seoul Metropolitan Government</a>)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><em>Note</em>. Arrows indicate the main wind flow route. Forests play a key role in directing wind flow to city centre.</p>
+<ul>
+<li>Implementation of mist spray and shade canopy in the parks and bus stops</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/mist_spray.jpg" class="img-fluid figure-img" style="width:60.0%"></p>
+<p></p><figcaption class="figure-caption">Mist spray and shade canopy (Source: <a href="https://www.joongang.co.kr/article/23534249">The JoongAng</a>, 2019)</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/shade.jpg" class="img-fluid figure-img" style="width:60.0%"></p>
+<p></p><figcaption class="figure-caption">Mist spray and shade canopy (Source: <a href="https://www.joongang.co.kr/article/23534249">The JoongAng</a>, 2019)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Configuration of <strong>urban waterfronts</strong> and <strong>urban parks</strong></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/cheonggyecheon.jpg" class="img-fluid figure-img" style="width:60.0%"></p>
+<p></p><figcaption class="figure-caption">Waterfront and urban parks in Seoul (Source: left image by <a href="https://mediahub.seoul.go.kr/archives/919167">Seoul Metropolitan Government</a> &amp; right image by <a href="https://m.kmib.co.kr/view.asp?arcid=0017350461">Kookmin Ilbo</a>)</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/park.jpg" class="img-fluid figure-img" style="width:60.0%"></p>
+<p></p><figcaption class="figure-caption">Waterfront and urban parks in Seoul (Source: left image by <a href="https://mediahub.seoul.go.kr/archives/919167">Seoul Metropolitan Government</a> &amp; right image by <a href="https://m.kmib.co.kr/view.asp?arcid=0017350461">Kookmin Ilbo</a>)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Seoul Plan’s UHI reduction activities are in accordance with <a href="https://sdgs.un.org/goals">UN SDG 11</a>. The activities listed contribute to building an environment risk resilient city. In particular, increasing open and green spaces within an urban setting is related to UN <code>SDG 11.7.1</code>: Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/sdg11.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p></p><figcaption class="figure-caption">UN SDG 11 - Global Policy (Source: <a href="https://sdgs.un.org/goals">United Nations</a>)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>However, some of the mitigation activities do not necessarily cope with main causes of UHI. There should also consideration for <code>road paving materials</code> which enable percolation of rainwater. In addition, <code>more specific and granular-scale guidelines</code> for implementing UHI-mitigation urban parks are needed to better locate the urban parks within the city. This is where remote sensing data could come into play in deciding the optimal location of urban green spaces. Sentinel 3 can be used to detect highly unusual temperature in cities.</p>
+<h2 class="anchored">
+8.3 Reflection
+</h2>
+<p>This week’s lecture was an extended lecture of the week 4, where we learnt about policies. A few weeks ago, I did not really understand the reason why there exist varying levels of policies. As each country faces country-specific challenges and their contexts are quite different. Therefore, I had somewhat suspicion about following global policies.</p>
+<p>Having UHI as an example enabled me to grasp the importance of creating a cohesive link between different levels of policies. It is true that global policies are ambiguous and provide unclear guidance, and each country has different context. Yet, we need to have an agreed, standardised approach as it helps us assess and monitor the actions we take, and allows for comparing outputs.</p>
 <h2 class="anchored">
 References
 </h2>
-<p>Korea Forest Service. (n.d.) <a href="https://english.forest.go.kr/kfsweb/kfs/subIdx/Index.do?mn=UENG" class="uri">https://english.forest.go.kr/kfsweb/kfs/subIdx/Index.do?mn=UENG</a> (Accessed: 02.02.2022)</p>
-<p>Seoul Metropolitan Government. (n.d.) <a href="https://www.seoul.go.kr/main/index.jsp" class="uri">https://www.seoul.go.kr/main/index.jsp</a> (Accessed: 02.02.2022)</p>
-<p>United Nations. (n.d.) <a href="https://sdgs.un.org/goals" class="uri">https://sdgs.un.org/goals</a> (Accessed: 02.02.2022)</p>
+<p>United States Environmental Protection Agency (US EPA). (2022) <a href="https://www.epa.gov/heatislands/learn-about-heat-islands" class="uri">https://www.epa.gov/heatislands/learn-about-heat-islands</a> (Accessed: 14.03.2023)</p>
+<p>World Bank Blogs (2020) <a href="https://blogs.worldbank.org/sustainablecities/3-ways-beat-heat-european-cities" class="uri">https://blogs.worldbank.org/sustainablecities/3-ways-beat-heat-european-cities</a> (Accessed: 14.03.2023)</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-gupta2006" class="csl-entry" role="doc-biblioentry">
-Gupta, Pawan, Sundar A. Christopher, Jun Wang, Robert Gehrig, Yc Lee, and Naresh Kumar. 2006. <span>“Satellite Remote Sensing of Particulate Matter and Air Quality Assessment over Global Cities.”</span> <em>Atmospheric Environment</em> 40 (30): 5880–92. https://doi.org/<a href="https://doi.org/10.1016/j.atmosenv.2006.03.016">https://doi.org/10.1016/j.atmosenv.2006.03.016</a>.
-</div>
-<div id="ref-zhang2021" class="csl-entry" role="doc-biblioentry">
-Zhang, Ying, Zhengqiang Li, Kaixu Bai, Yuanyuan Wei, Yisong Xie, Yuanxun Zhang, Yang Ou, et al. 2021. <span>“Satellite Remote Sensing of Atmospheric Particulate Matter Mass Concentration: Advances, Challenges, and Perspectives.”</span> <em>Fundamental Research</em> 1 (3): 240–58. https://doi.org/<a href="https://doi.org/10.1016/j.fmre.2021.04.007">https://doi.org/10.1016/j.fmre.2021.04.007</a>.
-</div>
-</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -420,13 +414,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week_3.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3</span></span>
+      <a href="./week_6.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week_5.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

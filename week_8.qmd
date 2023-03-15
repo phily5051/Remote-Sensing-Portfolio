@@ -1,0 +1,102 @@
+---
+title: "Week 8"
+bibliography: references.bib
+editor: visual
+---
+
+<h1>8 Urban Heat Island</h1>
+
+In this diary, I am going to give general information about Urban Heat Island (UHI) with some on-going UHI mitigation examples all around the world.
+
+Then, I will explain how UHI-related policies at a global-, metropolitan-, and local-level vary in terms of its goal and implementation scale, and ponder how we could bridge the gap that exists between these different levels of policies.
+
+<h2>8.1 Summary</h2>
+
+<h3>What is Urban Heat Island?</h3>
+
+-   Definition: UHI is a phenomenon where the temperature in an urban area is much warmer than its rural areas.
+
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap="Difference in Temperature due to Urban Heat Island (Source: [US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)"}
+knitr::include_graphics('img/uhi_diagram.jpg')
+```
+
+-   Causes:
+
+    -   Urban materials which reflect less solar energy and absorb more sun's heat - building roofs, pavements and parking lots ([US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)
+
+    -   Lack of urban green spaces which do evapo-transpiration and solar blocking ([US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)
+
+    -   Heat generating human activities, such as A/C, industrial activities and vehicles, etc) ([US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)
+
+    -   Urban geometry which blocks wind corridor - tall buildings and narrow streets create urban canyons ([US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)
+
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap="Urban Heat Island Effects and Factors (Source: [World Bank Blogs](https://blogs.worldbank.org/sustainablecities/3-ways-beat-heat-european-cities), 2020)"}
+knitr::include_graphics('img/uhi_cause.png')
+```
+
+-   Impacts:
+
+    -   Social impacts:
+
+        -   Increased energy consumption, which cause a positive feedback loop
+
+        -   Heat-related illness and increased mortality rate due to heat stroke
+
+    -   Environmental impacts:
+
+        -   Higher temperature during the daytime and reduced nighttime cooling effects
+
+        -   Increased green house gas emissions
+
+    -   Economic impacts:
+
+        -   Increased price of electricity
+
+        -   Rise in food price due to dry and hot weather
+
+<h2>8.2 Application</h2>
+
+In this section, I am going to introduce Seoul's urban planning policy with respect to UHI, and see how UHI mitigation activities under the metropolitan policy is in line with global policy.
+
+**Seoul Plan** is a `metropolitan-level urban planning policy` in Seoul, South Korea. The plan consists of 5 focal points, and one of which is environment. Under the environment part, there are 3 targets and 11 strategies. The strategy 1-2: Enhancement of Urban Climate Control Capacity specifies UHI. The strategy lists a number of UHI reduction activities which are as follows:
+
+-  Enabling **wind corridor** which brings fresh air from forests to city centre
+
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap="Wind corridor forest map. (Source: [Seoul Metropolitan Government](https://flexible.img.hani.co.kr/flexible/normal/970/689/imgdb/original/2020/1014/20201014502292.jpg?_ga=2.54985771.1264888021.1678839871-1975413597.1678839871))"}
+knitr::include_graphics('img/windforest.jpg')
+```
+
+*Note*. Arrows indicate the main wind flow route. Forests play a key role in directing wind flow to city centre.
+
+-   Implementation of mist spray and shade canopy in the parks and bus stops
+
+
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.show='hold', fig.cap= "Mist spray and shade canopy (Source: [The JoongAng](https://www.joongang.co.kr/article/23534249), 2019)"}
+knitr::include_graphics(c("img/mist_spray.jpg", "img/shade.jpg"))
+```
+
+-   Configuration of **urban waterfronts** and **urban parks**
+
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.show='hold', fig.cap= 'Waterfront and urban parks in Seoul (Source: left image by [Seoul Metropolitan Government](https://mediahub.seoul.go.kr/archives/919167) & right image by [Kookmin Ilbo](https://m.kmib.co.kr/view.asp?arcid=0017350461))'}
+knitr::include_graphics(c("img/cheonggyecheon.jpg", "img/park.jpg"))
+```
+
+Seoul Plan's UHI reduction activities are in accordance with [UN SDG 11](https://sdgs.un.org/goals). The activities listed contribute to building an environment risk resilient city. In particular, increasing open and green spaces within an urban setting is related to UN `SDG 11.7.1`: Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities.  
+
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap= "UN SDG 11 - Global Policy (Source: [United Nations](https://sdgs.un.org/goals))"}
+knitr::include_graphics('img/sdg11.png')
+```
+
+However, some of the mitigation activities do not necessarily cope with main causes of UHI. There should also consideration for `road paving materials` which enable percolation of rainwater. In addition, `more specific and granular-scale guidelines` for implementing UHI-mitigation urban parks are needed to better locate the urban parks within the city. This is where remote sensing data could come into play in deciding the optimal location of urban green spaces. Sentinel 3 can be used to detect highly unusual temperature in cities.
+
+<h2>8.3 Reflection</h2>
+
+This week's lecture was an extended lecture of the week 4, where we learnt about policies. A few weeks ago, I did not really understand the reason why there exist varying levels of policies. As each country faces country-specific challenges and their contexts are quite different. Therefore, I had somewhat suspicion about following global policies. 
+
+Having UHI as an example enabled me to grasp the importance of creating a cohesive link between different levels of policies. It is true that global policies are ambiguous and provide unclear guidance, and each country has different context. Yet, we need to have an agreed, standardised approach as it helps us assess and monitor the actions we take, and allows for comparing outputs.
+
+<h2>References</h2>
+
+United States Environmental Protection Agency (US EPA). (2022) <https://www.epa.gov/heatislands/learn-about-heat-islands> (Accessed: 14.03.2023)
+
+World Bank Blogs (2020) <https://blogs.worldbank.org/sustainablecities/3-ways-beat-heat-european-cities> (Accessed: 14.03.2023)

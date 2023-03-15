@@ -4,7 +4,7 @@ bibliography: references.bib
 editor: visual
 ---
 
-<h1>6 Classification methods 1</h1>
+<h1>6 Classification methods</h1>
 
 <h2>6.1 Summary</h2>
 
