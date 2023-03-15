@@ -18,7 +18,7 @@ Then, I will explain how UHI-related policies at a global-, metropolitan-, and l
 
 UHI is a phenomenon where the temperature in an urban area is much warmer than its rural areas.
 
-```{r echo=FALSE, out.width="49%", out.height="40%", fig.align='center', fig.cap="Difference in Temperature due to Urban Heat Island (Source: [US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)"}
+```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.cap="Difference in Temperature due to Urban Heat Island (Source: [US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)"}
 knitr::include_graphics('img/uhi_diagram.jpg')
 ```
 
@@ -32,25 +32,25 @@ knitr::include_graphics('img/uhi_diagram.jpg')
 
 -   Urban geometry which blocks wind corridor - tall buildings and narrow streets create urban canyons ([US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)
 
-```{r echo=FALSE, out.width="49%", out.height="40%", fig.align='center', fig.cap="Urban Heat Island Effects and Factors (Source: [World Bank Blogs](https://blogs.worldbank.org/sustainablecities/3-ways-beat-heat-european-cities), 2020)"}
+```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.cap="Urban Heat Island Effects and Factors (Source: [World Bank Blogs](https://blogs.worldbank.org/sustainablecities/3-ways-beat-heat-european-cities), 2020)"}
 knitr::include_graphics('img/uhi_cause.png')
 ```
 
 <h4>Impacts</h4>
 
-1.  Social impacts:
+1.  **Social impacts**:
 
 -   Increased energy consumption, which cause a positive feedback loop
 
 -   Heat-related illness and increased mortality rate due to heat stroke
 
-2.  Environmental impacts:
+2.  **Environmental impacts**:
 
 -   Higher temperature during the daytime and reduced nighttime cooling effects
 
 -   Increased green house gas emissions
 
-3.  Economic impacts:
+3.  **Economic impacts**:
 
 -   Increased price of electricity
 
@@ -64,7 +64,7 @@ In this section, I am going to introduce Seoul's urban planning policy with resp
 
 -   Enabling **wind corridor** which brings fresh air from forests to city centre
 
-```{r echo=FALSE, out.width="49%", out.height="40%", fig.align='center', fig.cap="Wind corridor forest map. (Source: [Seoul Metropolitan Government](https://flexible.img.hani.co.kr/flexible/normal/970/689/imgdb/original/2020/1014/20201014502292.jpg?_ga=2.54985771.1264888021.1678839871-1975413597.1678839871))"}
+```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.cap="Wind corridor forest map. (Source: [Seoul Metropolitan Government](https://flexible.img.hani.co.kr/flexible/normal/970/689/imgdb/original/2020/1014/20201014502292.jpg?_ga=2.54985771.1264888021.1678839871-1975413597.1678839871))"}
 knitr::include_graphics('img/windforest.jpg')
 ```
 
@@ -72,19 +72,20 @@ knitr::include_graphics('img/windforest.jpg')
 
 -   Implementation of mist spray and shade canopy in the parks and bus stops
 
-```{r echo=FALSE, out.width="49%", out.height="40%", fig.align='center', fig.show='hold', fig.cap= "Mist spray and shade canopy (Source: [The JoongAng](https://www.joongang.co.kr/article/23534249), 2019)"}
+```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.show='hold', fig.cap= "Mist spray and shade canopy (Source: [The JoongAng](https://www.joongang.co.kr/article/23534249), 2019)"}
+
 knitr::include_graphics(c("img/mist_spray.jpg", "img/shade.jpg"))
 ```
 
 -   Configuration of **urban waterfronts** and **urban parks**
 
-```{r echo=FALSE, out.width="49%", out.height="40%", fig.align='center', fig.show='hold', fig.cap= 'Waterfront and urban parks in Seoul (Source: left image by [Seoul Metropolitan Government](https://mediahub.seoul.go.kr/archives/919167) & right image by [Kookmin Ilbo](https://m.kmib.co.kr/view.asp?arcid=0017350461))'}
+```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.show='hold', fig.cap= 'Waterfront and urban parks in Seoul (Source: left image by [Seoul Metropolitan Government](https://mediahub.seoul.go.kr/archives/919167) & right image by [Kookmin Ilbo](https://m.kmib.co.kr/view.asp?arcid=0017350461))'}
 knitr::include_graphics(c("img/cheonggyecheon.jpg", "img/park.jpg"))
 ```
 
 Seoul Plan's UHI reduction activities are in accordance with [UN SDG 11](https://sdgs.un.org/goals). The activities listed contribute to building an environment risk resilient city. In particular, increasing open and green spaces within an urban setting is related to UN `SDG 11.7.1`: Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities.
 
-```{r echo=FALSE, out.width="49%", out.height="40%", fig.align='center', fig.cap= "UN SDG 11 - Global Policy (Source: [United Nations](https://sdgs.un.org/goals))"}
+```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.cap= "UN SDG 11 - Global Policy (Source: [United Nations](https://sdgs.un.org/goals))"}
 knitr::include_graphics('img/sdg11.png')
 ```
 
