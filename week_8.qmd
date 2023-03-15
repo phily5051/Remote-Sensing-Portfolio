@@ -14,45 +14,47 @@ Then, I will explain how UHI-related policies at a global-, metropolitan-, and l
 
 <h3>What is Urban Heat Island?</h3>
 
--   Definition: UHI is a phenomenon where the temperature in an urban area is much warmer than its rural areas.
+<h4>Definition</h4>
 
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap="Difference in Temperature due to Urban Heat Island (Source: [US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)"}
+UHI is a phenomenon where the temperature in an urban area is much warmer than its rural areas.
+
+```{r echo=FALSE, out.width="49%", out.height="40%", fig.align='center', fig.cap="Difference in Temperature due to Urban Heat Island (Source: [US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)"}
 knitr::include_graphics('img/uhi_diagram.jpg')
 ```
 
--   Causes:
+<h4>Causes</h4>
 
-    -   Urban materials which reflect less solar energy and absorb more sun's heat - building roofs, pavements and parking lots ([US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)
+-   Urban materials which reflect less solar energy and absorb more sun's heat - building roofs, pavements and parking lots ([US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)
 
-    -   Lack of urban green spaces which do evapo-transpiration and solar blocking ([US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)
+-   Lack of urban green spaces which do evapo-transpiration and solar blocking ([US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)
 
-    -   Heat generating human activities, such as A/C, industrial activities and vehicles, etc) ([US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)
+-   Heat generating human activities, such as A/C, industrial activities and vehicles, etc) ([US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)
 
-    -   Urban geometry which blocks wind corridor - tall buildings and narrow streets create urban canyons ([US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)
+-   Urban geometry which blocks wind corridor - tall buildings and narrow streets create urban canyons ([US EPA](https://www.epa.gov/heatislands/learn-about-heat-islands), 2022)
 
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap="Urban Heat Island Effects and Factors (Source: [World Bank Blogs](https://blogs.worldbank.org/sustainablecities/3-ways-beat-heat-european-cities), 2020)"}
+```{r echo=FALSE, out.width="49%", out.height="40%", fig.align='center', fig.cap="Urban Heat Island Effects and Factors (Source: [World Bank Blogs](https://blogs.worldbank.org/sustainablecities/3-ways-beat-heat-european-cities), 2020)"}
 knitr::include_graphics('img/uhi_cause.png')
 ```
 
--   Impacts:
+<h4>Impacts</h4>
 
-    -   Social impacts:
+1.  Social impacts:
 
-        -   Increased energy consumption, which cause a positive feedback loop
+-   Increased energy consumption, which cause a positive feedback loop
 
-        -   Heat-related illness and increased mortality rate due to heat stroke
+-   Heat-related illness and increased mortality rate due to heat stroke
 
-    -   Environmental impacts:
+2.  Environmental impacts:
 
-        -   Higher temperature during the daytime and reduced nighttime cooling effects
+-   Higher temperature during the daytime and reduced nighttime cooling effects
 
-        -   Increased green house gas emissions
+-   Increased green house gas emissions
 
-    -   Economic impacts:
+3.  Economic impacts:
 
-        -   Increased price of electricity
+-   Increased price of electricity
 
-        -   Rise in food price due to dry and hot weather
+-   Rise in food price due to dry and hot weather
 
 <h2>8.2 Application</h2>
 
@@ -60,9 +62,9 @@ In this section, I am going to introduce Seoul's urban planning policy with resp
 
 **Seoul Plan** is a `metropolitan-level urban planning policy` in Seoul, South Korea. The plan consists of 5 focal points, and one of which is environment. Under the environment part, there are 3 targets and 11 strategies. The strategy 1-2: Enhancement of Urban Climate Control Capacity specifies UHI. The strategy lists a number of UHI reduction activities which are as follows:
 
--  Enabling **wind corridor** which brings fresh air from forests to city centre
+-   Enabling **wind corridor** which brings fresh air from forests to city centre
 
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap="Wind corridor forest map. (Source: [Seoul Metropolitan Government](https://flexible.img.hani.co.kr/flexible/normal/970/689/imgdb/original/2020/1014/20201014502292.jpg?_ga=2.54985771.1264888021.1678839871-1975413597.1678839871))"}
+```{r echo=FALSE, out.width="49%", out.height="40%", fig.align='center', fig.cap="Wind corridor forest map. (Source: [Seoul Metropolitan Government](https://flexible.img.hani.co.kr/flexible/normal/970/689/imgdb/original/2020/1014/20201014502292.jpg?_ga=2.54985771.1264888021.1678839871-1975413597.1678839871))"}
 knitr::include_graphics('img/windforest.jpg')
 ```
 
@@ -70,20 +72,19 @@ knitr::include_graphics('img/windforest.jpg')
 
 -   Implementation of mist spray and shade canopy in the parks and bus stops
 
-
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.show='hold', fig.cap= "Mist spray and shade canopy (Source: [The JoongAng](https://www.joongang.co.kr/article/23534249), 2019)"}
+```{r echo=FALSE, out.width="49%", out.height="40%", fig.align='center', fig.show='hold', fig.cap= "Mist spray and shade canopy (Source: [The JoongAng](https://www.joongang.co.kr/article/23534249), 2019)"}
 knitr::include_graphics(c("img/mist_spray.jpg", "img/shade.jpg"))
 ```
 
 -   Configuration of **urban waterfronts** and **urban parks**
 
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.show='hold', fig.cap= 'Waterfront and urban parks in Seoul (Source: left image by [Seoul Metropolitan Government](https://mediahub.seoul.go.kr/archives/919167) & right image by [Kookmin Ilbo](https://m.kmib.co.kr/view.asp?arcid=0017350461))'}
+```{r echo=FALSE, out.width="49%", out.height="40%", fig.align='center', fig.show='hold', fig.cap= 'Waterfront and urban parks in Seoul (Source: left image by [Seoul Metropolitan Government](https://mediahub.seoul.go.kr/archives/919167) & right image by [Kookmin Ilbo](https://m.kmib.co.kr/view.asp?arcid=0017350461))'}
 knitr::include_graphics(c("img/cheonggyecheon.jpg", "img/park.jpg"))
 ```
 
-Seoul Plan's UHI reduction activities are in accordance with [UN SDG 11](https://sdgs.un.org/goals). The activities listed contribute to building an environment risk resilient city. In particular, increasing open and green spaces within an urban setting is related to UN `SDG 11.7.1`: Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities.  
+Seoul Plan's UHI reduction activities are in accordance with [UN SDG 11](https://sdgs.un.org/goals). The activities listed contribute to building an environment risk resilient city. In particular, increasing open and green spaces within an urban setting is related to UN `SDG 11.7.1`: Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities.
 
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap= "UN SDG 11 - Global Policy (Source: [United Nations](https://sdgs.un.org/goals))"}
+```{r echo=FALSE, out.width="49%", out.height="40%", fig.align='center', fig.cap= "UN SDG 11 - Global Policy (Source: [United Nations](https://sdgs.un.org/goals))"}
 knitr::include_graphics('img/sdg11.png')
 ```
 
@@ -91,7 +92,7 @@ However, some of the mitigation activities do not necessarily cope with main cau
 
 <h2>8.3 Reflection</h2>
 
-This week's lecture was an extended lecture of the week 4, where we learnt about policies. A few weeks ago, I did not really understand the reason why there exist varying levels of policies. As each country faces country-specific challenges and their contexts are quite different. Therefore, I had somewhat suspicion about following global policies. 
+This week's lecture was an extended lecture of the week 4, where we learnt about policies. A few weeks ago, I did not really understand the reason why there exist varying levels of policies. As each country faces country-specific challenges and their contexts are quite different. Therefore, I had somewhat suspicion about following global policies.
 
 Having UHI as an example enabled me to grasp the importance of creating a cohesive link between different levels of policies. It is true that global policies are ambiguous and provide unclear guidance, and each country has different context. Yet, we need to have an agreed, standardised approach as it helps us assess and monitor the actions we take, and allows for comparing outputs.
 
