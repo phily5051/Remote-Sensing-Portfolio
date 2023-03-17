@@ -4,7 +4,7 @@ bibliography: references.bib
 editor: visual
 ---
 
-<h1>6 Classification methods</h1>
+<h1>6 Classification Methods 1</h1>
 
 <h2>6.1 Summary</h2>
 
@@ -18,7 +18,7 @@ Supervised ML follows the following process:
     - Pixel assignment
     - Accuracy assessment
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/supervised_process.png')
 ```
 
@@ -34,7 +34,7 @@ Supervised Classification Process in Remote Sensing (Source: [GISgeography](http
 
 **CART** is a binary split and it consists of *classification trees* and *regression trees*. My interpretation of CART is that when we put our data on a 2D graph, we can see that data points cannot be solely captured by a single straight line.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/cart_reg_decision.png')
 ```
 
@@ -42,7 +42,7 @@ CART Algorithm (Source: [DataDrivenInvestor](https://medium.datadriveninvestor.c
 
 Thus, we subset our data into smaller groups and calculate the average for each data chunk. Each chunk is composed of some nodes. We add up nodes in the chunk one by one and check to what extent adding nodes gives the **lowest sum of squared residuals (SSR)**. To a certain point, adding nodes to the chunk would return a lower SSR, however, at some point we will notice that adding an extra node would give us a higher SSR. In this manner, We check SSR for different threshold till we get the lowest SSR. When we identify the lowest SSR, the average of the nodes in that chunk becomes a threshold. This threshold is where a decision tree divides. This indicates if we subset our data in many times, we can get a precise and accurate model. However, this poses a problem of over-fitting.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/cart_ssr.png')
 ```
 
@@ -58,7 +58,7 @@ There are two methods to prevent over-fitting in CART.
 
 -   Setting Maximum Tree Depth: can limit how much trees can grow. 20 is default.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/cart_max_depth.png')
 ```
 
@@ -70,7 +70,7 @@ $Tree-score$ = $SSR$ + $\alpha$ \* $T(Number-of-leaves)$
 
 Once we have those values for $\alpha$, we divide our data into training and test data. We take training data with all the values for $\alpha$ and calculate the SSR. Then, we look for which $\alpha$ value returns the lowest SSR. We repeat this process several times and look for the average value until we get the lowest SSR.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/cart_pruning.png')
 ```
 
@@ -86,7 +86,7 @@ CART with Pruning (Source: [Towards Data Science](https://towardsdatascience.com
 
 **RF** simply means that many are better than one. We do "*bootstrap*" samples (*bagging* - only 70% of data is used), and create nodes with random number of variables and on and on. Eventually, we will make many decision trees from random number of variables. These different decision trees are called a forest.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/rf_flowchart.jpg')
 ```
 
@@ -114,7 +114,7 @@ We test this forest with the samples that were not used to create the decision t
 
 **SVM** is a maximum margin classifier. SVM looks for a place where it can separate datasets most effectively. The benefit of SVM is that it uses structural risk minimisation which minimises errors on unseen data.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/svm.png')
 ```
 
@@ -122,7 +122,7 @@ Illustration of Support Vector Machine (Source: [skilltohire](https://medium.com
 
 The distance from the diving line to the closest points is called the maximum margin. However, sometimes points from some datasets are very close to points of other datasets, which could lead to misclassification. This issue can be dealt with *soft margin* that allows some wrongly classified points to get the overall best results. However, as outliers are included within the margins, margins become bigger which could cause **underfitting** problem. Inversely, *hard margin* does not allow any misclassification. This does not allow outliers within the margins so it could cause **overfitting** issue.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/svm_margin.png')
 ```
 
@@ -140,7 +140,7 @@ There are 3 hyper-parameters that we can control to wiggle SVM.
 
 -   Kernel: transforms the data when the data cannot be linearly separated.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/svm_kernel.png')
 ```
 
@@ -148,7 +148,7 @@ Kernel trick which projects data to a higher dimensional space (Source: [Towards
 
 -   gamma: defines the decision boundary. The larger the 'gamma' is, the higher probability of overfitting is. The smaller the 'gamma' is, the more linear the decision boundary is, which might cause underfitting issues.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/svm_gamma.png')
 ```
 
@@ -174,7 +174,7 @@ Some land covers, such as wetland, are hard to classify due to unclear distincti
 
 @rs8110954 aimed to classify wetland land cover by **fusing** the `Pléiade-1B data` with `multi-date Landsat-8 data`. The former was performed based on an *object-oriented approach*, and the *geometric* and *spectral features* were extracted. From the latter, the *normalized difference vegetation index (NDVI)* data were calculated and this enabled to reflect phenological changes in vegetation. The feature datasets obtained from two sensors were optimised and used to build a `RF model`.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/wk6_application_abstract.png')
 ```
 
@@ -182,7 +182,7 @@ Flowchart of building a RF Model (Source: @rs8110954)
 
 The RF classifier obtained an overall accuracy of 93 % and the research team found out that the inclusion of the *geometric shapes* improved the *classification accuracy of the farming lands and water bodies by 5% - 10%*. In addition, often times there was a challenge in classifying wetland due to similar spectral features of vegetation covers. By making use of the *phenological difference* and the *textual information*, the team reduced the classification errors and improved the overall accuracy about 10%.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/wk6_result_contribution.png')
 ```
 
@@ -192,26 +192,25 @@ The classification result of the RF model was compared with other ML classificat
 
 <h3>6.2.3 Insight from the findings</h3>
 
-The classification results bring us back to a question we had in the lecture. 
+The classification results bring us back to a question we had in the lecture.
 
-*'Does the most advanced ML classification method always achieves the best results?'* 
+*'Does the most advanced ML classification method always achieves the best results?'*
 
-As shown in the results, the most advanced ML algorithms - SVM and ANN - did not achieve the best classification results. They were 10% behind the overall accuracy compared to the RF model's result. 
+As shown in the results, the most advanced ML algorithms - SVM and ANN - did not achieve the best classification results. They were 10% behind the overall accuracy compared to the RF model's result.
 
 The author stated that the way that RF model builds each decision tree was significant in achieving a higher accuracy. In the RF model, each decision tree is a **"specialist tree"** which considers the `feature domain` - the data from geometric and textual features.
 
-For instance, the lakes which are characterised as being large and in a circular shape with a smoother shoreline, which are rather easy to classify. However, marshes and ponds inherit heterogeneous features, and are in irregular shape, which pose difficulties in classifying them. 
+For instance, the lakes which are characterised as being large and in a circular shape with a smoother shoreline, which are rather easy to classify. However, marshes and ponds inherit heterogeneous features, and are in irregular shape, which pose difficulties in classifying them.
 
-Therefore, the **specialist trees** grown with considerations for these features in the RF model explain why the RF model achieved a higher accuracy.
-What we can learn from this research is that the location- and context-specific ML algorithm is required to achieve a better classification accuracy. The most advanced and state-of-the-art algorithms do not guarantee the best results.
+Therefore, the **specialist trees** grown with considerations for these features in the RF model explain why the RF model achieved a higher accuracy. What we can learn from this research is that the location- and context-specific ML algorithm is required to achieve a better classification accuracy. The most advanced and state-of-the-art algorithms do not guarantee the best results.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/wk6_research_area.png')
 ```
 
 Research Area (Source: @rs8110954)
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/wk6_application_results.png')
 ```
 

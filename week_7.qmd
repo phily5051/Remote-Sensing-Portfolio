@@ -1,0 +1,84 @@
+---
+title: "Week 7"
+bibliography: references.bib
+editor: visual
+---
+
+<h1>7 Classification Methods 2</h1>
+
+<h2>7.1 Summary</h2>
+
+In this section, I am going to give an overall idea of how Machine Learning (ML) classification algorithm works, explain the basic concept of sub pixel analysis, and understand how to assess the accuracy of the models we build.
+
+<h3>7.1.1 Remote Sensing ML Classification Methods In a Nutshell</h3>
+
+-   How to build a ML model in Remote Sensing?
+
+The image below illustrates the general idea of how ML models are built in remote sensing. The pixel values are extracted from **Region of Interest (ROI)**, and the data are stored in a tabular format. Each row contains the values of each pixel. The output value (land cover type) that we are trying to predict is called *'Label'*,and the input data is *'Feature'*. 70% of the values are used for training a model, the rest is withheld for testing the accuracy of the model.
+
+-   Any Considerations?:
+
+    -   For generalizability, better use `multi-year data`, rather than data from one single year
+    -   Understanding of **spatial autocorrelation**
+    -   `Hard` vs `Soft` classification
+
+*A bit of Thought.....*
+
+So far, the classification methods we covered are at a per pixel approach, which assumes that a pixel contains only one land type. However, in reality, this is hardly true as each pixel can consist of different types of land. If we are doing a research, don't we need to set `detailed criteria or reasons to say a certain pixel a specific land type` when building a model and share this with people?
+
+<h3>7.1.2 Spectral Mixture Analysis (SMA)</h3>
+
+-   Definition:
+
+    SMA is a sub-pixel analysis technique which `estimates the proportion of different land covers within a pixel` based on their `spectral signatures` [@manolakislockwoodcooley2016].
+
+```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.cap= "A pixel of 3 mixture components (Source: [Machado and Small, 2013](https://www.researchgate.net/figure/Perfect-decomposition-with-a-Linear-Spectral-Mixture-Model-LSMM-on-a-30-m-pixel-formed_fig6_259715697))"}
+knitr::include_graphics('img/sma.png')
+```
+
+-   Assumption:
+
+    The reflectance spectrum of a pixel is a **linear sum** of the reflectance spectra of `Endmembers` (different land cover types) present within that pixel [@articlea].
+
+    *Note*. `Endmembers` are spectrally pure pixels which have homogeneuos land cover, and there are typically only a few of them.
+
+```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.cap= "The V-I-S (Vegetation-Impervious surface-Soil) model of Ridd (1995) (Source: [Leśko, 2013](https://www.researchgate.net/publication/312194814_Comparison_of_Eastern_and_Western_Europe_spatial_development_of_cities_based_on_Remote_sensing_data))"}
+knitr::include_graphics('img/vis.jpg')
+```
+
+-   Any Considerations?:
+
+    -   number of Endmembers
+    -   pixel purity
+
+*A bit of Thought.....*
+
+Can we really tell that Endmembers are *representative* of each land cover type? In previous lecture on signature reflectance, there was disparities in signature reflectance even between the same land cover type. For example, different tree species had different signature reflectance.
+
+<h3>7.1.3 Accuracy Assessment</h3>
+
+-   Error matrix:
+
+    -   `Producer accuracy (Recall)`:
+
+        -   How often are a map maker's classification of real features on the ground is correct
+        -   $TP$ / $TP$ + $FN$
+
+    -   `User accuracy (Precision)`:
+
+        -   How often the class on the map will actually be present on the ground
+        -   $TP$ / $TP$ + $FP$
+
+    -   `Overall accuracy (OA)`:
+
+        -   How well a map accurately represents all the reference sites
+        -   $TP$ $+$ $TN$ / $TP + FP + FN + TN$
+
+-   F1:
+
+    -   combines both recall and precision
+    -   $F1 = 2 * Precision * Recall / Precision + Recall$
+
+<h2>7.2 Application</h2>
+
+<h2>7.3 Reflection</h2>
