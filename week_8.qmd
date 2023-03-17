@@ -72,26 +72,30 @@ knitr::include_graphics('img/windforest.jpg')
 
 -   Implementation of mist spray and shade canopy in the parks and bus stops
 
-```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.show='hold', fig.cap= "Mist spray and shade canopy (Source: [The JoongAng](https://www.joongang.co.kr/article/23534249), 2019)"}
+```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.show='hold', fig.cap= "Mist spray (Source: [The JoongAng](https://www.joongang.co.kr/article/23534249), 2019)"}
 
-library(cowplot)
-ggdraw() + 
-  draw_image('img/mist_spray.jpg', width = 0.5) + 
-  draw_image('img/shade.jpg', width = 0.5, x = 0.5)
+knitr::include_graphics('img/mist_spray.jpg') 
+```
+
+```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.show='hold', fig.cap= "Shade canopy (Source: [The JoongAng](https://www.joongang.co.kr/article/23534249), 2019)"}
+knitr::include_graphics('img/shade.jpg')
 ```
 
 -   Configuration of **urban waterfronts** and **urban parks**
 
-```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.show='hold', fig.cap= 'Waterfront and urban parks in Seoul (Source: left image by [Seoul Metropolitan Government](https://mediahub.seoul.go.kr/archives/919167) & right image by [Kookmin Ilbo](https://m.kmib.co.kr/view.asp?arcid=0017350461))'}
-
-ggdraw() + 
-  draw_image('img/cheonggyecheon.jpg', width = 0.5) + 
-  draw_image('img/park.jpg', width = 0.5, x = 0.5)
+```{r echo=FALSE, out.width= "60%", out.height="40%", fig.show='hold', fig.align= 'center', fig.cap= 'Waterfront in Seoul (Source: [Seoul Metropolitan Government](https://mediahub.seoul.go.kr/archives/919167)'}
+knitr::include_graphics('img/cheonggyecheon.jpg')
 ```
 
-Seoul Plan's UHI reduction activities are in accordance with [UN SDG 11](https://sdgs.un.org/goals). The activities listed contribute to building an environment risk resilient city. In particular, increasing open and green spaces within an urban setting is related to.. 
+```{r echo=FALSE, out.width= "60%", out.height="40%", fig.show='hold', fig.align= 'center', fig.cap= 'Urban parks in Seoul (Source: [Kookmin Ilbo](https://m.kmib.co.kr/view.asp?arcid=0017350461))'}
 
-     `SDG 11.7.1: Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities`.
+knitr::include_graphics('img/park.jpg')
+
+```
+
+Seoul Plan's UHI reduction activities are in accordance with [UN SDG 11](https://sdgs.un.org/goals). The activities listed contribute to building an environment risk resilient city. In particular, increasing open and green spaces within an urban setting is related to..
+
+*SDG 11.7.1: Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities.*
 
 ```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.cap= "UN SDG 11 - Global Policy (Source: [United Nations](https://sdgs.un.org/goals))"}
 knitr::include_graphics('img/sdg11.png')
@@ -103,7 +107,7 @@ However, some of the mitigation activities do not necessarily cope with main cau
 
 This week's lecture was an extended lecture of the week 4, where we learnt about policies. A few weeks ago, I did not really understand the reason why there exist varying levels of policies. As each country faces country-specific challenges and their contexts are quite different. Therefore, I had somewhat suspicion about following global policies.
 
-Having UHI as an example enabled me to grasp the importance of creating a cohesive link between different levels of policies. It is true that global policies are ambiguous and provide unclear guidance, and each country has different context. Yet, we need to have an agreed, standardised approach as it helps us assess and monitor the actions we take, and allows for comparing outputs. As long as the local-level policies are in accordance with a higher level policies, I do believe that some adjustments can be made to better cope with the local issues. 
+Having UHI as an example enabled me to grasp the importance of creating a cohesive link between different levels of policies. It is true that global policies are ambiguous and provide unclear guidance, and each country has different context. Yet, we need to have an agreed, standardised approach as it helps us assess and monitor the actions we take, and allows for comparing outputs. As long as the local-level policies are in accordance with a higher level policies, I do believe that some adjustments can be made to better cope with the local issues.
 
 <h2>References</h2>
 

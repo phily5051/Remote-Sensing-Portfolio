@@ -285,17 +285,69 @@ div.csl-indent {
 <h2 class="anchored">
 7.2 Application
 </h2>
+<p>All ML models need to be tested with withheld data to avoid over-fitting issues. When it comes to ML classification models in remote sensing, however, this is not enough!. There is another factor that we have to consider…</p>
+<p><strong>Spatial autocorrelation</strong>!!</p>
+<p><span class="citation" data-cites="tobler">Tobler (<a href="references.html#ref-tobler" role="doc-biblioref">1970</a>)</span> argued the first law of geography is that <u>near things are more closely related than distant things</u>. Even if we split our spatial data into training and test data, there will always be “possibilities of spatial autocorrelation”.</p>
+<h3 class="anchored">
+7.2.1 Brief Information about the research
+</h3>
+<p><span class="citation" data-cites="karasiak">Karasiak et al. (<a href="references.html#ref-karasiak" role="doc-biblioref">2021</a>)</span> built a random forest (RF) model to classify forest stands. The research team compared the OA of six cross-validation (CV) strategies with different sample sizes - pixel and object levels.</p>
+<h3 class="anchored">
+7.2.3 Main Findings of the research
+</h3>
+<ul>
+<li><p>Ignoring spatial autocorrelation resulted in a high accuracy in both sample levels</p></li>
+<li><p>Non-spatial LOO or <em>k</em> - fold CV at the object level can mitigate the effect of spatial autocorrelation, when the number of sample size is not too large (50 forest stands)</p>
+<ul>
+<li>If the number of sample increases (over 500 forest stands), the distance between forest stands reduces, leading to increased effect of spatial dependence between training and test datasets</li>
+</ul></li>
+<li><p>Spatial LOO CV is a better choice</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/rs_cv.jpg" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Average OA accuracy for each CV strategies (Source: <a href="https://www.researchgate.net/publication/351106376_Spatial_dependence_between_training_and_test_sets_another_pitfall_of_classification_accuracy_assessment_in_remote_sensing">Karasiak et al, 2021</a>)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/rs_learningcurve.jpg" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Learning curve for each CV strategies (Source: <a href="https://www.researchgate.net/publication/351106376_Spatial_dependence_between_training_and_test_sets_another_pitfall_of_classification_accuracy_assessment_in_remote_sensing">Karasiak et al, 2021</a>)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><em>A bit of Thought…..</em></p>
+<p>Before reading this paper, I thought that object-based analysis is a safe way to avoid spatial autocorrelation issue as it is based on distance.</p>
+<p>After reading the paper, however, I began to understand the object-based non-spatial CV is just an alternative of spatial CV when the sample size is not too large.</p>
+<p>If we are classifying land cover types other than forest stands, would this optimal sample number be different from the forest stands? What is the optimal number of sample sizes that we are safe to use non-spatial CV to assess remote sensing ML model?</p>
 <h2 class="anchored">
 7.3 Reflection
 </h2>
+<p>This week’s contents helped me understand the particular characteristics of remote sensing ML models. As ML models are grounded on spatial data, spatial autocorrelation is always inherent in the data we use.</p>
+<p>Building a ML model without understanding this distinctive feature would result in a misleading classification.</p>
+<p>Moreover, I was pleased to see what we learnt in the previous term (<strong>Moran’s I</strong>) comes into play in solving spatial autocorrelation in ML models. This reinforced my understanding of previous lessons as well as connected it to new concepts and methodologies.</p>
+<p>In closing this week’s diary, I would like to look into any other new ML models in remote sensing which are not covered in the lecture, and their usage in urban environments.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-karasiak" class="csl-entry" role="doc-biblioentry">
+Karasiak, Nicolas, Jean-François Dejoux, Claude Monteil, and David Sheeren. 2021. <span>“Spatial Dependence Between Training and Test Sets: Another Pitfall of Classification Accuracy Assessment in Remote Sensing.”</span> <em>Machine Learning</em>. <a href="https://doi.org/10.1007/s10994-021-05972-1">https://doi.org/10.1007/s10994-021-05972-1</a>.
+</div>
 <div id="ref-manolakislockwoodcooley2016" class="csl-entry" role="doc-biblioentry">
 Manolakis, Dimitris G., Ronald B. Lockwood, and Thomas W. Cooley. 2016. <span>“Spectral Mixture Analysis.”</span> In, 443493. Cambridge: Cambridge University Press. <a href="https://doi.org/10.1017/CBO9781316017876.010">https://doi.org/10.1017/CBO9781316017876.010</a>.
 </div>
 <div id="ref-articlea" class="csl-entry" role="doc-biblioentry">
 Roberts, Dar, M. Gardner, R. Church, Susan Ustin, George Scheer, and R. O. Green. 1998. <span>“Mapping Chaparral in the Santa Monica Mountains Using Multiple Endmember Spectral Mixture Models.”</span> <em>Remote Sensing of Environment</em> 65 (September). <a href="https://doi.org/10.1016/S0034-4257(98)00037-6">https://doi.org/10.1016/S0034-4257(98)00037-6</a>.
+</div>
+<div id="ref-tobler" class="csl-entry" role="doc-biblioentry">
+Tobler, W. R. 1970. <span>“A Computer Movie Simulating Urban Growth in the Detroit Region.”</span> <em>Economic Geography</em> 46: 234240. <a href="http://www.jstor.org/stable/143141">http://www.jstor.org/stable/143141</a>.
 </div>
 </div>
 
