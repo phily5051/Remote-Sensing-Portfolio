@@ -98,7 +98,7 @@ Seoul Plan's UHI reduction activities are in accordance with [UN SDG 11](https:/
 *SDG 11.7.1: Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities.*
 
 ```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.cap= "UN SDG 11 - Global Policy (Source: [United Nations](https://sdgs.un.org/goals))"}
-knitr::include_graphics('img/sdg11.png')
+knitr::include_graphics('img/sdg.png')
 ```
 
 However, some of the mitigation activities do not necessarily cope with main causes of UHI. There should also consideration for `road paving materials` which enable percolation of rainwater. In addition, `more specific and granular-scale guidelines` for implementing UHI-mitigation urban parks are needed to better locate the urban parks within the city. This is where remote sensing data could come into play in deciding the optimal location of urban green spaces. Sentinel 3 can be used to detect highly unusual temperature in cities.
