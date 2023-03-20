@@ -100,6 +100,7 @@ All ML models need to be tested with withheld data to avoid over-fitting issues.
     -   If the number of sample increases (over 500 forest stands), the distance between forest stands reduces, leading to increased effect of spatial dependence between training and test datasets
 
 -   Spatial LOO CV is a better choice
+
 ```{r echo=FALSE, out.width= "60%", out.height= "40%", fig.show='hold', fig.align= 'center', fig.cap= "Average OA accuracy for each CV strategies (Source: [Karasiak et al, 2021](https://www.researchgate.net/publication/351106376_Spatial_dependence_between_training_and_test_sets_another_pitfall_of_classification_accuracy_assessment_in_remote_sensing))"}
 knitr::include_graphics('img/rs_cv.jpg')
 ```
@@ -111,15 +112,15 @@ knitr::include_graphics('img/rs_learningcurve.jpg')
 
 *A bit of Thought.....*
 
-Before reading this paper, I thought that object-based analysis is a safe way to avoid spatial autocorrelation issue as it is based on distance. 
+Before reading this paper, I thought that object-based analysis is a safe way to avoid spatial autocorrelation issue as it is based on distance.
 
-After reading the paper, however, I began to understand the object-based non-spatial CV is just an alternative of spatial CV when the sample size is not too large. 
+After reading the paper, however, I began to understand the object-based non-spatial CV is just an alternative of spatial CV when the sample size is not too large.
 
 If we are classifying land cover types other than forest stands, would this optimal sample number be different from the forest stands? What is the optimal number of sample sizes that we are safe to use non-spatial CV to assess remote sensing ML model?
 
 <h2>7.3 Reflection</h2>
 
-This week's contents helped me understand the particular characteristics of remote sensing ML models. As ML models are grounded on spatial data, spatial autocorrelation is always inherent in the data we use. 
+This week's contents helped me understand the particular characteristics of remote sensing ML models. As ML models are grounded on spatial data, spatial autocorrelation is always inherent in the data we use.
 
 Building a ML model without understanding this distinctive feature would result in a misleading classification.
 

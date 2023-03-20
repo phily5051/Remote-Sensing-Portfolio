@@ -16,7 +16,7 @@ According to NASA, remote sensing refers to **information obtained at a distance
 
 TO cut it short, the answer is **Electromagnetic Radiation (EMR)**. This energy travels in different forms of waves through the atmosphere. While human eyes only detects visible light, the sensors can utilise the full range of the electromagnetic spectrum to collect data.
 
-```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center'}
+```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/light_spec.jpeg')
 ```
 
@@ -39,7 +39,7 @@ There are two types of remote sensors: active and passive sensors.
     -   used for measuring physical attributes, such as land/sea surface temperature and vegetation cover
     -   has limitations in observing areas in the presence of dense cloud cover
 
-```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center'}
+```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/sensor_type.png')
 ```
 
@@ -49,7 +49,7 @@ Passive and Active Sensors (Source: NASA)
 
 Yes, these radiations are often influenced by Earth's surface and atmospheric conditions, which might distort the original information.
 
-```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center'}
+```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/interaction.jpg')
 ```
 
@@ -65,7 +65,7 @@ EMR's interaction with surface and atmosphere (Source: Daneshgar, 2015)
     -   Every object has its own unique spectral signature, thus it can be used for identifying a specific object
     -   But spectral resolution is often affected by atmospheric particles which absorb parts of the spectrum
 
-```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center'}
+```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/Atmospheric-Electromagnetic-Opacity.png')
 ```
 
@@ -79,7 +79,7 @@ Atmospheric Electromagnetic Opacity (Source: GIS Geography)
 
 In the context of climate change, the ability to map tree types are important as they are closely linked to biodiversity. As mentioned earlier, each feature has different spectral signatures. @durgante2013 have discovered that spectral signature of tree species was better than DNA identification in distinguishing tree species. The researchers used 'Fourier-Transform Near-Infrared (FT-NIR)'. It obtained the best results of 99.4% of correct specimen identification when using 36 spectral readings per specimen. This somehow opens a new, cost- and time-efficient avenue in mapping forest resources. Their research is meaningful in a sense that it enables us to identify types of forests in which forests are not easily accessible by humans or should be intact from human interferences.
 
-```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center'}
+```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/tree_species.jpg')
 ```
 
@@ -87,7 +87,7 @@ Spectral signatures of each tree (Source: Durgante et al., 2013)
 
 The potential of spectral signature can also be found in the business sector. @yang2012 suggested that spectral signatures could be employed to blueberry yield estimation system. The research team confirmed six-class blueberry classification - 233, 551, 554, 691, 699, 1373 nm - yielded the best results. This showed the potential of the spectral signature in developing fast and low cost blueberry detector. Furthermore, this research expands the use of spectral signatures from academia to industry, and suggests that the use of spectral signature can be boundless.
 
-```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center'}
+```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('img/blueberry.jpg')
 ```
 

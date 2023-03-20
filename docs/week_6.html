@@ -80,7 +80,6 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -195,7 +194,7 @@ div.csl-indent {
 <h2 class="anchored">
 6.1 Summary
 </h2>
-<p>In this summary, I will go through several Machine Learning (ML) classification methods. The classification methods can be divided into two approach - unsupervised and supervised algorithms. However, this diary will mainly focus on the supervised algorithms.</p>
+<p>The classification methods can be divided into two approach - unsupervised and supervised algorithms. However, this diary will mainly focus on the <u>supervised algorithms</u>.</p>
 <p>Supervised ML follows the following process:</p>
 <pre><code>- Class definition
 - Pre-processing
@@ -207,173 +206,151 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/supervised_process.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Supervised Classification Process in Remote Sensing (Source: <a href="https://gisgeography.com/supervised-unsupervised-classification-arcgis/">GISgeography</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Supervised Classification Process in Remote Sensing (Source: <a href="https://gisgeography.com/supervised-unsupervised-classification-arcgis/">GISgeography</a>)</p>
 <h3 class="anchored">
-6.1.1 <strong>Classification and Regression Trees (CART)</strong>
+6.1.1 Random Forests (RF)
 </h3>
-<h4 class="anchored">
-<ol type="1">
-<li><p>General Information about CART</p>
-</li></ol></h4>
-
-<p><strong>CART</strong> is a binary split and it consists of <em>classification trees</em> and <em>regression trees</em>. My interpretation of CART is that when we put our data on a 2D graph, we can see that data points cannot be solely captured by a single straight line.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/cart_reg_decision.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>CART Algorithm (Source: <a href="https://medium.datadriveninvestor.com/how-do-regression-trees-work-94999c5105d">DataDrivenInvestor</a>)</p>
-<p>Thus, we subset our data into smaller groups and calculate the average for each data chunk. Each chunk is composed of some nodes. We add up nodes in the chunk one by one and check to what extent adding nodes gives the <strong>lowest sum of squared residuals (SSR)</strong>. To a certain point, adding nodes to the chunk would return a lower SSR, however, at some point we will notice that adding an extra node would give us a higher SSR. In this manner, We check SSR for different threshold till we get the lowest SSR. When we identify the lowest SSR, the average of the nodes in that chunk becomes a threshold. This threshold is where a decision tree divides. This indicates if we subset our data in many times, we can get a precise and accurate model. However, this poses a problem of over-fitting.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/cart_ssr.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>CART SSR Threshold (Source: <a href="https://medium.datadriveninvestor.com/how-do-regression-trees-work-94999c5105d">DataDrivenInvestor</a>)</p>
-<h4 class="anchored">
-<ol start="2" type="1">
-<li><p>How to prevent over-fitting in CART?</p>
-</li></ol></h4>
-
-<p>There are two methods to prevent over-fitting in CART.</p>
 <ul>
-<li>Setting Maximum Tree Depth: can limit how much trees can grow. 20 is default.</li>
+<li>General Information about RF</li>
 </ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/cart_max_depth.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>CART with Maximum Tree Depth (Source: <a href="https://towardsdatascience.com/3-techniques-to-avoid-overfitting-of-decision-trees-1e7d3d985a09">Towards Data Science</a>)</p>
-<ul>
-<li>Weakest link pruning: basically means that we use a full size regression tree and we see if removing a leaf (a chunk of nodes) gives a lower tree score. We start with 0 for the value of <span class="math inline">\(\alpha\)</span>, and increase it until we get a lower tree score. The equation for tree score is as below:</li>
-</ul>
-<p><span class="math inline">\(Tree-score\)</span> = <span class="math inline">\(SSR\)</span> + <span class="math inline">\(\alpha\)</span> * <span class="math inline">\(T(Number-of-leaves)\)</span></p>
-<p>Once we have those values for <span class="math inline">\(\alpha\)</span>, we divide our data into training and test data. We take training data with all the values for <span class="math inline">\(\alpha\)</span> and calculate the SSR. Then, we look for which <span class="math inline">\(\alpha\)</span> value returns the lowest SSR. We repeat this process several times and look for the average value until we get the lowest SSR.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/cart_pruning.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>CART with Pruning (Source: <a href="https://towardsdatascience.com/3-techniques-to-avoid-overfitting-of-decision-trees-1e7d3d985a09">Towards Data Science</a>)</p>
-<h3 class="anchored">
-6.1.2 <strong>Random Forests (RF)</strong>
-</h3>
-<h4 class="anchored">
-<ol type="1">
-<li><p>General Information about RF</p>
-</li></ol></h4>
-
-<p><strong>RF</strong> simply means that many are better than one. We do “<em>bootstrap</em>” samples (<em>bagging</em> - only 70% of data is used), and create nodes with random number of variables and on and on. Eventually, we will make many decision trees from random number of variables. These different decision trees are called a forest.</p>
+<p><strong>RF</strong> simply means that <u>many are better than one</u>. We do “<em>bootstrap</em>” samples (<em>bagging</em> - only 70% of data is used), and create nodes with random number of variables and on and on. Eventually, we will make many decision trees from random number of variables. These different decision trees are called a forest.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/rf_flowchart.jpg" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Random Forests Classification (Source: <a href="https://doi.org/10.1080/01431161.2018.1479794">Feng et al, 2018</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Random Forests Classification (Source: <a href="https://doi.org/10.1080/01431161.2018.1479794">Feng et al, 2018</a>)</p>
-<h4 class="anchored">
-<ol start="2" type="1">
-<li><p>How a decision is generated in RF?</p>
-</li></ol></h4>
-
-<p>We test this forest with the samples that were not used to create the decision trees. These samples are called “<em>Out of Bag (OOB)</em>” (30%). The <strong>majority of decisions</strong> made on the OOB are chosen, and the proportion fo OOB incorrectly classified are called OOB error. For example, when we want to classify a pixel, if the majority of decision trees says it is an urban area, the pixel is categorised as an urban area. One thing to note is that OOB is different from test data as test data are never included in building decision trees.</p>
+<ul>
+<li>How a decision is generated in RF?</li>
+</ul>
+<p>We test this forest with the samples that were not used to create the decision trees. These samples are called “<em>Out of Bag (OOB)</em>” (30%). The <strong>majority of decisions</strong> made on the OOB are chosen, and the proportion fo OOB incorrectly classified are called OOB error.</p>
+<p>For example, when we want to classify a pixel, if the majority of decision trees says it is an urban area, the pixel is categorised as an urban area. One thing to note is that OOB is different from test data as test data are never included in building decision trees.</p>
 <h3 class="anchored">
-6.1.3 <strong>Maximum likelihood</strong>
+6.1.2 Support Vector Machine (SVM)
 </h3>
-<p><strong>Maximum likelihood</strong> is a parametric classifier which expects data to be normally distributed. This classifier uses probability. This means that we can set a probability threshold for a land cover type prior to initialising the classifier. Those pixels whose values are below the set probability are not classified.</p>
-<h3 class="anchored">
-6.1.4 <strong>Support Vector Machine (SVM)</strong>
-</h3>
-<h4 class="anchored">
-<ol type="1">
-<li><p>General Information about SVM</p>
-</li></ol></h4>
-
-<p><strong>SVM</strong> is a maximum margin classifier. SVM looks for a place where it can separate datasets most effectively. The benefit of SVM is that it uses structural risk minimisation which minimises errors on unseen data.</p>
+<ul>
+<li>General Information about SVM</li>
+</ul>
+<p><strong>SVM</strong> is a maximum margin classifier. SVM looks for a place where it can separate datasets most effectively. The benefit of SVM is that it uses structural risk minimisation which <code>minimises errors on unseen data</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/svm.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p></p><figcaption class="figure-caption">Illustration of Support Vector Machine (Source: <a href="https://medium.com/@skilltohire/support-vector-machines-4d28a427ebd">skilltohire</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Illustration of Support Vector Machine (Source: <a href="https://medium.com/@skilltohire/support-vector-machines-4d28a427ebd">skilltohire</a>)</p>
-<p>The distance from the diving line to the closest points is called the maximum margin. However, sometimes points from some datasets are very close to points of other datasets, which could lead to misclassification. This issue can be dealt with <em>soft margin</em> that allows some wrongly classified points to get the overall best results. However, as outliers are included within the margins, margins become bigger which could cause <strong>underfitting</strong> problem. Inversely, <em>hard margin</em> does not allow any misclassification. This does not allow outliers within the margins so it could cause <strong>overfitting</strong> issue.</p>
+<p>The distance from the diving line to the closest points is called the <code>maximum margin</code>. However, sometimes points from some datasets are very close to points of other datasets, which could lead to misclassification.</p>
+<p><strong>Terminology</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 85%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Soft margin</td>
+<td><ul>
+<li>allows some wrongly classified points to get the overall best results</li>
+<li><strong>underfitting</strong> problem as outliers are included within the margins</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td>Hard margin</td>
+<td><ul>
+<li>does not allow any misclassification</li>
+<li><strong>overfitting</strong> issue</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/svm_margin.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Hard and Soft margin (Source: <a href="https://www.vebuso.com/2020/02/a-top-machine-learning-algorithm-explained-support-vector-machines-svms/">Velocity Business Solutions</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Hard and Soft margin (Source: <a href="https://www.vebuso.com/2020/02/a-top-machine-learning-algorithm-explained-support-vector-machines-svms/">Velocity Business Solutions</a></p>
-<h4 class="anchored">
-<ol start="2" type="1">
-<li><p>How to wiggle SVM?</p>
-</li></ol></h4>
-
-<p>There are 3 hyper-parameters that we can control to wiggle SVM.</p>
-<ul>
-<li><p>C: can determine the extent of misclassification that SVM can allow. If ‘C’ is large, SVM has a hard margin. On the contrary, if ‘C’ is small, SVM has a soft margin.</p></li>
-<li><p>Kernel: transforms the data when the data cannot be linearly separated.</p></li>
-</ul>
+<p><strong>Parameters of SVM</strong>:</p>
+<p>The best values for C and gamma can be searched through using <u>grid search</u>, which tests every possible values for the hyper-parameters</p>
+<table class="table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 84%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C</td>
+<td><ul>
+<li>determines the extent of misclassification that SVM can allow</li>
+<li>If ‘C’ is large, SVM has a hard margin</li>
+<li>If ‘C’ is small, SVM has a soft margin</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td>Kernel</td>
+<td><ul>
+<li>transforms the data when the data cannot be linearly separated</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td>Gamma</td>
+<td><ul>
+<li>defines the decision boundary</li>
+<li>The larger the ‘gamma’ is, the higher probability of overfitting is</li>
+<li>The smaller the ‘gamma’ is, the more linear the decision boundary is, which might cause underfitting issues.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/svm_kernel.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Kernel trick which projects data to a higher dimensional space (Source: <a href="https://towardsdatascience.com/support-vector-machines-svm-clearly-explained-a-python-tutorial-for-classification-problems-29c539f3ad8">Towards Data Science</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Kernel trick which projects data to a higher dimensional space (Source: <a href="https://towardsdatascience.com/support-vector-machines-svm-clearly-explained-a-python-tutorial-for-classification-problems-29c539f3ad8">Towards Data Science</a>)</p>
-<ul>
-<li>gamma: defines the decision boundary. The larger the ‘gamma’ is, the higher probability of overfitting is. The smaller the ‘gamma’ is, the more linear the decision boundary is, which might cause underfitting issues.</li>
-</ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/svm_gamma.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Illustration of how change in gamma affects the decision boundary (Source: <a href="https://www.analyticsvidhya.com/blog/2021/06/support-vector-machine-better-understanding/">Analytics Vidhya</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Illustration of how change in gamma affects the decision boundary (Source: <a href="https://www.analyticsvidhya.com/blog/2021/06/support-vector-machine-better-understanding/">Analytics Vidhya</a>)</p>
-<p>The best values for C and gamma can be searched through using grid search, which tests every possible values for the hyper-parameters</p>
-<h4 class="anchored">
-<ol start="3" type="1">
-<li><p>What is the example of the application of SVM?</p>
-</li></ol></h4>
-
+<ul>
+<li>What is the example of the application of SVM?</li>
+</ul>
 <p>Let’s say ‘pixel 1’ has values for band 1, band 2, band 3, and so on. For reference, a pixel which has a number of band values is called <strong>Pattern vector</strong>. If there are forests, they will have many pattern vectors. If we put these into a feature space, these pattern vectors will be very close and on top of each other. This is the moment where SVM can come into play and separate them by allowing some misclassification.</p>
 <h2 class="anchored">
 6.2 Applications
@@ -385,75 +362,81 @@ div.csl-indent {
 <h3 class="anchored">
 6.2.2 Brief Information about a Research
 </h3>
-<p><span class="citation" data-cites="rs8110954">Tian et al. (<a href="references.html#ref-rs8110954" role="doc-biblioref">2016</a>)</span> aimed to classify wetland land cover by <strong>fusing</strong> the <code>Pléiade-1B data</code> with <code>multi-date Landsat-8 data</code>. The former was performed based on an <em>object-oriented approach</em>, and the <em>geometric</em> and <em>spectral features</em> were extracted. From the latter, the <em>normalized difference vegetation index (NDVI)</em> data were calculated and this enabled to reflect phenological changes in vegetation. The feature datasets obtained from two sensors were optimised and used to build a <code>RF model</code>.</p>
+<p><span class="citation" data-cites="rs8110954">Tian et al. (<a href="references.html#ref-rs8110954" role="doc-biblioref">2016</a>)</span> aimed to classify wetland land cover by <strong>fusing</strong> the <code>Pléiade-1B data</code> with <code>multi-date Landsat-8 data</code>. The former was performed based on an <em>object-oriented approach</em>, and the <em>geometric</em> and <em>spectral features</em> were extracted. From the latter, the <em>normalized difference vegetation index (NDVI)</em> data were calculated and this enabled to reflect <u>phenological changes in vegetation</u>. The feature datasets obtained from two sensors were optimised and used to build a <code>RF model</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/wk6_application_abstract.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Flowchart of building a RF Model (Source: <span class="citation" data-cites="rs8110954">Tian et al. (<a href="references.html#ref-rs8110954" role="doc-biblioref">2016</a>)</span>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Flowchart of building a RF Model (Source: <span class="citation" data-cites="rs8110954">Tian et al. (<a href="references.html#ref-rs8110954" role="doc-biblioref">2016</a>)</span>)</p>
-<p>The RF classifier obtained an overall accuracy of 93 % and the research team found out that the inclusion of the <em>geometric shapes</em> improved the <em>classification accuracy of the farming lands and water bodies by 5% - 10%</em>. In addition, often times there was a challenge in classifying wetland due to similar spectral features of vegetation covers. By making use of the <em>phenological difference</em> and the <em>textual information</em>, the team reduced the classification errors and improved the overall accuracy about 10%.</p>
+<p>The RF classifier obtained an overall accuracy of 93 % and the research team found out that the inclusion of the <em>geometric shapes</em> improved the <em>classification accuracy of the farming lands and water bodies by 5% - 10%</em>.</p>
+<p>In addition, there has been a challenge in classifying wetland due to similar spectral features of vegetation covers. By making use of the <em>phenological difference</em> and the <em>textual information</em>, the team reduced the classification errors and <u>improved the overall accuracy about 10%</u>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/wk6_result_contribution.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Importance of Features in the RF model (Source: <span class="citation" data-cites="rs8110954">Tian et al. (<a href="references.html#ref-rs8110954" role="doc-biblioref">2016</a>)</span>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Importance of Features in the RF model (Source: <span class="citation" data-cites="rs8110954">Tian et al. (<a href="references.html#ref-rs8110954" role="doc-biblioref">2016</a>)</span>)</p>
 <p>The classification result of the RF model was compared with other ML classification methods such as Support Vector Machine (SVM) and Artificial Neural Network (ANN). The research team found that the overall accuracy of the RF model was 10% higher than that of the SVM and ANN classifiers.</p>
 <h3 class="anchored">
 6.2.3 Insight from the findings
 </h3>
 <p>The classification results bring us back to a question we had in the lecture.</p>
-<p><em>‘Does the most advanced ML classification method always achieves the best results?’</em></p>
+<p><strong>‘Does the most advanced ML classification method always achieves the best results?’</strong></p>
 <p>As shown in the results, the most advanced ML algorithms - SVM and ANN - did not achieve the best classification results. They were 10% behind the overall accuracy compared to the RF model’s result.</p>
-<p>The author stated that the way that RF model builds each decision tree was significant in achieving a higher accuracy. In the RF model, each decision tree is a <strong>“specialist tree”</strong> which considers the <code>feature domain</code> - the data from geometric and textual features.</p>
+<p>The author stated that the way that RF model builds <code>each decision tree was significan</code>t in achieving a higher accuracy. In the RF model, each decision tree is a <strong>“specialist tree”</strong> which considers the <code>feature domain</code> - the data from <u>geometric and textual features</u>.</p>
 <p>For instance, the lakes which are characterised as being large and in a circular shape with a smoother shoreline, which are rather easy to classify. However, marshes and ponds inherit heterogeneous features, and are in irregular shape, which pose difficulties in classifying them.</p>
-<p>Therefore, the <strong>specialist trees</strong> grown with considerations for these features in the RF model explain why the RF model achieved a higher accuracy. What we can learn from this research is that the location- and context-specific ML algorithm is required to achieve a better classification accuracy. The most advanced and state-of-the-art algorithms do not guarantee the best results.</p>
+<p>Therefore, the <strong>specialist trees</strong> grown with considerations for these features in the RF model explain why the RF model achieved a higher accuracy. What we can learn from this research is that the <strong>location- and context-specific ML algorithm is required</strong> to achieve a better classification accuracy. <u>The most advanced and state-of-the-art algorithms do not guarantee the best results</u>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/wk6_research_area.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Research Area (Source: <span class="citation" data-cites="rs8110954">Tian et al. (<a href="references.html#ref-rs8110954" role="doc-biblioref">2016</a>)</span>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Research Area (Source: <span class="citation" data-cites="rs8110954">Tian et al. (<a href="references.html#ref-rs8110954" role="doc-biblioref">2016</a>)</span>)</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/wk6_application_results.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">The Classification Results of Different ML Methods - (a) RF; (b) SVM; (c) ANN (Source: <span class="citation" data-cites="rs8110954">Tian et al. (<a href="references.html#ref-rs8110954" role="doc-biblioref">2016</a>)</span>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>The Classification Results of Different ML Methods - (a) RF; (b) SVM; (c) ANN (Source: <span class="citation" data-cites="rs8110954">Tian et al. (<a href="references.html#ref-rs8110954" role="doc-biblioref">2016</a>)</span>)</p>
 <h2 class="anchored">
 6.3 Reflections
 </h2>
 <p>The week 6’s lecture covers a number of ML algorithms that are being used in satellite imagery classification. These classification methods are employed to better distinguish one band from the other band which help classifying land cover in the image. They essentially do the same functionality in classifying data but they do it in different ways.</p>
-<p>However, there are some aspects that we have to ponder. Firstly, these classifiers often make things very complicated. While state-of-the-art ML algorithms are highly accurate, they are very difficult to interpret.</p>
-<p>Secondly, we need to consider why we are using a specific ML algorithm to classify our data. If we could differentiate one band from the other with a simple method, is there still a necessity to use a highly developed classification method?</p>
-<p>The last but not the least, we have to think about classification itself. In reality, one pixel is not solely composed of one type of land cover types. It can co-exist with other types of land cover types. Therefore, we need to contemplate on to what extent we have to classify or ignore the values in a pixel.</p>
+<p>However, there are some aspects that we have to ponder. Firstly, these classifiers often make things very <code>complicated</code>. While state-of-the-art ML algorithms are highly accurate, they are very difficult to interpret.</p>
+<p>Secondly, we need to consider <code>why we are using a specific ML algorithm to classify our data</code>. If we could differentiate one band from the other with a simple method, is there still a necessity to use a highly developed classification method?</p>
+<p>The last but not the least, we have to think about <code>classification itself</code>. In reality, one pixel is not solely composed of one type of land cover types. It can co-exist with other types of land cover types. Therefore, we need to contemplate on to what extent we have to classify or ignore the values in a pixel.</p>
+<p>As a whole, the lecture enabled me to think critically about</p>
+<p><em>Why we use this method?</em></p>
+<p>and</p>
+<p><em>What are the assumptions of this specific method and are we aware of them?</em></p>
+<p>The comprehensive understanding of the rationale behind the ML algorithm will help me choose an appropriate method based on data I am trying to analyse. Moreover, this will enable me to comprehend not only the accuracy of the model but to approach to my data in a holistic manner.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/mixed_pixels.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Classification of Pixels (Source: <a href="https://www.researchgate.net/figure/Four-causes-of-mixed-pixels_fig3_242103275">Peter Fisher</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Classification of Pixels (Source: <a href="https://www.researchgate.net/figure/Four-causes-of-mixed-pixels_fig3_242103275">Peter Fisher</a>)</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
