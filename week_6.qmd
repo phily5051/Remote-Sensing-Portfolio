@@ -106,13 +106,13 @@ Some land covers, such as wetland, are hard to classify due to unclear distincti
 
 <h3>6.2.2 Brief Information about a Research</h3>
 
-@rs8110954 aimed to classify wetland land cover by **fusing** the `Pléiade-1B data` with `multi-date Landsat-8 data`. The former was performed based on an *object-oriented approach*, and the *geometric* and *spectral features* were extracted. From the latter, the *normalized difference vegetation index (NDVI)* data were calculated and this enabled to reflect [phenological changes in vegetation]{.underline}. The feature datasets obtained from two sensors were optimised and used to build a `RF model`.
+@rs8110954 aimed to classify wetland land cover by **fusing** the `Pléiade-1B data` with `multi-date Landsat-8 data`. The former was performed based on an object-oriented approach, and the geometric and spectral features were extracted. From the latter, the *normalized difference vegetation index (NDVI) data* were calculated and this enabled to reflect [phenological changes in vegetation]{.underline}. The feature datasets obtained from two sensors were optimised and used to build a `RF model`.
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "Flowchart of building a RF Model (Source: @rs8110954)"}
 knitr::include_graphics('img/wk6_application_abstract.png')
 ```
 
-The RF classifier obtained an overall accuracy of 93 % and the research team found out that the inclusion of the *geometric shapes* improved the *classification accuracy of the farming lands and water bodies by 5% - 10%*.
+The RF classifier obtained an overall accuracy of 93 % and the research team found out that the inclusion of the *geometric shapes improved the classification accuracy of the farming lands and water bodies by 5% - 10%*.
 
 In addition, there has been a challenge in classifying wetland due to similar spectral features of vegetation covers. By making use of the *phenological difference* and the *textual information*, the team reduced the classification errors and [improved the overall accuracy about 10%]{.underline}.
 
@@ -130,7 +130,7 @@ The classification results bring us back to a question we had in the lecture.
 
 As shown in the results, the most advanced ML algorithms - SVM and ANN - did not achieve the best classification results. They were 10% behind the overall accuracy compared to the RF model's result.
 
-The author stated that the way that RF model builds `each decision tree was significan`t in achieving a higher accuracy. In the RF model, each decision tree is a **"specialist tree"** which considers the `feature domain` - the data from [geometric and textual features]{.underline}.
+The author stated that the way that RF model builds [each decision tree was significant in achieving a higher accuracy]{.underline}. In the RF model, each decision tree is a **"specialist tree"** which considers the `feature domain` - the data from [geometric and textual features]{.underline}.
 
 For instance, the lakes which are characterised as being large and in a circular shape with a smoother shoreline, which are rather easy to classify. However, marshes and ponds inherit heterogeneous features, and are in irregular shape, which pose difficulties in classifying them.
 
@@ -148,11 +148,13 @@ knitr::include_graphics('img/wk6_application_results.png')
 
 The week 6's lecture covers a number of ML algorithms that are being used in satellite imagery classification. These classification methods are employed to better distinguish one band from the other band which help classifying land cover in the image. They essentially do the same functionality in classifying data but they do it in different ways.
 
-However, there are some aspects that we have to ponder. Firstly, these classifiers often make things very `complicated`. While state-of-the-art ML algorithms are highly accurate, they are very difficult to interpret.
+However, there are some aspects that we have to ponder. 
 
-Secondly, we need to consider `why we are using a specific ML algorithm to classify our data`. If we could differentiate one band from the other with a simple method, is there still a necessity to use a highly developed classification method?
+*Firstly*, these classifiers often make things very [complicated]{.underline}. While state-of-the-art ML algorithms are highly accurate, they are very difficult to interpret.
 
-The last but not the least, we have to think about `classification itself`. In reality, one pixel is not solely composed of one type of land cover types. It can co-exist with other types of land cover types. Therefore, we need to contemplate on to what extent we have to classify or ignore the values in a pixel.
+*Secondly*, we need to consider [why we are using a specific ML algorithm to classify our data]{.underline}. If we could differentiate one band from the other with a simple method, is there still a necessity to use a highly developed classification method?
+
+*The last but not the least*, we have to think about [classification itself]{.underline}. In reality, one pixel is not solely composed of one type of land cover types. It can co-exist with other types of land cover types. Therefore, we need to contemplate on to what extent we have to classify or ignore the values in a pixel.
 
 As a whole, the lecture enabled me to think critically about
 

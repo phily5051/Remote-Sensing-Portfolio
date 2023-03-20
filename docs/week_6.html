@@ -362,7 +362,7 @@ div.csl-indent {
 <h3 class="anchored">
 6.2.2 Brief Information about a Research
 </h3>
-<p><span class="citation" data-cites="rs8110954">Tian et al. (<a href="references.html#ref-rs8110954" role="doc-biblioref">2016</a>)</span> aimed to classify wetland land cover by <strong>fusing</strong> the <code>Pléiade-1B data</code> with <code>multi-date Landsat-8 data</code>. The former was performed based on an <em>object-oriented approach</em>, and the <em>geometric</em> and <em>spectral features</em> were extracted. From the latter, the <em>normalized difference vegetation index (NDVI)</em> data were calculated and this enabled to reflect <u>phenological changes in vegetation</u>. The feature datasets obtained from two sensors were optimised and used to build a <code>RF model</code>.</p>
+<p><span class="citation" data-cites="rs8110954">Tian et al. (<a href="references.html#ref-rs8110954" role="doc-biblioref">2016</a>)</span> aimed to classify wetland land cover by <strong>fusing</strong> the <code>Pléiade-1B data</code> with <code>multi-date Landsat-8 data</code>. The former was performed based on an object-oriented approach, and the geometric and spectral features were extracted. From the latter, the <em>normalized difference vegetation index (NDVI) data</em> were calculated and this enabled to reflect <u>phenological changes in vegetation</u>. The feature datasets obtained from two sensors were optimised and used to build a <code>RF model</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -373,7 +373,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>The RF classifier obtained an overall accuracy of 93 % and the research team found out that the inclusion of the <em>geometric shapes</em> improved the <em>classification accuracy of the farming lands and water bodies by 5% - 10%</em>.</p>
+<p>The RF classifier obtained an overall accuracy of 93 % and the research team found out that the inclusion of the <em>geometric shapes improved the classification accuracy of the farming lands and water bodies by 5% - 10%</em>.</p>
 <p>In addition, there has been a challenge in classifying wetland due to similar spectral features of vegetation covers. By making use of the <em>phenological difference</em> and the <em>textual information</em>, the team reduced the classification errors and <u>improved the overall accuracy about 10%</u>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -392,7 +392,7 @@ div.csl-indent {
 <p>The classification results bring us back to a question we had in the lecture.</p>
 <p><strong>‘Does the most advanced ML classification method always achieves the best results?’</strong></p>
 <p>As shown in the results, the most advanced ML algorithms - SVM and ANN - did not achieve the best classification results. They were 10% behind the overall accuracy compared to the RF model’s result.</p>
-<p>The author stated that the way that RF model builds <code>each decision tree was significan</code>t in achieving a higher accuracy. In the RF model, each decision tree is a <strong>“specialist tree”</strong> which considers the <code>feature domain</code> - the data from <u>geometric and textual features</u>.</p>
+<p>The author stated that the way that RF model builds <u>each decision tree was significant in achieving a higher accuracy</u>. In the RF model, each decision tree is a <strong>“specialist tree”</strong> which considers the <code>feature domain</code> - the data from <u>geometric and textual features</u>.</p>
 <p>For instance, the lakes which are characterised as being large and in a circular shape with a smoother shoreline, which are rather easy to classify. However, marshes and ponds inherit heterogeneous features, and are in irregular shape, which pose difficulties in classifying them.</p>
 <p>Therefore, the <strong>specialist trees</strong> grown with considerations for these features in the RF model explain why the RF model achieved a higher accuracy. What we can learn from this research is that the <strong>location- and context-specific ML algorithm is required</strong> to achieve a better classification accuracy. <u>The most advanced and state-of-the-art algorithms do not guarantee the best results</u>.</p>
 <div class="cell" data-layout-align="center">
@@ -419,9 +419,10 @@ div.csl-indent {
 6.3 Reflections
 </h2>
 <p>The week 6’s lecture covers a number of ML algorithms that are being used in satellite imagery classification. These classification methods are employed to better distinguish one band from the other band which help classifying land cover in the image. They essentially do the same functionality in classifying data but they do it in different ways.</p>
-<p>However, there are some aspects that we have to ponder. Firstly, these classifiers often make things very <code>complicated</code>. While state-of-the-art ML algorithms are highly accurate, they are very difficult to interpret.</p>
-<p>Secondly, we need to consider <code>why we are using a specific ML algorithm to classify our data</code>. If we could differentiate one band from the other with a simple method, is there still a necessity to use a highly developed classification method?</p>
-<p>The last but not the least, we have to think about <code>classification itself</code>. In reality, one pixel is not solely composed of one type of land cover types. It can co-exist with other types of land cover types. Therefore, we need to contemplate on to what extent we have to classify or ignore the values in a pixel.</p>
+<p>However, there are some aspects that we have to ponder.</p>
+<p><em>Firstly</em>, these classifiers often make things very <u>complicated</u>. While state-of-the-art ML algorithms are highly accurate, they are very difficult to interpret.</p>
+<p><em>Secondly</em>, we need to consider <u>why we are using a specific ML algorithm to classify our data</u>. If we could differentiate one band from the other with a simple method, is there still a necessity to use a highly developed classification method?</p>
+<p><em>The last but not the least</em>, we have to think about <u>classification itself</u>. In reality, one pixel is not solely composed of one type of land cover types. It can co-exist with other types of land cover types. Therefore, we need to contemplate on to what extent we have to classify or ignore the values in a pixel.</p>
 <p>As a whole, the lecture enabled me to think critically about</p>
 <p><em>Why we use this method?</em></p>
 <p>and</p>
