@@ -138,7 +138,7 @@ Therefore, the **specialist trees** grown with considerations for these features
 knitr::include_graphics('img/wk6_research_area.png')
 ```
 
-```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "The Classification Results of Different ML Methods - (a) RF; (b) SVM; (c) ANN (Source: @rs8110954)"}
+```{r echo=FALSE, out.width='60%', out.height= "60%", fig.align='center', fig.cap= "The Classification Results of Different ML Methods - (a) RF; (b) SVM; (c) ANN (Source: @rs8110954)"}
 knitr::include_graphics('img/wk6_application_results.png')
 ```
 
