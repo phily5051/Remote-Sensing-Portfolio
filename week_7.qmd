@@ -87,7 +87,7 @@ All ML models need to be tested with withheld data to avoid over-fitting issues.
 
 @tobler argued the first law of geography is that [near things are more closely related than distant things]{.underline}. Even if we split our spatial data into training and test data, there will always be "possibilities of spatial autocorrelation".
 
-<h3>7.2.1 Brief Information about the research</h3>
+<h3>7.2.1 Brief Information about the Research</h3>
 
 @karasiak built a random forest (RF) model to classify forest stands. The research team compared the OA of six cross-validation (CV) strategies with different sample sizes - pixel and object levels.
 

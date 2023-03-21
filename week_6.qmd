@@ -34,7 +34,7 @@ knitr::include_graphics('img/rf_flowchart.jpg')
 
 -   How a decision is generated in RF?
 
-We test this forest with the samples that were not used to create the decision trees. These samples are called "*Out of Bag (OOB)*" (30%). The **majority of decisions** made on the OOB are chosen, and the proportion fo OOB incorrectly classified are called OOB error. 
+We test this forest with the samples that were not used to create the decision trees. These samples are called "*Out of Bag (OOB)*" (30%). The **majority of decisions** made on the OOB are chosen, and the proportion fo OOB incorrectly classified are called OOB error.
 
 For example, when we want to classify a pixel, if the majority of decision trees says it is an urban area, the pixel is categorised as an urban area. One thing to note is that OOB is different from test data as test data are never included in building decision trees.
 
@@ -48,19 +48,19 @@ For example, when we want to classify a pixel, if the majority of decision trees
 knitr::include_graphics('img/svm.png')
 ```
 
-The distance from the diving line to the closest points is called the `maximum margin`. However, sometimes points from some datasets are very close to points of other datasets, which could lead to misclassification. 
+The distance from the diving line to the closest points is called the `maximum margin`. However, sometimes points from some datasets are very close to points of other datasets, which could lead to misclassification.
 
 **Terminology**
 
-+------------+-------------------------------------------------------------------------+
-|Term        |Description                                                              |
-+============+=========================================================================+
-|Soft margin | - allows some wrongly classified points to get the overall best results |
-|            | - **underfitting** problem as outliers are included within the margins  |
-+------------+-------------------------------------------------------------------------+
-|Hard margin | - does not allow any misclassification                                  |
-|            | - **overfitting** issue                                                 |
-+------------+-------------------------------------------------------------------------+
++-------------+---------------------------------------------------------------------------+
+| Term        | Description                                                               |
++=============+===========================================================================+
+| Soft margin | -   allows some wrongly classified points to get the overall best results |
+|             | -   **underfitting** problem as outliers are included within the margins  |
++-------------+---------------------------------------------------------------------------+
+| Hard margin | -   does not allow any misclassification                                  |
+|             | -   **overfitting** issue                                                 |
++-------------+---------------------------------------------------------------------------+
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "Hard and Soft margin (Source: [Velocity Business Solutions](https://www.vebuso.com/2020/02/a-top-machine-learning-algorithm-explained-support-vector-machines-svms/))"}
 knitr::include_graphics('img/svm_margin.png')
@@ -70,21 +70,19 @@ knitr::include_graphics('img/svm_margin.png')
 
 The best values for C and gamma can be searched through using [grid search]{.underline}, which tests every possible values for the hyper-parameters
 
-+------------+------------------------------------------------------------------------+
-|Parameter   |Description                                                             |
-+============+========================================================================+
-|C           | - determines the extent of misclassification that SVM can allow        |
-|            | - If 'C' is large, SVM has a hard margin                               |
-|            | - If 'C' is small, SVM has a soft margin                               |
-+------------+------------------------------------------------------------------------+
-|Kernel      | - transforms the data when the data cannot be linearly separated       |
-+------------+------------------------------------------------------------------------+
-|Gamma       | - defines the decision boundary                                        |
-|            | - The larger the 'gamma' is, the higher probability of overfitting is  |
-|            | - The smaller the 'gamma' is, the more linear the decision boundary is,|
-|            |   which might cause underfitting issues.                               |
-+------------+------------------------------------------------------------------------+     
-
++-----------+------------------------------------------------------------------------------------------------------------------+
+| Parameter | Description                                                                                                      |
++===========+==================================================================================================================+
+| C         | -   determines the extent of misclassification that SVM can allow                                                |
+|           | -   If 'C' is large, SVM has a hard margin                                                                       |
+|           | -   If 'C' is small, SVM has a soft margin                                                                       |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| Kernel    | -   transforms the data when the data cannot be linearly separated                                               |
++-----------+------------------------------------------------------------------------------------------------------------------+
+| Gamma     | -   defines the decision boundary                                                                                |
+|           | -   The larger the 'gamma' is, the higher probability of overfitting is                                          |
+|           | -   The smaller the 'gamma' is, the more linear the decision boundary is, which might cause underfitting issues. |
++-----------+------------------------------------------------------------------------------------------------------------------+
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "Kernel trick which projects data to a higher dimensional space (Source: [Towards Data Science](https://towardsdatascience.com/support-vector-machines-svm-clearly-explained-a-python-tutorial-for-classification-problems-29c539f3ad8))"}
 knitr::include_graphics('img/svm_kernel.png')
@@ -148,7 +146,7 @@ knitr::include_graphics('img/wk6_application_results.png')
 
 The week 6's lecture covers a number of ML algorithms that are being used in satellite imagery classification. These classification methods are employed to better distinguish one band from the other band which help classifying land cover in the image. They essentially do the same functionality in classifying data but they do it in different ways.
 
-However, there are some aspects that we have to ponder. 
+However, there are some aspects that we have to ponder.
 
 *Firstly*, these classifiers often make things very [complicated]{.underline}. While state-of-the-art ML algorithms are highly accurate, they are very difficult to interpret.
 

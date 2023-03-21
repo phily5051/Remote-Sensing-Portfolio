@@ -111,6 +111,6 @@ Having UHI as an example enabled me to grasp the importance of creating a cohesi
 
 <h2>References</h2>
 
-United States Environmental Protection Agency (US EPA). (2022) <https://www.epa.gov/heatislands/learn-about-heat-islands> (Accessed: 14.03.2023)
+United States Environmental Protection Agency (US EPA) (2022) <https://www.epa.gov/heatislands/learn-about-heat-islands> (Accessed: 14.03.2023)
 
 World Bank Blogs (2020) <https://blogs.worldbank.org/sustainablecities/3-ways-beat-heat-european-cities> (Accessed: 14.03.2023)
