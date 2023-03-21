@@ -91,7 +91,7 @@ All ML models need to be tested with withheld data to avoid over-fitting issues.
 
 @karasiak built a random forest (RF) model to classify forest stands. The research team compared the OA of six cross-validation (CV) strategies with different sample sizes - pixel and object levels.
 
-<h3>7.2.3 Main Findings of the research</h3>
+<h3>7.2.2 Main Findings of the research</h3>
 
 -   Ignoring spatial autocorrelation resulted in a high accuracy in both sample levels
 

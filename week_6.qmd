@@ -156,14 +156,14 @@ However, there are some aspects that we have to ponder.
 
 As a whole, the lecture enabled me to think critically about
 
-*Why we use this method?*
+***Why do we use this method?***
 
 and
 
-*What are the assumptions of this specific method and are we aware of them?*
+***What are the assumptions of this specific method and are we aware of them?***
 
 The comprehensive understanding of the rationale behind the ML algorithm will help me choose an appropriate method based on data I am trying to analyse. Moreover, this will enable me to comprehend not only the accuracy of the model but to approach to my data in a holistic manner.
 
-```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "Classification of Pixels (Source: [Peter Fisher](https://www.researchgate.net/figure/Four-causes-of-mixed-pixels_fig3_242103275))"}
+```{r echo=FALSE, out.width='60%', out.height= "30%", fig.align='center', fig.cap= "Classification of Pixels (Source: [Peter Fisher](https://www.researchgate.net/figure/Four-causes-of-mixed-pixels_fig3_242103275))"}
 knitr::include_graphics('img/mixed_pixels.png')
 ```
