@@ -138,11 +138,11 @@ knitr::include_graphics('img/pmlevels.jpg')
 
 The application of remote sensing to locating the optimal location of PM mitigation urban forests could be linked to the following SDGs:
 
--   SDG 3. Good Health and Well-Being
+-   **UN SDG 03**: Good Health and Well-Being
 
     -   PM causes various health problems, such as lung and heart diseases. The reduction in PM could improve citizen's health and quality of life.
 
--   SDG 11. Sustainable Cities and Communities
+-   **UN SDG 11**: Sustainable Cities and Communities
 
     -   Creating urban forests, as a measure to mitigate PM, could not only reduce aereal PM but also contribute to building a safe and resilient built environment from other natural hazards.
 
