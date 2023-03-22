@@ -4,8 +4,6 @@ bibliography: references.bib
 editor: visual
 ---
 
-<h1>7 Classification Methods 2</h1>
-
 <h2>7.1 Summary</h2>
 
 In this section, I am going to give an overall idea of how Machine Learning (ML) classification algorithm works, explain the basic concept of sub pixel analysis, and understand how to assess the accuracy of the models we build.

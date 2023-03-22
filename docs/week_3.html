@@ -195,265 +195,300 @@ div.csl-indent {
 3.1 Summary
 </h2>
 <h3 class="anchored">
-Causes of Remote Sensing Data Distortion
+3.1.1 Data Distortion
 </h3>
 <p>Remotely sensed images often require corrections to be available for analysis. The image distortions occur due to the following factors:</p>
 <ul>
-<li>View angle: depending on the angle of the sensor, the area of interest might look different.</li>
+<li><strong>View angle</strong>: depending on the angle of the sensor, the area of interest might look different.</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/view_angle.jpeg" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">View angle (Source: <a href="https://www.mdpi.com/2072-4292/13/24/5094">Shen et al., 2021</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>View angle (Source: <a href="https://www.mdpi.com/2072-4292/13/24/5094">Shen et al., 2021</a>)</p>
 <ul>
-<li>Topography: the shape of terrain might cause some flaws in the image.</li>
+<li><strong>Topography</strong>: the shape of terrain might cause some flaws in the image.</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/topography.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Impact of Topography on Remote Sensing Images (Source: <a href="https://community.esri.com/t5/imagery-and-remote-sensing-blog/bg-p/imagery-and-remote-sensing-blog/page/4">Julia Lenhardt</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>The impact of topography on remote sensing images (Source: <a href="https://community.esri.com/t5/imagery-and-remote-sensing-blog/bg-p/imagery-and-remote-sensing-blog/page/4">Julia Lenhardt</a>)</p>
 <ul>
-<li>Earth rotation: Earth’s spinning motion poses another difficulty. Straight lines of an image can appear to be unnaturally curved or deformed.</li>
+<li><strong>Earth rotation</strong>: Earth’s spinning motion poses another difficulty. Straight lines of an image can appear to be unnaturally curved or deformed.</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/rotation.gif" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Effect of Earth’s motion (Source: <a href="https://www.nln.geos.ed.ac.uk/courses/english/frs/f3400/f3400005.htm">National Learning Network for Remote Sensing</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Effect of Earth’s motion (Source: <a href="https://www.nln.geos.ed.ac.uk/courses/english/frs/f3400/f3400005.htm">National Learning Network for Remote Sensing</a>)</p>
-<ul>
-<li>Wind, and so on.</li>
-</ul>
 <h3 class="anchored">
-Data Corrections
+3.1.2 Data Corrections
 </h3>
-<p>4 types of data correction methods are available for distorted images. These are Geometric, Atmospheric, Orthorectification corrections!</p>
-<p>First, we can kick off with Geometric Correction!</p>
+<p>Geometric, Atmospheric and Orthorectification corrections can be applied to corrected distorted images.</p>
 <h4 class="anchored">
-<strong>Geometric Correction</strong>
+<strong>(1)</strong> <strong>Geometric Correction</strong>
 </h4>
-<p><em>Geometric error</em>s are normally introduced by internal and external factors (attitude and altitude change). And Ground Control Points (GPS) can be used for correcting the errors! This means, basically, we are identifying so-called “known points” in both sensed image and a reference data and use them to build regression models! But we need each GCP, which are “image coordinate” and “map coordinate”.</p>
+<ul>
+<li><p>Cause: <strong>geometric error</strong>, introduced by internal and external factors (attitude and altitude change).</p></li>
+<li><p>Solution:</p>
+<ul>
+<li><p><strong>Ground Control Points</strong> (<strong>GCP</strong>): “known points” in both sensed image and a reference data</p>
+<ul>
+<li><p><strong>Backward mapping</strong> (<strong>Linear model</strong>): process of using GCP to infer the characteristics of the corresponding remote sensing data by building or refining models</p></li>
+<li><p>Model verification: <strong>RMSE</strong> can be used - threshold 0.5</p></li>
+</ul></li>
+</ul></li>
+</ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/geomet.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">GPS points from a map and Landsat image (Source: <a href="https://geolearn.in/geometric-corrections-in-remote-sensing-images/">GeoLearn</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>GPS points from a map and Landsat image (Source: <a href="https://geolearn.in/geometric-corrections-in-remote-sensing-images/">GeoLearn</a>)</p>
-<ul>
-<li>Solution:</li>
-</ul>
-<p><em>Linear Regression</em> in a “Backward mapping” fashion can be an answer to this problem. Backward mapping is going from output image to input image. This method goes through one pixel at a time and for each position in output image to calculate where in the input image a pixel must come from.</p>
-<p>The result can be verified by using RMSE. The lower the value is, the more accurate the result is, and the threshold RMSE value is 0.5. To reduce the RMSE, more GPS can be added as well.But when we do this, we have to re-sample the final raster data. There are several resample methods, such as Nearest Neighbour, Linear, Cubic and Cubic spline.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/Geometric.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Geometric Correction (Source: <a href="https://www.researchgate.net/figure/Geometric-correction-procedures_fig7_320710942">Abdul Basith</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Geometric Correction (Source: <a href="https://www.researchgate.net/figure/Geometric-correction-procedures_fig7_320710942">Abdul Basith</a>)</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/resampling.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Nearest Neighbour Resampling method (Source: <a href="http://wiki.awf.forst.uni-goettingen.de/wiki/index.php/Geometric_corrections">AWF-WIKI</a>)</p>
 <h4 class="anchored">
-<strong>Atmospheric Correction</strong>
+<strong>(2)</strong> <strong>Atmospheric Correction</strong>
 </h4>
-<p>Atmospheric correction removes scattering and absorption effects of the atmosphere to improve the image. Absorption and scattering makes an image somewhat blurry as they reduce contrast of image.</p>
+<ul>
+<li>This method removes scattering and absorption effects of the atmosphere to improve the image - absorption and scattering makes an image somewhat blurry as they reduce contrast of image.</li>
+</ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/atmos.jpeg" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Example of an image before and after atmospheric correction (Source: NASA)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Example of an image before and after atmospheric correction (Source: NASA)</p>
 <ul>
-<li>Solution: there are two kinds of approaches - <em>relative</em> and <em>absolute</em>.</li>
+<li>Solution: Relative and Absolute approaches</li>
 </ul>
-<p><strong>Relative atmospheric correction</strong> typically consists of two methods.</p>
-<pre><code>- Dark Object Subtraction (DOS): searches each band for the darkest pixel value. The scattering is removed by subtracting this value from every pixel in the band.</code></pre>
+<p><strong>Relative atmospheric correction</strong></p>
+<ul>
+<li>Dark Object Subtraction (DOS):
+<ul>
+<li>Searches each band for the darkest pixel value</li>
+<li>The scattering is removed by subtracting this value from every pixel in the band.</li>
+</ul></li>
+</ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/dos.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">An improved image after DOS (Source: <a href="https://link.springer.com/chapter/10.1007/978-981-13-9917-6_41">Wang et al., 2019</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>An improved image after DOS (Source: <a href="https://link.springer.com/chapter/10.1007/978-981-13-9917-6_41">Wang et al., 2019</a>)</p>
-<pre><code>- Pseudo-Invariant Features (PIFs): is grounded upon statistical invariance of artificial elements, which do not exhibit seasonal variation. The differences in PIFs reflectance between dates are assumed to be due to atmospheric conditions and are linearly related.</code></pre>
+<ul>
+<li>Pseudo-Invariant Features (PIFs):
+<ul>
+<li>Grounded upon statistical invariance of artificial elements, which do not exhibit seasonal variation</li>
+<li>The differences in PIFs reflectance between dates are assumed to be due to atmospheric conditions and are linearly related.</li>
+</ul></li>
+</ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/pif.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">An improved image after employing PIFs (Source: <a href="https://doi.org/10.1016/0034-4257(88)90116-2">Schott et al., 1988</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>An improved image after employing PIFs (Source: <a href="https://doi.org/10.1016/0034-4257(88)90116-2">Schott et al., 1988</a>)</p>
-<p><strong>Relative atmospheric correction</strong> convert digital brightness values into scaled surface reflectance by using atmospheric radiative transfer models.</p>
+<p><strong>Absolute atmospheric correction</strong> converts digital brightness values into scaled surface reflectance by using atmospheric radiative transfer models.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/absolute.jpg" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Before and after atmospheric correction using radiative transfer method (Source: <a href="https://www.sciencedirect.com/topics/earth-and-planetary-sciences/atmospheric-correction#:~:text=Atmospheric%20correction%20of%20the%20radiative,the%20atmospheric%E2%80%93surface%20remote%20sensor.">Advanced Remote Sensing</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Before and after atmospheric correction using radiative transfer method (Source: <a href="https://www.sciencedirect.com/topics/earth-and-planetary-sciences/atmospheric-correction#:~:text=Atmospheric%20correction%20of%20the%20radiative,the%20atmospheric%E2%80%93surface%20remote%20sensor.">Advanced Remote Sensing</a>)</p>
 <h4 class="anchored">
-<strong>Orthorectification Correction</strong>
+<strong>(3)</strong> <strong>Orthorectification Correction</strong>
 </h4>
-<p>This method removes distortions by making the images looked right above (at nadir). This correction necessiates sensor geometry and an elevation model.</p>
+<ul>
+<li>This method removes distortions by making the images <u>looked right above</u> (at nadir). This correction necessitates <u>sensor geometry</u> and an <u>elevation model</u>.</li>
+</ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/ortho.jpg" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">An example of orthorectification correction (Source: <a href="https://www.esri.com/about/newsroom/insider/what-is-orthorectified-imagery/">Esri Insider, 2016</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>An example of orthorectification correction (Source: <a href="https://www.esri.com/about/newsroom/insider/what-is-orthorectified-imagery/">Esri Insider, 2016</a>)</p>
 <h3 class="anchored">
-Data Join
+3.1.3 Data Join
 </h3>
-<p>Joining remote sensed images are coined as “<em>Mosaicking</em>”. Using histogram matching algorithm, similar brightness values are given to two images that are overlapped, and then the feathering is conducted.</p>
+<p>Joining remote sensed images are coined as “<strong>Mosaicking</strong>”. Using histogram matching algorithm, similar brightness values are given to two images that are overlapped, and then the feathering is conducted.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/mosaicking.gif" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Six raster datasets are joined into one image (Source: ArcMap)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Six raster datasets are joined into one image (Source: <a href="https://desktop.arcgis.com/en/arcmap/10.3/manage-data/raster-and-images/what-is-a-mosaic.htm">ArcMap</a>)</p>
 <h3 class="anchored">
-Image Enhancement
+3.1.4 Image Enhancement
 </h3>
-<p>Materials reflect different amounts of energy in the same wavelengths. However, sensors have a fixed range of Digital Number (DN) values between 4 to 105. If we expand this range, we could enhance the visual appearance of images. There are several methods to do this, which include Minimum-Maximum, Percentage Linear and Standard Deviation, and Piecewise Linear Contrast Stretch.</p>
 <ul>
-<li><em>Minimum-Maximum</em>: utilises the full range of available brightness values</li>
+<li><p>Materials reflect different amounts of energy in the same wavelengths. However, sensors have <u>a fixed range of Digital Number (DN)</u> values between 4 to 105.</p>
+<p>The following methods could enhance the visual appearance of images by expanding this range.</p></li>
+</ul>
+<!-- -->
+<ul>
+<li><strong>Minimum-Maximum</strong>: utilises the <u>full range of available brightness values</u></li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/minmax.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Minimum-Maximum Linear Stretch (Source: <a href="https://www.onestopgis.com/Aerial-Photography/Digital-Imaging/Imaging-by-Scanning-Techniques/3-Contrast-Stretch.html">OneStopGIS</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Minimum-Maximum Linear Stretch (Source: <a href="https://www.onestopgis.com/Aerial-Photography/Digital-Imaging/Imaging-by-Scanning-Techniques/3-Contrast-Stretch.html">OneStopGIS</a>)</p>
 <ul>
-<li><em>Percentage Linear and Standard Deviation Stretch</em>: is similar to the Minimum-Maximum linear contrast stretch but this method uses a specified minimum and maximum values that situate between a certain percentage of pixels from the mean of the histogram.</li>
+<li><strong>Percentage Linear and Standard Deviation Stretch</strong>:
+<ul>
+<li>Similar to the Minimum-Maximum linear contrast stretch</li>
+<li>It uses a specified minimum and maximum values</li>
+</ul></li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/percentage_stretch.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Percentage Linear Contrast Stretch (Source: <a href="https://www.onestopgis.com/Aerial-Photography/Digital-Imaging/Imaging-by-Scanning-Techniques/3-Contrast-Stretch.html">OneStopGIS</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Percentage Linear Contrast Stretch (Source: <a href="https://www.onestopgis.com/Aerial-Photography/Digital-Imaging/Imaging-by-Scanning-Techniques/3-Contrast-Stretch.html">OneStopGIS</a>)</p>
 <ul>
-<li><em>Piecewise Linear Contrast Stretch</em>: is used when the distribution of a histogram in an image is bi or trimodal (<a href="http://knightlab.org/rscc/legacy/RSCC_Contrast_Enhancement.pdf">Jensen and Schill, n.d.</a>).</li>
+<li><strong>Piecewise Linear Contrast Stretch</strong>: is used when the distribution of a histogram in an image is bi or trimodal (<a href="http://knightlab.org/rscc/legacy/RSCC_Contrast_Enhancement.pdf">Jensen and Schill, n.d.</a>).</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/piecewise.png" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Piecewise Linear Contrast Stretch (Source: <a href="http://dx.doi.org/10.1109/TCE.2008.4560077">Tsai and Yeh, 2008</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Piecewise Linear Contrast Stretch (Source: <a href="http://dx.doi.org/10.1109/TCE.2008.4560077">Tsai and Yeh, 2008</a>)</p>
 <h2 class="anchored">
 3.2 Application
 </h2>
-<p>Image enhancement techniques not only enhance visual appearance but also allows for comparison between images retrieved from different years.</p>
+<p>Image enhancement techniques not only enhance visual appearance but also allow for comparison between images retrieved from different years. In this part, I did research about how else image enhancement technology can be utilised apart from improving an image quality, and novel way of using a deep learning model to enhance the quality of image.</p>
+<h3 class="anchored">
+3.2.1 General Information about Research
+</h3>
+<p><strong>Identification of Urban Heat Island (UHI)</strong></p>
 <p><span class="citation" data-cites="Hanqiu2011AnIP">Han-qiu (<a href="references.html#ref-Hanqiu2011AnIP" role="doc-biblioref">2011</a>)</span> has attempted to compare thermal images from different years with the same date in order to investigate urban heat island (UHI). The thermal infrared bands of different date were processed with several image enhancement technologies.</p>
-<p>To detect change of the UHI between different dates, the two thermal imageries were normalised and scaled to reduce the impacts caused by seasonal variations or weather conditions. Then, the images were overlaid to show difference between images by subtracting correponding pixels.</p>
-<p>This research demonstrates how we can employ image enhancement technologies to compare images from different years in a quantitative fashion.</p>
+<p>To detect change of the UHI between different dates, the two thermal imagery were normalised and scaled to reduce the impacts caused by seasonal variations or weather conditions. Then, the images were overlaid to show difference between images by subtracting corresponding pixels.</p>
+<p><em>A bit of Thought…..</em></p>
+<p>This research demonstrates how we can employ image enhancement technologies to compare images from different years in a quantitative fashion. It showed us that the image enhancement technology, itself, is not just an end goal, but it can be used for limitless purposes.</p>
+<p><strong>Convolutional Neural Networks (CNN) for Image Enhancement</strong></p>
 <p>In addition to image enhancement technologies covered in the lecture, <span class="citation" data-cites="article">Hu et al. (<a href="references.html#ref-article" role="doc-biblioref">2020</a>)</span> demonstrated that Convolutional Neural Networks (CNN) can enhance visual appearance of image greatly. The authors carried out performing several different image enhancement technologies on low-quality image.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/ie_methods.jpg" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Results of different image enhancement methods (Source: Hu et al., 2020)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Results of different image enhancement methods (Source: <a href="10.3390/rs13010062">Hu et al., 2020</a>)</p>
 <p>Their findings suggest remote-sensing CNN (RSCNN) has proven to be the most efficient method in enhancing visualisation effects and allowing a better interpretation. RSCNN showed the superiority in terms of Structural Similarity Index (SSIM) and Peak Signal-to-Noise_Ratio (PSNR) over conventional techniques.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/rscnn_result.jpg" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">SSIM and PSNR of different image enhancement methods (Source: Hu et al., 2020)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>SSIM and PSNR of different image enhancement methods (Source: <a href="10.3390/rs13010062">Hu et al., 2020</a>)</p>
+<p><em>A bit of Thought…..</em></p>
 <p>This research somehow offered potentials in combining two different fields of studies - CNN and remote sensing -, and suggested that adding complexity to imagery can help us more natural results with more realistic textures and vivid details.</p>
 <h2 class="anchored">
 3.3 Reflection
 </h2>
-<p>This week’s content gave me an answer for the questions I had from the first week. Numerous data correction technologies improve the quality of image collected and allow for facilitating data to be ready for analysis.</p>
-<p>However, as there are a variety of correction methods, it seems necessary to understand what causes flaws in the remotely sensed images and how to employ an appropriate correction method to that specific datasets. In addition, I wonder whether there is a preference in a particular correction method over other correction methods, depending on the domain of study field or industry.</p>
-<p>Lastly, as we went through numerous technologies which enable us to identify objects or areas in a better and higher resolution. However, in the context of built environment, there are many objects in cities that look similar to each other, and this might pose a difficulty in classifying them.</p>
-<p>In Data Science module, I came across a deep learning model called YOLOv5, which detects objects in remotely sensed images. The model was trained on custom datasets. Once the training is done, the model can be applied to satellite imagery of different resolutions and identify objects.</p>
+<p>This week’s content gave me an answer for the questions I had from the first week. Numerous <strong>data correction technologies improve the quality of image collected and allow for facilitating data to be ready for analysis</strong>.</p>
+<p><em>Takeaway message</em></p>
+<ul>
+<li>As there are a variety of correction methods, it seems necessary to understand <strong>what causes flaws in the remotely sensed images</strong> and <strong>how to employ an appropriate correction method to that specific datasets</strong>.</li>
+</ul>
+<p><em>A bit of Thought…..</em></p>
+<ul>
+<li><p>Any preference in correction method?</p>
+<ul>
+<li>I wonder whether there is a preference in a particular correction method over other correction methods, depending on the domain of study field or industry.</li>
+</ul></li>
+<li><p>Object-detection model in urban environment?!</p>
+<ul>
+<li><p>In the context of built environment, there are many objects in cities that look similar to each other, and this might pose a difficulty in classifying them. In Data Science module, I came across a deep learning model called <strong>YOLOv5</strong>, which detects objects in remotely sensed images. The model was trained on custom datasets. Once the training is done, the model can be applied to satellite imagery of different resolutions and identify objects.</p>
+<p>If we create a <strong>customised dataset which contains specific information about some types of urban infrastructure</strong>, and feed these to train a model, we might be able to build a deep learning object detection model targeted at urban environment.</p>
+<p>Together with the data correction and image enhancement methods we learnt, I think the object detection model could enable us to classify some technically-challenging objects in an urban setting.</p></li>
+</ul></li>
+</ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/yolo.jpg" style="width:60.0%;height:40.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Objects indicated by a bounding box and its probability (Source: <a href="https://oballinger.github.io/GEE_OSINT/object_detection.html">Google Earth Engine for OSINT</a>)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Objects indicated by a bounding box and its probability (Source: <a href="https://oballinger.github.io/GEE_OSINT/object_detection.html">Google Earth Engine for OSINT</a>)</p>
-<p>If we create a customised dataset which contains specific information about some types of urban infrastructure, and feed these to train a model, we might be able to build a deep learning object detection model targeted at urban environment. Together with the data correction and image enhancement methods we learnt, I think the object detection model could enable us to classify some technically-challenging objects in an urban setting.</p>
 <h2 class="anchored">
 3.4 References
 </h2>

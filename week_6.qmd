@@ -4,8 +4,6 @@ bibliography: references.bib
 editor: visual
 ---
 
-<h1>6 Classification Methods 1</h1>
-
 <h2>6.1 Summary</h2>
 
 The classification methods can be divided into two approach - unsupervised and supervised algorithms. However, this diary will mainly focus on the [supervised algorithms]{.underline}.
@@ -122,7 +120,7 @@ knitr::include_graphics('img/wk6_result_contribution.png')
 
 The classification result of the RF model was compared with other ML classification methods such as Support Vector Machine (SVM) and Artificial Neural Network (ANN). The research team found that the overall accuracy of the RF model was 10% higher than that of the SVM and ANN classifiers.
 
-<h3>6.2.3 Insight from the findings</h3>
+<h3>6.2.3 Insight from the Findings</h3>
 
 The classification results bring us back to a question we had in the lecture.
 

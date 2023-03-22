@@ -4,7 +4,7 @@ bibliography: references.bib
 editor: visual
 ---
 
-<h1>4 2030 Seoul Plan - Particulate Matter (PM) Policy</h1>
+<h2>2030 Seoul Plan - Particulate Matter (PM) Policy</h2>
 
 This week covers the way we can use remote sensing to assist in implementing data-driven local-, country-, regional-level policies, while in compliance to global agendas. As a case study, we will look into Seoul's city plan - the biggest city plan in South Korea -, with special focus on the PM-related policies.
 
@@ -134,7 +134,7 @@ In addition, @gupta2006 found that remote sensing can capture the movement of ai
 knitr::include_graphics('img/pmlevels.jpg')
 ```
 
-*A bit of Thought.....* 
+*A bit of Thought.....*
 
 The application of remote sensing to locating the optimal location of PM mitigation urban forests could be linked to the following SDGs:
 

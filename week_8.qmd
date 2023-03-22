@@ -4,8 +4,6 @@ bibliography: references.bib
 editor: visual
 ---
 
-<h1>8 Urban Heat Island</h1>
-
 In this diary, I am going to give general information about Urban Heat Island (UHI) with some on-going UHI mitigation examples all around the world.
 
 Then, I will explain how UHI-related policies at a global-, metropolitan-, and local-level vary in terms of its goal and implementation scale, and ponder how we could bridge the gap that exists between these different levels of policies.
@@ -60,7 +58,7 @@ knitr::include_graphics('img/uhi_cause.png')
 
 In this section, I am going to introduce Seoul's urban planning policy with respect to UHI, and see how UHI mitigation activities under the metropolitan policy is in line with global policy.
 
-**Seoul Plan** is a `metropolitan-level urban planning policy` in Seoul, South Korea. The plan consists of 5 focal points, and one of which is environment. Under the environment part, there are 3 targets and 11 strategies. 
+**Seoul Plan** is a `metropolitan-level urban planning policy` in Seoul, South Korea. The plan consists of 5 focal points, and one of which is environment. Under the environment part, there are 3 targets and 11 strategies.
 
 Policy relevant to UHI:
 

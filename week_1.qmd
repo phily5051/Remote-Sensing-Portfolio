@@ -4,8 +4,6 @@ bibliography: references.bib
 editor: visual
 ---
 
-<h1>Introduction to Remote Sensing</h1>
-
 <h2>1.1 Summary</h2>
 
 <h3>1.1.1 Definition of Remote Sensing</h3>
@@ -24,20 +22,18 @@ knitr::include_graphics('img/light_spec.jpeg')
 
 There are two types of remote sensors: active and passive sensors.
 
-+----------------+---------------------------------------------------------------------------------------------------------+
-| Sensor Type    | Description                                                                                             |
-+================+=========================================================================================================+
-| Active sensor  | -   emits electromagnetic energy and receives the reflected energy                                      |
-|                | -   can observe areas under most conditions as most active sensors operate in the microwave band of the |
-|                |     electromagnetic spectrum                                                                            |
-|                | -   requires power source energy - solar energy                                                         |
-|                | -   affected by space weather - solar flares                                                            |
-+----------------+---------------------------------------------------------------------------------------------------------+
-| Passive sensor | -   usually detects reflected energy                                                                    |
-|                | -   used for measuring physical attributes, such as land/sea surface temperature and vegetation cover   |
-|                | -   has limitations in observing areas in the presence of dense cloud cover                             |
-+----------------+---------------------------------------------------------------------------------------------------------+
-
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+| Sensor Type    | Description                                                                                                                      |
++================+==================================================================================================================================+
+| Active sensor  | -   emits electromagnetic energy and receives the reflected energy                                                               |
+|                | -   can observe areas under most conditions as most active sensors operate in the microwave band of the electromagnetic spectrum |
+|                | -   requires power source energy - solar energy                                                                                  |
+|                | -   affected by space weather - solar flares                                                                                     |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+| Passive sensor | -   usually detects reflected energy                                                                                             |
+|                | -   used for measuring physical attributes, such as land/sea surface temperature and vegetation cover                            |
+|                | -   has limitations in observing areas in the presence of dense cloud cover                                                      |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
 
 ```{r echo=FALSE, out.width='100%', out.height= '50%', fig.align='center', fig.cap= "Passive and Active Sensors (Source: NASA)"}
 knitr::include_graphics('img/sensor_type.png')
@@ -78,7 +74,13 @@ knitr::include_graphics('img/Atmospheric-Electromagnetic-Opacity.png')
 
 <h2>Application</h2>
 
-In the context of climate change, the ability to map tree types are important as they are closely linked to biodiversity. As mentioned earlier, each feature has different spectral signatures. @durgante2013 have discovered that
+In the context of climate change, the ability to map tree types are important as they are closely linked to biodiversity. As mentioned earlier, each feature has different spectral signatures.
+
+In this section, we will have a look at two studies in which spectral signature are employed
+
+**Identification of Trees**
+
+@durgante2013 have discovered that
 
 *spectral signature of tree species was better than DNA identification in distinguishing tree species.*
 
@@ -87,6 +89,8 @@ The researchers used 'Fourier-Transform Near-Infrared (FT-NIR)'. It obtained the
 ```{r echo=FALSE, out.width='100%', out.height= '50%',fig.align='center', fig.cap= "Spectral Signatures of Each Tree (Source: @durgante2013)"}
 knitr::include_graphics('img/tree_species.jpg')
 ```
+
+**Blueberry Yield**
 
 The potential of spectral signature can also be found in the business sector. @yang2012 suggested that spectral signatures could be employed to blueberry yield estimation system. The research team confirmed six-class blueberry classification - 233, 551, 554, 691, 699, 1373 nm - yielded the best results. This showed the potential of the spectral signature in developing fast and low cost blueberry detector. Furthermore, this research expands the use of spectral signatures from academia to industry, and suggests that the use of spectral signature can be boundless.
 
