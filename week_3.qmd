@@ -1,5 +1,5 @@
 ---
-title: "Week 3"
+title: "Corrections"
 bibliography: references.bib
 editor: visual
 ---
@@ -86,7 +86,9 @@ Example of an image before and after atmospheric correction (Source: NASA)
 
 **Relative atmospheric correction** typically consists of two methods.
 
-    - Dark Object Subtraction (DOS): searches each band for the darkest pixel value. The scattering is removed by subtracting this value from every pixel in the band.
+```         
+- Dark Object Subtraction (DOS): searches each band for the darkest pixel value. The scattering is removed by subtracting this value from every pixel in the band.
+```
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center'}
 knitr::include_graphics('img/dos.png')
@@ -94,7 +96,9 @@ knitr::include_graphics('img/dos.png')
 
 An improved image after DOS (Source: [Wang et al., 2019](https://link.springer.com/chapter/10.1007/978-981-13-9917-6_41))
 
-    - Pseudo-Invariant Features (PIFs): is grounded upon statistical invariance of artificial elements, which do not exhibit seasonal variation. The differences in PIFs reflectance between dates are assumed to be due to atmospheric conditions and are linearly related.
+```         
+- Pseudo-Invariant Features (PIFs): is grounded upon statistical invariance of artificial elements, which do not exhibit seasonal variation. The differences in PIFs reflectance between dates are assumed to be due to atmospheric conditions and are linearly related.
+```
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center'}
 knitr::include_graphics('img/pif.png')

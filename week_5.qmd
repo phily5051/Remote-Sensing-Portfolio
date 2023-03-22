@@ -1,5 +1,5 @@
 ---
-title: "Week 5"
+title: "Introduction to Google Earth Engine"
 bibliography: references.bib
 editor: visual
 ---
@@ -129,9 +129,9 @@ knitr::include_graphics('img/confusion.png')
 
 *A bit of Thought.....*
 
-The above research was utilising GEE as a main platform to build a ML model. It was very interesting to see how the GEE platform can be used apart from monitoring land cover change. 
+The above research was utilising GEE as a main platform to build a ML model. It was very interesting to see how the GEE platform can be used apart from monitoring land cover change.
 
-However, I would like to point out an overfitting issue. If we look at the validation results, the accuracy of the model is `too good to be true`!! Can we be sure that training and test data are appropriately separated? The authors only mentioned that they separated the data but did not give a detailed explanation how they did it. 
+However, I would like to point out an overfitting issue. If we look at the validation results, the accuracy of the model is `too good to be true`!! Can we be sure that training and test data are appropriately separated? The authors only mentioned that they separated the data but did not give a detailed explanation how they did it.
 
 <h2>5.3 Reflection</h2>
 

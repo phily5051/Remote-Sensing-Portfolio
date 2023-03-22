@@ -1,46 +1,100 @@
 ---
-title: "Week 4"
+title: "Policy"
 bibliography: references.bib
 editor: visual
 ---
 
-<h1>2030 Seoul Plan - Focus on Particulate Matter (PM) Policy</h1>
+<h1>4 2030 Seoul Plan - Particulate Matter (PM) Policy</h1>
 
-<h2>Summary</h2>
+This week covers the way we can use remote sensing to assist in implementing data-driven local-, country-, regional-level policies, while in compliance to global agendas. As a case study, we will look into Seoul's city plan - the biggest city plan in South Korea -, with special focus on the PM-related policies.
 
-In this diary, I am going to talk about the biggest city plan in South Korea and how a low-level city plan guideline is aligned with its upper-level plan. In particular, I will focus on the implementation of the plan regarding environment and whether there is any implementation that can be benefited from using remote sensing.
+<h2>4.1 Summary</h2>
 
-<h3>Brief Information about 2030 Seoul Plan</h3>
+<h3>4.1.1 Context</h3>
 
-[**2030 Seoul Plan**](https://urban.seoul.go.kr/view/html/PMNU2020000000) is the highest level city plan in Seoul, South Korea. Provided that Seoul is a capital city in South Korea, its city plan is often considered as significant and determinant as a government-led plan, in terms of its impacts on citizens of Seoul and the country. The plan covers a number of sectors which include housing, transport and environment. The city plan presents Seoul's future vision and outlines the city's development plan for the next 10 years.
-
-With regards to environment, the plan specifies 3 Targets and 11 Strategies. The 3 targets are as follows:
-
--   Target 1: Ecological city with numerous urban parks
--   Target 2: Energy-efficient city
--   Target 3: Disaster-free city
-
-Among the illustrated targets, Strategy 1-4 under Target 1 suggests a number of ways to deal with particulate matter, which is one of the biggest environmental issues in South Korea and highly related to citizen's life. One of the mitigation actions to deal with the air pollutants identified by the Seoul government is creating urban forests on those areas which are specifically vulnerable to fine dust.
-
-```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center'}
-knitr::include_graphics('img/seoulplan.png')
+```{r echo=FALSE, out.width="100%", out.height="50%", fig.align='center', fig.cap= "Poor Air Quality in Seoul in 2016, image taken from an aircraft (Source: [NASA](https://www.nasa.gov/feature/early-airborne-results-address-south-korean-air-quality))"}
+knitr::include_graphics('img/photo_seoul_nasa.jpg')
 ```
 
-2030 Seoul Plan (Source: Seoul Metropolitan Government)
+According to [NASA](https://www.nasa.gov/feature/early-airborne-results-address-south-korean-air-quality), Seoul, a capital city in South Korea, has some of the worst air pollution levels globally. Between 2009 and 2013, the average concentration of PM10 in Seoul was higher than that in many other major cities, including Los Angeles, Tokyo, Paris, and London. This severe pollution has caused health and environmental issues. To breathe cleaner air, people in Korea purchase masks and air purifiers, and the country struggles to reduce the PM levels.
 
-<h3>Urban Forest Guideline for PM Mitigation</h3>
+-   Consequences:
 
-[**Urban Forest Guideline for PM Mitigation**](https://news.seoul.go.kr/env/square/tree_planting_project/guideline) is a low-level city plan which entails types of activities that will be executed in line with the 2030 Seoul Plan. The guideline specified a number of technical rules to follow regarding types of trees to plant, which areas are targeted for urban forests implementation, and suitable distance between each tree stand and so on.
+    -   Health effects:
+
+        -   Higher mortality - PM is attributable to the death of 165 Korean citizens
+
+        -   Air pollution-related diseases - cancer, heart disease, pneumonia and low birth weight
+
+    -   Socio-economic effects:
+
+        -   Economic damage of \$ 9 billion a year, due to the decrease in economic activities
+
+        -   Impact on a number of outdoor sports
+
+<h3>4.1.2 International Framework</h3>
+
+**Sustainable Development Goals (SDG)**
+
+```{r echo=FALSE, out.width="100%", out.height="50%", fig.align='center', fig.cap= "United Nation SDG (Source: [United Nations](https://sdgs.un.org/goals))"}
+knitr::include_graphics('img/sdg.png')
+```
+
+The Sustainable Development Goals are a set of 17 interconnected aims adopted by all UN member states in 2015. The SDGs provide a common plan for achieving sustainable development by 2030, focusing on ending poverty, promoting peace and prosperity and all. The SDGs are an urgent call for action to create a better future for all people and the planet.
+
+SDGs regarding PM:
+
+**UN SDG 03**: Ensure healthy lives and promote well-being for all at all ages
+
+-   **Target 3.9**: By 2030, substantially reduce the number of deaths and illnesses from hazardous chemicals and air, water and soil pollution and contamination
+
+-   **Indicator 3.9.1**: Mortality rate attributed to household and ambient air pollution
+
+**UN SDG 11**: Make cities and human settlements inclusive, safe, resilient and sustainable
+
+-   **Target 11.6**: By 2030, reduce the adverse per capita environmental impact of cities, including by paying special attention to air quality and municipal and other waste management.
+
+-   **Indicator 11.6.2**: Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted)
+
+<h3>4.1.3 Metropolitan-level Framework</h3>
+
+-   General Information about Seoul Plan
+
+[**2030 Seoul Plan**](https://urban.seoul.go.kr/view/html/PMNU2020000000) is the highest-level city plan in Seoul, South Korea. Provided that Seoul is a capital city in South Korea, its city plan is often considered as significant and determinant as a government-led plan, in terms of its impacts on citizens of Seoul and the country. The plan has 5 focal points which include well-being ,employment, culture, environment and housing/transport, and it presents Seoul's future vision and outlines the city's development plan for the next 10 years.
+
+Policy relevant to PM:
+
+**Focal Point 4**: A city where life thrives/breathes
+
+-   **Target 1**: Urban park-led ecological city
+
+    -   **Strategy 1.3**: Conservation, restoration, and enhancement of urban natural ecosystems for public benefits
+
+        -   **Guideline 1.3.4**: Enhancement of public benefits of urban forests
+
+            -   Wide implementation of urban forests within the city
+
+    -   **Strategy 1.4**: Qualitative improvement and optimisation of urban living environment
+
+        -   **Guideline 1.4.1**: Reduction in Particulate Matter (PM) and smog
+
+            -   Promote environmentally-friendly cars such as electric and hybrid vehicles in the transportation sector
+            -   Modify road facilities to prevent the dispersion of PM
+            -   Expand distribution of eco-friendly home boilers and dust-absorbing cleaning vehicles to roads
+
+As we can see, **Strategy 1.3** and **Strategy 1.4** suggest a number of ways to reduce PM, which is one of the biggest environmental issues in South Korea and highly related to citizen's life. One of the mitigation actions to deal with the air pollutants identified by the Seoul government is creating urban forests on those areas which are specifically vulnerable to fine dust.
+
+<h3>4.1.4 Detailed Guideline for PM Mitigation Urban Forests</h3>
+
+[**Urban Forest Guideline for PM Mitigation**](https://www.seoul.go.kr/main/index.jsp) entails types of PM reduction activities that will be executed in line with the 2030 Seoul Plan. The guideline specified a number of technical rules to follow regarding types of trees to plant, which areas are targeted for urban forests implementation, and suitable distance between each tree stand and so on.
 
 Furthermore, the guideline categorised six types of urban forests that could mitigate the concentration of PM. These are street trees, urban parks, forests around the city, vegetations in schools and river, and green spaces within proximity to residential areas.
 
-```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center'}
+```{r echo=FALSE, out.width='100%', out.height= "50%", fig.align='center', fig.cap= "Distance between trees in residential areas (Source: Seoul Metropolitan Government)"}
 knitr::include_graphics('img/dist.png')
 ```
 
-Distance between trees in residential areas (Source: Seoul Metropolitan Government)
-
-<h4>3 Functional Urban Forest Types for PM Mitigation</h4>
+<h4>4.1.5 3 Types of PM Mitigation Urban Forest Types</h4>
 
 The said urban forest types can be grouped into 3 types of urban forests in terms of their objective and functionality. These are PM blockage urban forests, PM mitigation urban forests and Wind corridor urban forests.
 
@@ -60,11 +114,9 @@ The said urban forest types can be grouped into 3 types of urban forests in term
     -   to introduce clean air to city centre
     -   to enable the outflow of congregated PM within the city due to vehicles and household heating.
 
-```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center'}
+```{r echo=FALSE, out.width='100%', out.height= "50%", fig.align='center', fig.cap= "3 Types of PM Mitigation Urban Forest Types (Edited, Original image by Korea Forest Service)"}
 knitr::include_graphics('img/type.png')
 ```
-
-3 Types of PM Mitigation Urban Forest Types (Adjusted from Korea Forest Service)
 
 <h2>Application</h2>
 
@@ -72,23 +124,19 @@ Remote sensing can come into play a key role in identifying what PM mitigation u
 
 Remote sensing is an effective measure to map and monitor PM concentrations [@zhang2021]. This indicates that areas with routinely high PM concentrations can be detected by satellite images. Thus, government officials could take data-informed decisions and select the most suitable PM mitigation urban forest types for each particular area.
 
-```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center'}
+```{r echo=FALSE, out.width='100%', out.height= "50%", fig.align='center', fig.cap= "Average PM2.5 concentration between 2001 and 2006 mapped by remote sensing (Source: @zhang2021)"}
 knitr::include_graphics('img/pmmapping.jpg')
 ```
 
-Average PM2.5 concentration between 2001 and 2006 mapped by remote sensing (Source: @zhang2021)
-
 In addition, @gupta2006 found that remote sensing can capture the movement of air pollutants over a large area as satellite measurements are available globally. Their findings allude to us that remote sensing could enable us to understand how much PM have been absorbed by urban forests by measuring the size of PM mass between areas. The policymakers could draw on these quantified data as a basis for future policies.
 
-```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center'}
+```{r echo=FALSE, out.width='100%', out.height= "50%", fig.align='center', fig.cap= "Documentation of 1-year change of PM2.5 mass concentration in five study regions (Source: @gupta2006)"}
 knitr::include_graphics('img/pmlevels.jpg')
 ```
 
-Documentation of 1-year change of PM2.5 mass concentration in five study regions (Source: @gupta2006)
+*A bit of Thought.....* 
 
-<h3>**Link to UN SDG Goals**</h3>
-
-According to [United Nations 2030 Sustainable Development Goals (SDGs)](https://sdgs.un.org/goals), the use of remote sensing could contribute to achieving 2 SDGs goals.
+The application of remote sensing to locating the optimal location of PM mitigation urban forests could be linked to the following SDGs:
 
 -   SDG 3. Good Health and Well-Being
 
@@ -100,7 +148,11 @@ According to [United Nations 2030 Sustainable Development Goals (SDGs)](https://
 
 <h2>Reflection</h2>
 
-This week's contents were somewhat different from what we have learnt past few months. Understanding policy and how remote sensing could come into play its part in realising the policy's objective was interesting. The contemplation upon how remote sensing can be applied at a particular context and a site broadened my understanding. Of course, I am aware that remote sensing is one of many solutions that could assist in achieving policy's goals, and 1-size-fits-all approach is not sufficient to solve similar problems in different contexts. Thanks to this week's lecture, however, I could say that I came to understand how we can apply our theoretical and technical knowledge about remote sensing to solve the real problems.
+This week's contents were very different from what we have learnt in the past few months. Understanding policy and how remote sensing could come into play its part in realising the policy's objective was interesting. The contemplation upon how remote sensing can be applied at a particular context and a site broadened my understanding of where remote sensing can be applied in the policy implementation.
+
+Of course, I am aware that remote sensing is one of many solutions that could assist in achieving policy's goals, and 1-size-fits-all approach is not sufficient to solve similar problems in different contexts. Thanks to this week's lecture, however, I could say that I came to understand how we can apply our theoretical and technical knowledge about remote sensing to solve the real problems.
+
+In the future, I would like to look into environmental policies of developing countries as their contexts might be very different from the example we covered here. For developing countries, economic growth seems to be placed before environment. Consequently, some countries might not have sufficient guidelines to be in line with global agendas, and in worst cases they might not have policies. Therefore, it would be very interesting to explore how we can help bridge this gap between country-level policies and global policies by assisting in framing their policies and raising public awareness.
 
 <h2>References</h2>
 

@@ -1,5 +1,5 @@
 ---
-title: "Week 6"
+title: "Classification I"
 bibliography: references.bib
 editor: visual
 ---
@@ -12,11 +12,13 @@ The classification methods can be divided into two approach - unsupervised and s
 
 Supervised ML follows the following process:
 
-    - Class definition
-    - Pre-processing
-    - Training
-    - Pixel assignment
-    - Accuracy assessment
+```         
+- Class definition
+- Pre-processing
+- Training
+- Pixel assignment
+- Accuracy assessment
+```
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "Supervised Classification Process in Remote Sensing (Source: [GISgeography](https://gisgeography.com/supervised-unsupervised-classification-arcgis/))"}
 knitr::include_graphics('img/supervised_process.png')
