@@ -4,7 +4,7 @@ bibliography: references.bib
 editor: visual
 ---
 
-This week's learning diary is to investigate a remote sensor we are interested in, create a Xaringan presentation and host it on a learning diary. The presentation provides a general overview of the sensor, its application with regard to forestry, urban environment and geology, and my personal reflection. 
+This week's learning diary is to investigate a remote sensor we are interested in, create a Xaringan presentation and host it on a learning diary. The presentation consists of a general overview of the sensor, its application with regard to forestry, urban environment and geology, and my personal reflection. 
 
 ```{r, echo = FALSE, out.width='40%'}
 xaringanExtra::embed_xaringan(
