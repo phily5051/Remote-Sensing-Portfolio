@@ -85,19 +85,25 @@ All ML models need to be tested with withheld data to avoid over-fitting issues.
 
 @tobler argued the first law of geography is that [near things are more closely related than distant things]{.underline}. Even if we split our spatial data into training and test data, there will always be "possibilities of spatial autocorrelation".
 
-<h3>7.2.1 Brief Information about the Research</h3>
+<h3>7.2.1 Spatial dependence between training and test sets: another pitfall of classification accuracy assessment in remote sensing</h3>
 
-@karasiak built a random forest (RF) model to classify forest stands. The research team compared the OA of six cross-validation (CV) strategies with different sample sizes - pixel and object levels.
+-   **Summary**: \@karasiak discuss how spatial autocorrelation affects remote sensing image classification and emphasizes the need to account for spatial independence between training and test sets to avoid overestimating the model's generalization capabilities. The authors built a random forest (RF) model to classify forest stands. The research team compares the overall accuracy (OA) of six cross-validation (CV) strategies with different sample sizes - pixel and object levels, and demonstrates that spatial leave-one-out cross-validation is the most effective approach to obtaining unbiased estimates of predictive error.
 
-<h3>7.2.2 Main Findings of the research</h3>
+-   **Main Findings**:
 
--   Ignoring spatial autocorrelation resulted in a high accuracy in both sample levels
+    -   Ignoring spatial autocorrelation resulted in a high accuracy in both sample levels
 
--   Non-spatial LOO or *k* - fold CV at the object level can mitigate the effect of spatial autocorrelation, when the number of sample size is not too large (50 forest stands)
+    -   Non-spatial LOO or *k* - fold CV at the object level can mitigate the effect of spatial autocorrelation, when the number of sample size is not too large (50 forest stands)
 
-    -   If the number of sample increases (over 500 forest stands), the distance between forest stands reduces, leading to increased effect of spatial dependence between training and test datasets
+        -   If the number of sample increases (over 500 forest stands), the distance between forest stands reduces, leading to increased effect of spatial dependence between training and test datasets
 
--   Spatial LOO CV is a better choice
+    -   Spatial LOO CV is a better choice
+
+-   **Comment**:
+
+    This paper emphasises the importance of spatial autocorrelation and spatial independence between training and test datasets in accuracy assessment. The authors show that traditional non-spatial cross-validation methods can lead to overestimating accuracy, and spatial cross-validation provides better estimates of predictive error.
+
+    However, the paper has limitations in terms of its generalizability to other types of remote sensing imagery and classification tasks since it only focuses on forest classification using Sentinel-2 data. Furthermore, the authors did not provide a thorough analysis of the proposed approach's limitations and the possible trade-offs between accuracy and computational efficiency. Further research is necessary to validate the proposed approach in various contexts and to investigate its potential drawbacks and trade-offs.
 
 ```{r echo=FALSE, out.width= "60%", out.height= "40%", fig.show='hold', fig.align= 'center', fig.cap= "Average OA accuracy for each CV strategies (Source: [Karasiak et al, 2021](https://www.researchgate.net/publication/351106376_Spatial_dependence_between_training_and_test_sets_another_pitfall_of_classification_accuracy_assessment_in_remote_sensing))"}
 knitr::include_graphics('img/rs_cv.jpg')
@@ -108,14 +114,6 @@ knitr::include_graphics('img/rs_cv.jpg')
 knitr::include_graphics('img/rs_learningcurve.jpg')
 ```
 
-*A bit of Thought.....*
-
-Before reading this paper, I thought that object-based analysis is a safe way to avoid spatial autocorrelation issue as it is based on distance.
-
-After reading the paper, however, I began to understand the object-based non-spatial CV is just an alternative of spatial CV when the sample size is not too large.
-
-If we are classifying land cover types other than forest stands, would this optimal sample number be different from the forest stands? What is the optimal number of sample sizes that we are safe to use non-spatial CV to assess remote sensing ML model?
-
 <h2>7.3 Reflection</h2>
 
 This week's contents helped me understand the particular characteristics of remote sensing ML models. As ML models are grounded on spatial data, spatial autocorrelation is always inherent in the data we use.
@@ -123,5 +121,11 @@ This week's contents helped me understand the particular characteristics of remo
 Building a ML model without understanding this distinctive feature would result in a misleading classification.
 
 Moreover, I was pleased to see what we learnt in the previous term (**Moran's I**) comes into play in solving spatial autocorrelation in ML models. This reinforced my understanding of previous lessons as well as connected it to new concepts and methodologies.
+
+*A bit of thought.....*
+
+-   The object-based non-spatial CV is just an alternative of spatial CV when the sample size is not too large.
+
+-   If we are classifying land cover types other than forest stands, would this optimal sample number be different from the forest stands? What is the optimal number of sample sizes that we are safe to use non-spatial CV to assess remote sensing ML model?
 
 In closing this week's diary, I would like to look into any other new ML models in remote sensing which are not covered in the lecture, and their usage in urban environments.

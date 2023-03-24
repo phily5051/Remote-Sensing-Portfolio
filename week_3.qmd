@@ -132,37 +132,27 @@ knitr::include_graphics('img/piecewise.png')
 
 <h2>3.2 Application</h2>
 
-Image enhancement techniques not only enhance visual appearance but also allow for comparison between images retrieved from different years. In this part, I did research about how else image enhancement technology can be utilised apart from improving an image quality, and novel way of using a deep learning model to enhance the quality of image.
+Image enhancement techniques not only enhance visual appearance but also allow for comparison between images retrieved from different years. In this part, I did research about how else image enhancement technology can be utilised apart from improving an image quality, and a novel way of using a deep learning model to enhance the quality of image.
 
-<h3>3.2.1 General Information about Research</h3>
+<h3>3.2.1 An Image Processing Technique for the Study of Urban Heat Island Changes Using Different Seasonal Remote Sensing Data</h3>
 
-**Identification of Urban Heat Island (UHI)**
+-   **Summary**: @Hanqiu2011AnIP showed a method to address the challenge of comparing thermal remote sensing imagery data from different dates when studying UHI phenomena. The method involves using image enhancement technologies to generate 3D images that highlight UHI heat characteristics and spatial distribution features. To reduce the impacts caused by seasonal differences or weather conditions, normalization and scaling are used. Then, the images were overlaid to show difference between images by subtracting corresponding pixels. The study also introduces the Urban Heat Island Ratio Index (URI) to quantitatively compare UHI intensity within urban areas.
 
-@Hanqiu2011AnIP has attempted to compare thermal images from different years with the same date in order to investigate urban heat island (UHI). The thermal infrared bands of different date were processed with several image enhancement technologies.
+-   **Comment**: The study focuses on the difficulty of comparing thermal remote sensing imagery data from different dates due to seasonal variations and cloudy/rainy conditions, which is crucial to studying urban heat island (UHI) phenomena. The proposed solution involves processing the thermal data from different dates separately, using image enhancement technologies to generate 3D images, and reducing seasonal differences using normalization and scaling. The study also introduces a quantitative measure, the Urban Heat Island Ratio Index (URI), to compare UHI intensity within urban areas. However, more information is needed on the specific image enhancement technologies used and how they were selected. Additionally, I think it would be valuable to test this method in locations with different UHI patterns and environmental conditions beyond the case study city presented in the paper.
 
-To detect change of the UHI between different dates, the two thermal imagery were normalised and scaled to reduce the impacts caused by seasonal variations or weather conditions. Then, the images were overlaid to show difference between images by subtracting corresponding pixels.
+\<h3\>3.2.2 RSCNN: A CNN-Based Method to Enhance Low-Light Remote-Sensing Images\</h3\>
 
-*A bit of Thought.....*
+-   **Summary**: @article proposes a new neural network architecture called Remote-Sensing CNN (RSCNN) for enhancing low-light remote-sensing images. RSCNN uses CNNs, including LLCNN and SRCNN, and an upsampling operator to learn multi-scaled features. Due to the lack of labeled training data in remote-sensing image datasets, the study uses real natural image patches to train initially and fine-tunes with simulated remote-sensing image pairs. The study's experiments show that RSCNN outperforms conventional techniques in terms of SSIM and PSNR and has qualitative advantages in denoising and maintaining color and texture authenticity.
 
-This research demonstrates how we can employ image enhancement technologies to compare images from different years in a quantitative fashion. It showed us that the image enhancement technology, itself, is not just an end goal, but it can be used for limitless purposes.
-
-**Convolutional Neural Networks (CNN) for Image Enhancement**
-
-In addition to image enhancement technologies covered in the lecture, @article demonstrated that Convolutional Neural Networks (CNN) can enhance visual appearance of image greatly. The authors carried out performing several different image enhancement technologies on low-quality image.
+-   **Comment**: In addition to image enhancement technologies covered in the lecture, this study demonstrates that Convolutional Neural Networks (CNN) can enhance visual appearance of image greatly. The study's proposed RSCNN architecture is an exciting development in image enhancement technology, particularly for remote-sensing images. The use of real natural image patches for initial training and fine-tuning with simulated remote-sensing images is a smart approach to addressing the lack of labeled training data. The experiments' qualitative and quantative results demonstrate RSCNN's superiority over conventional techniques, which is encouraging. Lastly, I would like to point that this research somehow offered potentials in combining two different fields of studies - CNN and remote sensing -, and suggested that adding complexity to imagery can help us more natural results with more realistic textures and vivid details.
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap="Results of different image enhancement methods (Source: Hu et al., 2020)"}
 knitr::include_graphics('img/ie_methods.jpg')
 ```
 
-Their findings suggest remote-sensing CNN (RSCNN) has proven to be the most efficient method in enhancing visualisation effects and allowing a better interpretation. RSCNN showed the superiority in terms of Structural Similarity Index (SSIM) and Peak Signal-to-Noise_Ratio (PSNR) over conventional techniques.
-
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "SSIM and PSNR of different image enhancement methods (Source: Hu et al., 2020)"}
 knitr::include_graphics('img/rscnn_result.jpg')
 ```
-
-*A bit of Thought.....*
-
-This research somehow offered potentials in combining two different fields of studies - CNN and remote sensing -, and suggested that adding complexity to imagery can help us more natural results with more realistic textures and vivid details.
 
 <h2>3.3 Reflection</h2>
 
@@ -172,7 +162,7 @@ This week's content gave me an answer for the questions I had from the first wee
 
 -   As there are a variety of correction methods, it seems necessary to understand **what causes flaws in the remotely sensed images** and **how to employ an appropriate correction method to that specific datasets**.
 
-*A bit of Thought.....*
+*A bit of thought.....*
 
 -   Any preference in correction method?
 

@@ -1,6 +1,8 @@
 # Preface {.unnumbered}
 
-Hello, I am Phil from South Korea.
-This is my learning diary for CASA0023 Remotely Sensing Cities and Environments.
+```{r echo=FALSE, out.width= "30%", out.height="30%", fig.show='hold', fig.align= 'left'}
+knitr::include_graphics('img/selfie.jpg')
+```
+Hello, I am Phil from South Korea. This is my learning diary for CASA0023 Remotely Sensing Cities and Environments.
 
 To learn more about the module, visit <https://andrewmaclachlan.github.io/CASA0023/00-course_info.html>

@@ -90,17 +90,17 @@ Google Earth Engine has been widely applied, ranging from forest and vegetation 
 
 In this section, I will focus on [how GEE can be applied in collaboration with Machine Learning technologies]{.underline}, and what are the benefits of considering technological fusion.
 
-<h3>5.2.1 Brief Information about a Research</h3>
+<h3>5.2.1 Monitoring Forest Change in the Amazon Using Multi-Temporal Remote Sensing Data and Machine Learning Classification on Google Earth Engine</h3>
 
-@ijgi9100580 mapped and monitored the rainforests change in Brazil from 2000 and 2019.
+-   **Summary**: @ijgi9100580 aimed to map and monitor forest changes from 2000 to 2019 in a rainforest region in Pará state, Brazil, using satellite imagery and machine learning classification on Google Earth Engine. The results were validated through high-resolution image interpretation and showed a peak in deforestation rates from 2000 to 2006, followed by a decrease and stabilization until 2015, and a slight increase until 2019. Future forest dynamics were simulated based on historical trends, showing a decrease in deforestation rates from 2019 to 2028. The study demonstrated that the approach can provide useful information for forest policy development.
 
--   Data:
+-   **Data**:
 
     -   Building a model: Sentinel-2 and Landsat 5, 7 and 8 were used
 
     -   Model validation: the China-Brazilian Earth Resources Satellite (CBERS) high-resolution panchromatic data were used to validate the results of the classification.
 
--   Model building:
+-   **Model building**:
 
     -   The whole process of building `Random Forest (RF)` algorithm was implemented on GEE platform
 
@@ -114,7 +114,7 @@ In this section, I will focus on [how GEE can be applied in collaboration with M
 knitr::include_graphics('img/gee_abstract.jpg')
 ```
 
--   Results: The RF algorithm captured the deforestation patterns with accuracy.
+-   **Results**: The RF algorithm captured the deforestation patterns with accuracy.
 
 ```{r echo=FALSE, out.width='75%', out.height= "40%", fig.align='center', fig.cap= "RF Classification results - (a) Landsat 7 for 2000; (b) Landsat 5 for 2006; (c) Landsat 5 for 2010; (d) Landsat 8 for 2015; (e) Sentinel-2 for 2019 (Source: @ijgi9100580)"}
 knitr::include_graphics('img/classification_rf.jpg')
@@ -125,11 +125,9 @@ knitr::include_graphics('img/classification_rf.jpg')
 knitr::include_graphics('img/confusion.png')
 ```
 
-*A bit of Thought.....*
+-   **Comment**: The above research was utilising GEE as a main platform to build a ML model. It was very interesting to see how the GEE platform can be used apart from monitoring land cover change. This research well-demonstrated that combining satellite images and machine learning can be an effective way to monitor and forecast changes in forests. The study found a reduction in deforestation rates, but it's important to recognise that deforestation remains an ongoing issue with severe consequences for biodiversity, climate change, and local communities. In particular, the research argues that cattle ranching and land speculation were the main driving factors for deforestation in the region. Therefore, it is vital to continue monitoring and enforcing policies that safeguard forests and encourage sustainable land use practices. Good policies like the Brazilian government's various measures to regulate illegal deforestation in the region, such as the Action Plan for Prevention and Control of Legal Amazon Deforestation (PPCDAm), are much more needed now more than ever.
 
-The above research was utilising GEE as a main platform to build a ML model. It was very interesting to see how the GEE platform can be used apart from monitoring land cover change.
-
-However, I would like to point out an overfitting issue. If we look at the validation results, the accuracy of the model is `too good to be true`!! Can we be sure that training and test data are appropriately separated? The authors only mentioned that they separated the data but did not give a detailed explanation how they did it.
+-   **Limitation**: I would like to point out an overfitting issue. If we look at the validation results, the accuracy of the model is `too good to be true`!! Can we be sure that training and test data are appropriately separated? The authors only mentioned that they separated the data but did not give a detailed explanation how they did it.
 
 <h2>5.3 Reflection</h2>
 

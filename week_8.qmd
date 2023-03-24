@@ -12,6 +12,20 @@ Then, I will explain how UHI-related policies at a global-, metropolitan-, and l
 
 <h3>What is Urban Heat Island?</h3>
 
+<h4>UHI Interpretive Dance</h4>
+
+```{r, echo = FALSE, out.width='40%'}
+xaringanExtra::embed_xaringan(
+  'https://grand-tuck-757.notion.site/Urban-Heat-Island-Interpretive-Dance-5a97bd9ac958489188ab689db54e59a8',
+  ratio = "4:3",
+  border = "2px solid currentColor",
+  max_width = NULL,
+  margin = "1em auto",
+  style = NULL
+)
+
+```
+
 <h4>Definition</h4>
 
 UHI is a phenomenon where the temperature in an urban area is much warmer than its rural areas.
@@ -58,18 +72,25 @@ knitr::include_graphics('img/uhi_cause.png')
 
 In this section, I am going to introduce Seoul's urban planning policy with respect to UHI, and see how UHI mitigation activities under the metropolitan policy is in line with global policy.
 
+<h3>8.2.1 Metropolitan-level Policy</h3>
+
 **Seoul Plan** is a `metropolitan-level urban planning policy` in Seoul, South Korea. The plan consists of 5 focal points, and one of which is environment. Under the environment part, there are 3 targets and 11 strategies.
 
-Policy relevant to UHI:
+<h4>**Policy relevant to UHI**</h4>
 
-**Focal Point 4**: A city where life thrives/breathes
+-   **Focal Point 4**: A city where life thrives/breathes
 
--   **Target 1**: Urban park-led ecological city
--   **Strategy 1.2**: Enhancement of Urban Climate Control Capacity
+    -   **Target 1**: Urban park-led ecological city
 
-The strategy lists a number of UHI reduction activities which are as follows:
+        -   **Strategy 1.2**: Enhancement of Urban Climate Control Capacity
 
--   Enabling **wind corridor** which brings fresh air from forests to city centre
+            -   **Guideline 1.2.2**: Urban Heat Island Mitigation/Reduction
+
+<h4>**UHI Reduction Activities</h4>
+
+The **Guideline 1.2.2** lists a number of UHI reduction activities which are as follows:
+
+1.  Enabling **wind corridor** which brings fresh air from forests to city centre
 
 ```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.cap="Wind corridor forest map. (Source: [Seoul Metropolitan Government](https://flexible.img.hani.co.kr/flexible/normal/970/689/imgdb/original/2020/1014/20201014502292.jpg?_ga=2.54985771.1264888021.1678839871-1975413597.1678839871))"}
 knitr::include_graphics('img/windforest.jpg')
@@ -77,18 +98,18 @@ knitr::include_graphics('img/windforest.jpg')
 
 *Note*. Arrows indicate the main wind flow route. Forests play a key role in directing wind flow to city centre.
 
--   Implementation of mist spray and shade canopy in the parks and bus stops
+2.  Implementation of mist spray and shade canopy in the parks and bus stops
 
 ```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.show='hold', fig.cap= "Mist spray (Source: [The JoongAng](https://www.joongang.co.kr/article/23534249), 2019)"}
 
 knitr::include_graphics('img/mist_spray.jpg') 
 ```
 
-```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.show='hold', fig.cap= "Shade canopy (Source: [The JoongAng](https://www.joongang.co.kr/article/23534249), 2019)"}
+```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.show='hold', fig.cap= "Shade canopy (Source: [The JoongAng](https://www.joongang.co.kr/article/21706462#home), 2017)"}
 knitr::include_graphics('img/shade.jpg')
 ```
 
--   Configuration of **urban waterfronts** and **urban parks**
+3.  Configuration of **urban waterfronts** and **urban parks**
 
 ```{r echo=FALSE, out.width= "60%", out.height="40%", fig.show='hold', fig.align= 'center', fig.cap= 'Waterfront in Seoul (Source: [Seoul Metropolitan Government](https://mediahub.seoul.go.kr/archives/919167)'}
 knitr::include_graphics('img/cheonggyecheon.jpg')
@@ -100,15 +121,19 @@ knitr::include_graphics('img/park.jpg')
 
 ```
 
-Seoul Plan's UHI reduction activities are in accordance with [UN SDG 11](https://sdgs.un.org/goals). The activities listed contribute to building an environment risk resilient city. In particular, increasing open and green spaces within an urban setting is related to..
+-   **Limitation**:
+
+However, some of the mitigation activities do not necessarily cope with main causes of UHI. There should also consideration for `road paving materials` which enable percolation of rainwater. In addition, `more specific and granular-scale guidelines` for implementing UHI-mitigation urban parks are needed to better locate the urban parks within the city. This is where remote sensing data could come into play in deciding the optimal location of urban green spaces. Sentinel 3 can be used to detect highly unusual temperature in cities.
+
+-   **A link to Global Agenda**:
+
+Seoul Plan's UHI reduction activities could contribute to [UN SDG 11](https://sdgs.un.org/goals). The activities listed contribute to building an environment risk resilient city. In particular, one of the measures under **Guideline 1.2.2**: increasing open and green spaces within an urban setting is related to..
 
 *SDG 11.7.1: Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities.*
 
 ```{r echo=FALSE, out.width="60%", out.height="40%", fig.align='center', fig.cap= "UN SDG 11 - Global Policy (Source: [United Nations](https://sdgs.un.org/goals))"}
 knitr::include_graphics('img/sdg.png')
 ```
-
-However, some of the mitigation activities do not necessarily cope with main causes of UHI. There should also consideration for `road paving materials` which enable percolation of rainwater. In addition, `more specific and granular-scale guidelines` for implementing UHI-mitigation urban parks are needed to better locate the urban parks within the city. This is where remote sensing data could come into play in deciding the optimal location of urban green spaces. Sentinel 3 can be used to detect highly unusual temperature in cities.
 
 <h2>8.3 Reflection</h2>
 

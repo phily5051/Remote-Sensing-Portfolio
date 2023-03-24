@@ -102,37 +102,39 @@ Let's say 'pixel 1' has values for band 1, band 2, band 3, and so on. For refere
 
 Some land covers, such as wetland, are hard to classify due to unclear distinction with other surrounding land covers, massive seasonal changes in vegetation and hydrological variation. In this section, I looked into how somewhat classification-wise challenging land covers can be classified in conjunction with ML algorithms.
 
-<h3>6.2.2 Brief Information about a Research</h3>
+<h3>6.2.2 Random Forest Classification of Wetland Landcovers from Multi-Sensor Data in the Arid Region of Xinjiang, China</h3>
 
-@rs8110954 aimed to classify wetland land cover by **fusing** the `Pléiade-1B data` with `multi-date Landsat-8 data`. The former was performed based on an object-oriented approach, and the geometric and spectral features were extracted. From the latter, the *normalized difference vegetation index (NDVI) data* were calculated and this enabled to reflect [phenological changes in vegetation]{.underline}. The feature datasets obtained from two sensors were optimised and used to build a `RF model`.
+-   **Summary**: \@rs8110954 aimed to classify wetland land cover by using a random forest classification approach. The classification model was successfully developed with 19 features and achieved a satisfactory accuracy of 92.5%. The inclusion of spatial and temporal features has allowed for the accurate differentiation of wetland vegetation and water bodies from forests and crops. The study concludes that the proposed approach has significant practical values in supporting the effective management and protection of wetland resources.
+
+-   **Data + Processing**: By fusing the `Pléiade-1B data` with `multi-date Landsat-8 data`. The former was performed based on an object-oriented approach, and the geometric and spectral features were extracted. From the latter, the *normalized difference vegetation index (NDVI) data* were calculated and this enabled to reflect [phenological changes in vegetation]{.underline}. The feature datasets obtained from two sensors were optimised and used to build a `RF model`.
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "Flowchart of building a RF Model (Source: @rs8110954)"}
 knitr::include_graphics('img/wk6_application_abstract.png')
 ```
 
-The RF classifier obtained an overall accuracy of 93 % and the research team found out that the inclusion of the *geometric shapes improved the classification accuracy of the farming lands and water bodies by 5% - 10%*.
+-   **Result**:
 
-In addition, there has been a challenge in classifying wetland due to similar spectral features of vegetation covers. By making use of the *phenological difference* and the *textual information*, the team reduced the classification errors and [improved the overall accuracy about 10%]{.underline}.
+    -   The RF classifier obtained an [overall accuracy of 93 %]{.underline} and the research team found out that the inclusion of the *geometric shapes improved the classification accuracy of the farming lands and water bodies by 5% - 10%*. In addition, there has been a challenge in classifying wetland due to similar spectral features of vegetation covers. By making use of the *phenological difference* and the *textual information*, the team reduced the classification errors and [improved the overall accuracy about 10%]{.underline}.
+
+    -   The overall accuracy of the RF model was 10% higher than that of Support Vector Machine (SVM) and Artificial Neural Network (ANN) classifiers.
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "Importance of Features in the RF model (Source: @rs8110954)"}
 knitr::include_graphics('img/wk6_result_contribution.png')
 ```
 
-The classification result of the RF model was compared with other ML classification methods such as Support Vector Machine (SVM) and Artificial Neural Network (ANN). The research team found that the overall accuracy of the RF model was 10% higher than that of the SVM and ANN classifiers.
+-   **Insight**:
 
-<h3>6.2.3 Insight from the Findings</h3>
+    The classification results bring us back to a question we had in the lecture.
 
-The classification results bring us back to a question we had in the lecture.
+    **'Does the most advanced ML classification method always achieves the best results?'**
 
-**'Does the most advanced ML classification method always achieves the best results?'**
+    As shown in the results, the most advanced ML algorithms - SVM and ANN - did not achieve the best classification results. They were 10% behind the overall accuracy compared to the RF model's result.
 
-As shown in the results, the most advanced ML algorithms - SVM and ANN - did not achieve the best classification results. They were 10% behind the overall accuracy compared to the RF model's result.
+    The author stated that the way that RF model builds [each decision tree was significant in achieving a higher accuracy]{.underline}. In the RF model, each decision tree is a **"specialist tree"** which considers the `feature domain` - the data from [geometric and textual features]{.underline}.
 
-The author stated that the way that RF model builds [each decision tree was significant in achieving a higher accuracy]{.underline}. In the RF model, each decision tree is a **"specialist tree"** which considers the `feature domain` - the data from [geometric and textual features]{.underline}.
+    For instance, the lakes which are characterised as being large and in a circular shape with a smoother shoreline, which are rather easy to classify. However, marshes and ponds inherit heterogeneous features, and are in irregular shape, which pose difficulties in classifying them.
 
-For instance, the lakes which are characterised as being large and in a circular shape with a smoother shoreline, which are rather easy to classify. However, marshes and ponds inherit heterogeneous features, and are in irregular shape, which pose difficulties in classifying them.
-
-Therefore, the **specialist trees** grown with considerations for these features in the RF model explain why the RF model achieved a higher accuracy. What we can learn from this research is that the **location- and context-specific ML algorithm is required** to achieve a better classification accuracy. [The most advanced and state-of-the-art algorithms do not guarantee the best results]{.underline}.
+    Therefore, the **specialist trees** grown with considerations for these features in the RF model explain why the RF model achieved a higher accuracy. What we can learn from this research is that the **location- and context-specific ML algorithm is required** to achieve a better classification accuracy. [The most advanced and state-of-the-art algorithms do not guarantee the best results]{.underline}.
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "Research Area (Source: @rs8110954)"}
 knitr::include_graphics('img/wk6_research_area.png')

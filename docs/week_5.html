@@ -316,16 +316,16 @@ div.csl-indent {
 <p>Google Earth Engine has been widely applied, ranging from forest and vegetation studies to medical fields such as malaria <span class="citation" data-cites="rs10101509">(<a href="references.html#ref-rs10101509" role="doc-biblioref">Kumar and Mutanga 2018</a>)</span>. The display of satellite imagery on GEE has enabled us to identify any change occurred during a certain period of time. However, I was wondering whether detecting changes in land cover is the only thing that GEE can offer.</p>
 <p>In this section, I will focus on <u>how GEE can be applied in collaboration with Machine Learning technologies</u>, and what are the benefits of considering technological fusion.</p>
 <h3 class="anchored">
-5.2.1 Brief Information about a Research
+5.2.1 Monitoring Forest Change in the Amazon Using Multi-Temporal Remote Sensing Data and Machine Learning Classification on Google Earth Engine
 </h3>
-<p><span class="citation" data-cites="ijgi9100580">Brovelli, Sun, and Yordanov (<a href="references.html#ref-ijgi9100580" role="doc-biblioref">2020</a>)</span> mapped and monitored the rainforests change in Brazil from 2000 and 2019.</p>
 <ul>
-<li><p>Data:</p>
+<li><p><strong>Summary</strong>: <span class="citation" data-cites="ijgi9100580">Brovelli, Sun, and Yordanov (<a href="references.html#ref-ijgi9100580" role="doc-biblioref">2020</a>)</span> aimed to map and monitor forest changes from 2000 to 2019 in a rainforest region in Pará state, Brazil, using satellite imagery and machine learning classification on Google Earth Engine. The results were validated through high-resolution image interpretation and showed a peak in deforestation rates from 2000 to 2006, followed by a decrease and stabilization until 2015, and a slight increase until 2019. Future forest dynamics were simulated based on historical trends, showing a decrease in deforestation rates from 2019 to 2028. The study demonstrated that the approach can provide useful information for forest policy development.</p></li>
+<li><p><strong>Data</strong>:</p>
 <ul>
 <li><p>Building a model: Sentinel-2 and Landsat 5, 7 and 8 were used</p></li>
 <li><p>Model validation: the China-Brazilian Earth Resources Satellite (CBERS) high-resolution panchromatic data were used to validate the results of the classification.</p></li>
 </ul></li>
-<li><p>Model building:</p>
+<li><p><strong>Model building</strong>:</p>
 <ul>
 <li><p>The whole process of building <code>Random Forest (RF)</code> algorithm was implemented on GEE platform</p>
 <ul>
@@ -348,7 +348,7 @@ div.csl-indent {
 </div>
 </div>
 <ul>
-<li>Results: The RF algorithm captured the deforestation patterns with accuracy.</li>
+<li><strong>Results</strong>: The RF algorithm captured the deforestation patterns with accuracy.</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -370,9 +370,10 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p><em>A bit of Thought…..</em></p>
-<p>The above research was utilising GEE as a main platform to build a ML model. It was very interesting to see how the GEE platform can be used apart from monitoring land cover change.</p>
-<p>However, I would like to point out an overfitting issue. If we look at the validation results, the accuracy of the model is <code>too good to be true</code>!! Can we be sure that training and test data are appropriately separated? The authors only mentioned that they separated the data but did not give a detailed explanation how they did it.</p>
+<ul>
+<li><p><strong>Comment</strong>: The above research was utilising GEE as a main platform to build a ML model. It was very interesting to see how the GEE platform can be used apart from monitoring land cover change. This research well-demonstrated that combining satellite images and machine learning can be an effective way to monitor and forecast changes in forests. The study found a reduction in deforestation rates, but it’s important to recognise that deforestation remains an ongoing issue with severe consequences for biodiversity, climate change, and local communities. In particular, the research argues that cattle ranching and land speculation were the main driving factors for deforestation in the region. Therefore, it is vital to continue monitoring and enforcing policies that safeguard forests and encourage sustainable land use practices. Good policies like the Brazilian government’s various measures to regulate illegal deforestation in the region, such as the Action Plan for Prevention and Control of Legal Amazon Deforestation (PPCDAm), are much more needed now more than ever.</p></li>
+<li><p><strong>Limitation</strong>: I would like to point out an overfitting issue. If we look at the validation results, the accuracy of the model is <code>too good to be true</code>!! Can we be sure that training and test data are appropriately separated? The authors only mentioned that they separated the data but did not give a detailed explanation how they did it.</p></li>
+</ul>
 <h2 class="anchored">
 5.3 Reflection
 </h2>
