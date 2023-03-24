@@ -86,7 +86,7 @@ In this section, I am going to introduce Seoul's urban planning policy with resp
 
             -   **Guideline 1.2.2**: Urban Heat Island Mitigation/Reduction
 
-<h4>**UHI Reduction Activities</h4>
+<h4>**UHI Reduction Activities**</h4>
 
 The **Guideline 1.2.2** lists a number of UHI reduction activities which are as follows:
 
@@ -111,11 +111,11 @@ knitr::include_graphics('img/shade.jpg')
 
 3.  Configuration of **urban waterfronts** and **urban parks**
 
-```{r echo=FALSE, out.width= "60%", out.height="40%", fig.show='hold', fig.align= 'center', fig.cap= 'Waterfront in Seoul (Source: [Seoul Metropolitan Government](https://mediahub.seoul.go.kr/archives/919167)'}
+```{r echo=FALSE, out.width= "60%", out.height="40%", fig.show='hold', fig.align= 'center', fig.cap= 'Waterfront in Seoul (Source: [Seoul Metropolitan Government](https://mediahub.seoul.go.kr/archives/919167), 2015)'}
 knitr::include_graphics('img/cheonggyecheon.jpg')
 ```
 
-```{r echo=FALSE, out.width= "60%", out.height="40%", fig.show='hold', fig.align= 'center', fig.cap= 'Urban parks in Seoul (Source: [Kookmin Ilbo](https://m.kmib.co.kr/view.asp?arcid=0017350461))'}
+```{r echo=FALSE, out.width= "60%", out.height="40%", fig.show='hold', fig.align= 'center', fig.cap= 'Urban parks in Seoul (Source: [Kookmin Ilbo](https://m.kmib.co.kr/view.asp?arcid=0017350461), 2022)'}
 
 knitr::include_graphics('img/park.jpg')
 
@@ -137,7 +137,7 @@ knitr::include_graphics('img/sdg.png')
 
 <h2>8.3 Reflection</h2>
 
-This week's lecture was an extended lecture of the week 4, where we learnt about policies. A few weeks ago, I did not really understand the reason why there exist varying levels of policies. As each country faces country-specific challenges and their contexts are quite different. Therefore, I had somewhat suspicion about following global policies.
+This week's lecture was an extended lecture of the week 4, where we learnt about policies. A few weeks ago, I did not understand the reason why there exist varying levels of policies. As each country faces country-specific challenges and their contexts are quite different. Therefore, I had somewhat suspicion about following global policies.
 
 Having UHI as an example enabled me to grasp the importance of creating a cohesive link between different levels of policies. It is true that global policies are ambiguous and provide unclear guidance, and each country has different context. Yet, we need to have an agreed, standardised approach as it helps us assess and monitor the actions we take, and allows for comparing outputs. As long as the local-level policies are in accordance with a higher level policies, I do believe that some adjustments can be made to better cope with the local issues.
 
