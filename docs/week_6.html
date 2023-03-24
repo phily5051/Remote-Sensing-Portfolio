@@ -167,7 +167,22 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">6.1</span>  6.1 Summary</a>
+  <ul class="collapse">
+  <li><a href="#random-forests-rf" id="toc-random-forests-rf" class="nav-link" data-scroll-target="#random-forests-rf"><span class="toc-section-number">6.1.1</span>  6.1.1 Random Forests (RF)</a></li>
+  <li><a href="#support-vector-machine-svm" id="toc-support-vector-machine-svm" class="nav-link" data-scroll-target="#support-vector-machine-svm"><span class="toc-section-number">6.1.2</span>  6.1.2 Support Vector Machine (SVM)</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">6.2</span>  6.2 Applications</a>
+  <ul class="collapse">
+  <li><a href="#random-forest-classification-of-wetland-landcovers-from-multi-sensor-data-in-the-arid-region-of-xinjiang-china" id="toc-random-forest-classification-of-wetland-landcovers-from-multi-sensor-data-in-the-arid-region-of-xinjiang-china" class="nav-link" data-scroll-target="#random-forest-classification-of-wetland-landcovers-from-multi-sensor-data-in-the-arid-region-of-xinjiang-china"><span class="toc-section-number">6.2.1</span>  6.2.1 Random Forest Classification of Wetland Landcovers from Multi-Sensor Data in the Arid Region of Xinjiang, China</a></li>
+  </ul></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="toc-section-number">6.3</span>  6.3 Reflections</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -188,9 +203,8 @@ div.csl-indent {
 
 </header>
 
-<h2 class="anchored">
-6.1 Summary
-</h2>
+<section id="summary" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> 6.1 Summary</h2>
 <p>The classification methods can be divided into two approach - unsupervised and supervised algorithms. However, this diary will mainly focus on the supervised algorithms.</p>
 <p>Supervised ML follows the following process:</p>
 <pre><code>- Class definition
@@ -208,9 +222,8 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<h3 class="anchored">
-6.1.1 Random Forests (RF)
-</h3>
+<section id="random-forests-rf" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="random-forests-rf"><span class="header-section-number">6.1.1</span> 6.1.1 Random Forests (RF)</h3>
 <ul>
 <li><strong>Overview</strong>: RF simply means that <u>many are better than one</u>. We do “bootstrap” samples (bagging - only 70% of data is used), and create nodes with random number of variables and on and on. Eventually, we will make many decision trees from random number of variables. These different decision trees are called a forest. <u>A final decision is made by aggregating the results of a collection of decision trees</u>.</li>
 </ul>
@@ -230,9 +243,9 @@ div.csl-indent {
 <p>For example, when we want to classify a pixel, if the majority of decision trees says it is an urban area, the pixel is categorised as an urban area.</p>
 <p><em>Note.</em> <u>OOB is different from test data</u> as test data are never included in building decision trees.</p></li>
 </ul>
-<h3 class="anchored">
-6.1.2 Support Vector Machine (SVM)
-</h3>
+</section>
+<section id="support-vector-machine-svm" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="support-vector-machine-svm"><span class="header-section-number">6.1.2</span> 6.1.2 Support Vector Machine (SVM)</h3>
 <ul>
 <li><p><strong>Overview:</strong> SVM is a maximum margin classifier. SVM looks for a place where it can separate datasets most effectively. <u>The benefit of SVM is that it uses structural risk minimisation which minimises errors on unseen data</u>.</p>
 <p>The distance from the diving line to the closest points is called the maximum margin. However, sometimes points from some datasets are very close to points of other datasets, which could lead to misclassification.</p></li>
@@ -351,13 +364,13 @@ div.csl-indent {
 <li><p><strong>Example of the application of SVM</strong>:</p>
 <p>Let’s say ‘pixel 1’ has values for band 1, band 2, band 3, and so on. For reference, a pixel which has a number of band values is called <strong>Pattern vector</strong>. If there are forests, they will have many pattern vectors. If we put these into a feature space, these pattern vectors will be very close and on top of each other. This is the moment where SVM can come into play and separate them by allowing some misclassification.</p></li>
 </ul>
-<h2 class="anchored">
-6.2 Applications
-</h2>
+</section>
+</section>
+<section id="applications" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> 6.2 Applications</h2>
 <p>Some land covers, such as wetland, are hard to classify due to unclear distinction with other surrounding land covers, massive seasonal changes in vegetation and hydrological variation. In this section, I looked into how somewhat classification-wise challenging land covers can be classified in conjunction with ML algorithms.</p>
-<h3 class="anchored">
-6.2.1 Random Forest Classification of Wetland Landcovers from Multi-Sensor Data in the Arid Region of Xinjiang, China
-</h3>
+<section id="random-forest-classification-of-wetland-landcovers-from-multi-sensor-data-in-the-arid-region-of-xinjiang-china" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="random-forest-classification-of-wetland-landcovers-from-multi-sensor-data-in-the-arid-region-of-xinjiang-china"><span class="header-section-number">6.2.1</span> 6.2.1 Random Forest Classification of Wetland Landcovers from Multi-Sensor Data in the Arid Region of Xinjiang, China</h3>
 <ul>
 <li><p><strong>Summary</strong>: <span class="citation" data-cites="rs8110954">Tian et al. (<a href="references.html#ref-rs8110954" role="doc-biblioref">2016</a>)</span> aimed to classify wetland land cover by using a random forest classification approach. The classification model was successfully developed with 19 features and achieved a satisfactory accuracy of 92.5%. <u>The inclusion of spatial and temporal features has allowed for the accurate differentiation of wetland vegetation and water bodies from forests and crops</u>. The study concludes that the proposed approach has significant practical values in supporting the effective management and protection of wetland resources.</p></li>
 <li><p><strong>Data + Processing</strong>:</p>
@@ -424,9 +437,10 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<h2 class="anchored">
-6.3 Reflections
-</h2>
+</section>
+</section>
+<section id="reflections" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">6.3</span> 6.3 Reflections</h2>
 <p>The week 6’s lecture covers a number of ML algorithms that are being used in satellite imagery classification. These classification methods are employed to better distinguish one band from the other band which help classifying land cover in the image. They essentially do the same functionality in classifying data but they do it in different ways.</p>
 <p><em>Any considerations?</em>.</p>
 <ul>
@@ -459,6 +473,7 @@ div.csl-indent {
 Tian, Shaohong, Xianfeng Zhang, Jie Tian, and Quan Sun. 2016. <span>“Random Forest Classification of Wetland Landcovers from Multi-Sensor Data in the Arid Region of Xinjiang, China.”</span> <em>Remote Sensing</em> 8 (11). <a href="https://doi.org/10.3390/rs8110954">https://doi.org/10.3390/rs8110954</a>.
 </div>
 </div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

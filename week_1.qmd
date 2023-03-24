@@ -4,13 +4,13 @@ bibliography: references.bib
 editor: visual
 ---
 
-<h2>1.1 Summary</h2>
+## 1.1 Summary
 
-<h3>1.1.1 Definition of Remote Sensing</h3>
+### 1.1.1 Definition of Remote Sensing
 
 According to [NASA](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing#:~:text=Remote%20sensing%20is%20the%20acquiring,record%20reflected%20or%20emitted%20energy.) (n.d.), remote sensing refers to [information obtained at a distance]{.underline}. These sensors are placed on satellites or aircrafts and they detect and document reflected or emitted energy.
 
-<h3>1.1.2 What kinds of energy?</h3>
+### 1.1.2 What kinds of energy?
 
 To cut it short, the answer is [Electromagnetic Radiation (EMR)]{.underline}. Electromagnetic waves are waves comprising of oscillations of electric and magnetic fields that oscillate at right angles to each other. They exist as a large range of frequencies, with gamma waves having the highest frequency and radio waves the lowest frequency. While human eyes only detects visible light, the sensors can utilise the full range of the electromagnetic spectrum to collect data.
 
@@ -18,7 +18,7 @@ To cut it short, the answer is [Electromagnetic Radiation (EMR)]{.underline}. El
 knitr::include_graphics('img/light_spec.jpeg')
 ```
 
-<h3>1.1.3 Sensor Types</h3>
+### 1.1.3 Sensor Types
 
 There are two types of remote sensors: active and passive sensors.
 
@@ -39,7 +39,7 @@ There are two types of remote sensors: active and passive sensors.
 knitr::include_graphics('img/sensor_type.png')
 ```
 
-<h3>1.1.4. Does EMR interact with other factors?</h3>
+### 1.1.4. Does EMR interact with other factors?
 
 Yes, these radiations are often influenced by Earth's surface and atmospheric conditions, which might distort the original information.
 
@@ -47,7 +47,7 @@ Yes, these radiations are often influenced by Earth's surface and atmospheric co
 knitr::include_graphics('img/interaction.jpg')
 ```
 
-<h3>1.1.5 Four Resolutions of Remote Sensing Data</h3>
+### 1.1.5 Four Resolutions of Remote Sensing Data
 
 -   **Spatial**:
 
@@ -73,11 +73,11 @@ knitr::include_graphics('img/Atmospheric-Electromagnetic-Opacity.png')
 
     -   Sensor's ability to detect subtle differences in energy which determines the quality of images
 
-<h2>1.2 Application</h2>
+## 1.2 Application
 
 In this section, we will have a look at two studies in which spectral signature are employed in both academia and business.
 
-<h3>1.2.1 Species Spectral Signature: DiscriminatingClosely Related Plant Species in the Amazon with Near-InfraredLeaf-Spectroscopy</h3>
+### 1.2.1 Species Spectral Signature: DiscriminatingClosely Related Plant Species in the Amazon with Near-InfraredLeaf-Spectroscopy
 
 -   **Summary**: @durgante2013 explored the use of Fourier-Transform Near-Infrared (FT-NIR) Leaf Spectroscopy\* as a tool for discriminating closely related tree species in Amazonian forests. The researchers collected 36 spectral readings from the adaxial and abaxial surfaces of dried leaves for 159 individuals representing 10 species. Each spectral reading consisted of 1557 FT-NIR absorbance values. From these spectral readings, the researchers extracted Species Spectral Signatures (SSS) using discriminant analysis techniques, which represent the unique spectral properties of each species. [The study suggests that Species Spectral Signatures (SSS) from FT-NIR Leaf Spectroscopy provides better results than current DNA barcoding for plant identification in tropical forests, and represents a fast, low-cost sampling technique]{.underline}.
 
@@ -97,7 +97,7 @@ In this section, we will have a look at two studies in which spectral signature 
 knitr::include_graphics('img/tree_species.jpg')
 ```
 
-<h3>1.2.2 Classification of blueberry fruit and leaves based on spectral signatures</h3>
+### 1.2.2 Classification of blueberry fruit and leaves based on spectral signatures
 
 -   **Summary**: @yang2012 investigated the use of blueberry spectral analysis to provide necessary wavelengths for the development of a multispectral imaging system for estimating blueberry yield. Samples of fruit and leaves from different stages of maturity were collected from two blueberry fields in Florida, USA, in 2010 and 2011. The researchers used 3 classification models and found that an Multi-Nomial Logistic regression (MNR) model was the most efficient. The study suggests that a blueberry fruit detector could be developed using multispectral imaging.
 
@@ -119,7 +119,7 @@ I was mind-blown when I found out that spectral signature is like DNA!! Initiall
 
 Furthermore, with spectral signature, could we develop a ML model that helps us detect vulnerable or endangered species in the nature? This could be more time-, cost-effective than previous methods that are being employed in the field.
 
-<h2>1.3 Reflection</h2>
+## 1.3 Reflection
 
 Before taking this lecture, I did hear about the terminology "remote sensing". But I have to admit that I was quite scared of it as it appealed to me so-called "elite-science". Of course, we do see a lot of remote sensing imagery in our daily life but not many of us actually use the imagery to do work or study. In this regard, the introduction to remote sensing helped me feel more familiar with this domain of study field.
 
@@ -136,7 +136,7 @@ While free access and publicly availability are the Earth Observation (EO) data'
 
 Apart from what I mentioned, there will be more opportunities that remote sensors can come into play in achieving policy goals. The terminology "remote sensing" is not yet appearing in policy documents, but the time will come. Who would not want to make use of freely available data and its numerous advantages??
 
-<h2>References</h2>
+## References
 
 NASA EarthData. (n.d.) <https://www.earthdata.nasa.gov/> (Accessed: 26.01.2023)
 

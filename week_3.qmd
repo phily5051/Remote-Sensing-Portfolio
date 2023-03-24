@@ -4,9 +4,9 @@ bibliography: references.bib
 editor: visual
 ---
 
-<h2>3.1 Summary</h2>
+## 3.1 Summary
 
-<h3>3.1.1 Data Distortion</h3>
+### 3.1.1 Data Distortion
 
 Remotely sensed images often require corrections to be available for analysis. The image distortions occur due to the following factors:
 
@@ -28,11 +28,11 @@ knitr::include_graphics('img/topography.png')
 knitr::include_graphics('img/rotation.gif')
 ```
 
-<h3>3.1.2 Data Corrections</h3>
+### 3.1.2 Data Corrections
 
 Geometric, Atmospheric and Orthorectification corrections can be applied to correct distorted images.
 
-<h4>**(1)** **Geometric Correction**</h4>
+#### **(1)** **Geometric Correction**
 
 -   **Cause**: geometric error, introduced by internal and external factors (attitude and altitude change).
 
@@ -52,7 +52,7 @@ knitr::include_graphics('img/geomet.png')
 knitr::include_graphics('img/Geometric.png')
 ```
 
-<h4>**(2)** **Atmospheric Correction**</h4>
+#### **(2)** **Atmospheric Correction**
 
 -   This method removes scattering and absorption effects of the atmosphere to improve the image - absorption and scattering makes an image somewhat blurry as they reduce contrast of image.
 
@@ -86,7 +86,7 @@ knitr::include_graphics('img/pif.png')
 knitr::include_graphics('img/absolute.jpg')
 ```
 
-<h4>**(3)** **Orthorectification Correction**</h4>
+#### **(3)** **Orthorectification Correction**
 
 -   This method removes distortions by making the images [looked right above]{.underline} (at nadir). This correction necessitates [sensor geometry]{.underline} and an [elevation model]{.underline}.
 
@@ -102,7 +102,7 @@ Joining remote sensed images are coined as "**Mosaicking**". Using histogram mat
 knitr::include_graphics('img/mosaicking.gif')
 ```
 
-<h3>3.1.4 Image Enhancement</h3>
+#### 3.1.4 Image Enhancement
 
 -   Materials reflect different amounts of energy in the same wavelengths. However, sensors have [a fixed range of Digital Number (DN)]{.underline} values between 4 to 105.
 
@@ -128,11 +128,11 @@ knitr::include_graphics('img/percentage_stretch.png')
 knitr::include_graphics('img/piecewise.png')
 ```
 
-<h2>3.2 Application</h2>
+## 3.2 Application
 
 Image enhancement techniques not only enhance visual appearance but also allow for comparison between images retrieved from different years. In this part, I did research about how else image enhancement technology can be utilised apart from improving an image quality, and a novel way of using a deep learning model to enhance the quality of image.
 
-<h3>3.2.1 RSCNN: A CNN-Based Method to Enhance Low-Light Remote-Sensing Images</h3>
+#### 3.2.1 RSCNN: A CNN-Based Method to Enhance Low-Light Remote-Sensing Images
 
 -   **Summary**: @article proposes [a new neural network architecture called Remote-Sensing CNN (RSCNN) for enhancing low-light remote-sensing images]{.underline}. RSCNN uses CNNs, including LLCNN and SRCNN, and an upsampling operator to learn multi-scaled features. Due to the lack of labeled training data in remote-sensing image datasets, the study uses real natural image patches to train initially and fine-tunes with simulated remote-sensing image pairs. The study's experiments show that RSCNN outperforms conventional techniques in terms of SSIM and PSNR and has qualitative advantages in denoising and maintaining color and texture authenticity.
 
@@ -162,7 +162,7 @@ knitr::include_graphics('img/ie_methods.jpg')
 knitr::include_graphics('img/rscnn_result.jpg')
 ```
 
-<h2>3.3 Reflection</h2>
+## 3.3 Reflection
 
 This week's content gave me an answer for the questions I had from the first week. [Numerous data correction technologies improve the quality of image collected and allow for facilitating data to be ready for analysis]{.underline}.
 
@@ -188,7 +188,7 @@ This week's content gave me an answer for the questions I had from the first wee
 knitr::include_graphics('img/yolo.jpg')
 ```
 
-<h2>References</h2>
+## References
 
 Google Earth Engine for OSINT. (n.d.) 'Object Detection in Satellite Imagery'\[Online\]. Available at: <https://oballinger.github.io/GEE_OSINT/object_detection.html> (Acessed: 08.02.2023)
 

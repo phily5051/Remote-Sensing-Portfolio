@@ -4,9 +4,9 @@ bibliography: references.bib
 editor: visual
 ---
 
-<h2>5.1 Summary</h2>
+## 5.1 Summary
 
-<h3>5.1.1 What is Google Earth Engine (GEE)</h3>
+### 5.1.1 What is Google Earth Engine (GEE)
 
 [**Google Earth Engine**](https://earthengine.google.com/) is a [planetary-scale geo-spatial analysis platform]{.underline}. It enables users to keep track of changes and quantify differences on Earth's surface.
 
@@ -14,7 +14,7 @@ editor: visual
 knitr::include_graphics('img/gee.png')
 ```
 
-<h3>5.1.2 Pros & Cons of GEE</h3>
+### 5.1.2 Pros & Cons of GEE
 
 The advantages and disadvantages of GEE are as follows:
 
@@ -38,7 +38,7 @@ The advantages and disadvantages of GEE are as follows:
 
     -   Limited data types: profoundly limited to satellite imagery, which may not provide access to all the data types that people need
 
-<h3>5.1.3 Aggregating Pixels in GEE</h3>
+### 5.1.3 Aggregating Pixels in GEE
 
 [To allow large computations]{.underline}, GEE provides users with [various scale]{.underline} options to choose from. When an image is fed into GEE, many lower resolution versions of the image are pre-computed, and these are known as `Image Pyramids`.
 
@@ -52,7 +52,7 @@ The lowest level of the image pyramid represents native resolution. The ingested
 knitr::include_graphics('img/resampling_ex.png')
 ```
 
-<h3>5.1.4 Objects in GEE</h3>
+### 5.1.4 Objects in GEE
 
 There are **9 object classes** in GEE. Each class has its own class-specific functions to load and manipulate data.
 
@@ -60,7 +60,7 @@ There are **9 object classes** in GEE. Each class has its own class-specific fun
 knitr::include_graphics('img/classtype.png')
 ```
 
-<h3>5.1.5 Applicable Processes in GEE</h3>
+### 5.1.5 Applicable Processes in GEE
 
 -   **Reducing images by regions**:
 
@@ -84,13 +84,13 @@ knitr::include_graphics('img/reduce_ex.png')
 knitr::include_graphics('img/Reduce_Neighborhood.png')
 ```
 
-<h2>5.2 Application</h2>
+## 5.2 Application
 
 Google Earth Engine has been widely applied, ranging from forest and vegetation studies to medical fields such as malaria [@rs10101509]. The display of satellite imagery on GEE has enabled us to identify any change occurred during a certain period of time. However, I was wondering whether detecting changes in land cover is the only thing that GEE can offer.
 
 In this section, I will focus on [how GEE can be applied in collaboration with Machine Learning technologies]{.underline}, and what are the benefits of considering technological fusion.
 
-<h3>5.2.1 Monitoring Forest Change in the Amazon Using Multi-Temporal Remote Sensing Data and Machine Learning Classification on Google Earth Engine</h3>
+### 5.2.1 Monitoring Forest Change in the Amazon Using Multi-Temporal Remote Sensing Data and Machine Learning Classification on Google Earth Engine
 
 -   **Summary**: @ijgi9100580 aimed to [map and monitor forest changes from 2000 to 2019 in a rainforest region in Pará state, Brazil, using satellite imagery and machine learning classification on Google Earth Engine]{.underline}. The results were validated through high-resolution image interpretation and showed a peak in deforestation rates from 2000 to 2006, followed by a decrease and stabilization until 2015, and a slight increase until 2019. Future forest dynamics were simulated based on historical trends, showing a decrease in deforestation rates from 2019 to 2028. The study demonstrated that the approach can provide useful information for forest policy development.
 
@@ -129,7 +129,7 @@ knitr::include_graphics('img/confusion.png')
 
 -   **Limitation**: I would like to point out an [overfitting issue]{.underline}. If we look at the validation results, the accuracy of the model is `too good to be true`!! Can we be sure that training and test data are appropriately separated? The authors only mentioned that they separated the data but did not give a detailed explanation how they did it.
 
-<h2>5.3 Reflection</h2>
+## 5.3 Reflection
 
 This week's content was an introductory lecture for the GEE. The whole concept was somewhat very new and interesting for me as I have not ever heard of GEE before.
 
@@ -153,7 +153,7 @@ I noticed that most of datasets stored within the GEE server were mostly about "
 
 Thus, I was wondering whether there is any current research [in the context of urban environment by using the GEE platform]{.underline}. Although the change in an urban setting might not be as distinctive as deforestation, cities are growing and urban infrastructures are always changing. This gives us enough reason to make use of GEE to better understand fast-changing cities. Therefore, in the next session, I would love to do more research about how GEE can be potentially utilised in the urban environment.
 
-<h2>References</h2>
+## References
 
 Google Earth Engine (n.d.) <https://earthengine.google.com/> (Accessed: 28.02.2023)
 
