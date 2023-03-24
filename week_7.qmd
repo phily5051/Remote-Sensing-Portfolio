@@ -12,7 +12,11 @@ In this section, I am going to give an overall idea of how Machine Learning (ML)
 
 -   How to build a ML model in Remote Sensing?
 
-The image below illustrates the general idea of how ML models are built in remote sensing. The pixel values are extracted from **Region of Interest (ROI)**, and the data are stored in a tabular format. Each row contains the values of each pixel. The output value (land cover type) that we are trying to predict is called *'Label'*,and the input data is *'Feature'*. 70% of the values are used for training a model, the rest is withheld for testing the accuracy of the model.
+The drawing below illustrates the general idea of how ML models are built in remote sensing. The pixel values are extracted from **Region of Interest (ROI)**, and the data are stored in a tabular format. Each row contains the values of each pixel. The output value (land cover type) that we are trying to predict is called *'Label'*,and the input data is *'Feature'*. 70% of the values are used for training a model, the rest is withheld for testing the accuracy of the model.
+
+```{r echo=FALSE, out.width="80%", out.height="40%", fig.align='center', fig.cap= "ML Classification Model in a Nutshell"}
+knitr::include_graphics('img/drawing.jpg')
+```
 
 -   Any Considerations?:
 
@@ -20,7 +24,7 @@ The image below illustrates the general idea of how ML models are built in remot
     -   Understanding of **spatial autocorrelation**
     -   `Hard` vs `Soft` classification
 
-*A bit of Thought.....*
+*A bit of thought.....*
 
 So far, the classification methods we covered are at a per pixel approach, which assumes that a pixel contains only one land type. However, in reality, this is hardly true as each pixel can consist of different types of land. If we are doing a research, don't we need to set `detailed criteria or reasons to say a certain pixel a specific land type` when building a model and share this with people?
 
@@ -49,7 +53,7 @@ knitr::include_graphics('img/vis.jpg')
     -   number of Endmembers
     -   pixel purity
 
-*A bit of Thought.....*
+*A bit of thought.....*
 
 Can we really tell that Endmembers are *representative* of each land cover type? In previous lecture on signature reflectance, there was disparities in signature reflectance even between the same land cover type. For example, different tree species had different signature reflectance.
 

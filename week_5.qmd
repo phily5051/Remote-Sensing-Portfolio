@@ -146,7 +146,7 @@ Things I didn't like?!
 1.  `Javascript`: was a bit confusing. It kinds of looked similar to Python, but it was quite different in terms of defining variables.
 2.  `Image Export`: was quite challenging which I spent so much time!
 
-*A bit of Thought.....*
+*A bit of thought.....*
 
 I noticed that most of datasets stored within the GEE server were mostly about "[environment-related datasets]{.underline}". Moreover, many of the [on-going research]{.underline} were mainly focusing on [identifying change in the natural environment]{.underline}...
 
