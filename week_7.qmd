@@ -10,7 +10,7 @@ In this section, I am going to give an overall idea of how Machine Learning (ML)
 
 <h3>7.1.1 Remote Sensing ML Classification Methods In a Nutshell</h3>
 
--   **Building a ML model in Remote Sensing**: I drew the image below to illustrate the general idea of how ML models are built in remote sensing. The pixel values are extracted from [Region of Interest (ROI)]{.underline}, and the data are stored in a tabular format. Each row contains the values of each pixel. The output value (land cover type) that we are trying to predict is called '[Label]{.underline}', and the input data is '[Features]{.underline}'. 70% of the values are used for training a model, the rest is withheld for testing the accuracy of the model.
+-   **Building a ML model in Remote Sensing**: I drew the image below to illustrate the general idea of how ML models are built in remote sensing. The pixel values are extracted from [Region of Interest (ROI)]{.underline}, and the data are stored in a tabular format. Each row contains the values of each pixel. The output value (land cover type) that we are trying to predict is called '[Label]{.underline}', and the input data are called '[Features]{.underline}'. 70% of the values are used for training a model, the rest is withheld for testing the accuracy of the model.
 
 ```{r echo=FALSE, out.width="80%", out.height="40%", fig.align='center', fig.cap= "ML Classification Model in a Nutshell"}
 knitr::include_graphics('img/drawing.jpg')
