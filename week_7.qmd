@@ -91,7 +91,7 @@ All ML models need to be tested with withheld data to avoid over-fitting issues.
 
 <h3>7.2.1 Spatial dependence between training and test sets: another pitfall of classification accuracy assessment in remote sensing</h3>
 
--   **Summary**: \@karasiak discuss how spatial autocorrelation affects remote sensing image classification and emphasizes the need to account for spatial independence between training and test sets to avoid overestimating the model's generalization capabilities. The authors built a random forest (RF) model to classify forest stands. The research team compares the overall accuracy (OA) of six cross-validation (CV) strategies with different sample sizes - pixel and object levels, and demonstrates that spatial leave-one-out cross-validation is the most effective approach to obtaining unbiased estimates of predictive error.
+-   **Summary**: @karasiak discuss how spatial autocorrelation affects remote sensing image classification and emphasizes the need to account for spatial independence between training and test sets to avoid overestimating the model's generalization capabilities. The authors built a random forest (RF) model to classify forest stands. The research team compares the overall accuracy (OA) of six cross-validation (CV) strategies with different sample sizes - pixel and object levels, and demonstrates that spatial leave-one-out cross-validation is the most effective approach to obtaining unbiased estimates of predictive error.
 
 -   **Main Findings**:
 
