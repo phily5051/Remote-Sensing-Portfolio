@@ -140,7 +140,9 @@ Image enhancement techniques not only enhance visual appearance but also allow f
 
     -   DeepISP: It consists of 110 pairs of normal and low-light exposure images
 
-    -   UCMerced: This dataset contain 21 types of land use images
+    -   UCMerced: This dataset contains 21 types of land use images
+
+-   **Result**: The results of RSCNN are compared with traditional low-light enhancement algorithms, and the results show that RSCNN has better quantitative analysis indicators and can be applied to low-light remote-sensing image enhancement tasks.
 
 -   **Comment**:
 
