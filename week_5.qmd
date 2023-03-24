@@ -18,7 +18,7 @@ knitr::include_graphics('img/gee.png')
 
 The advantages and disadvantages of GEE are as follows:
 
--   Pros:
+-   [Pros]{.underline}:
 
     -   GEE stores various, rich and ready-to-use datasets within its server
 
@@ -28,7 +28,7 @@ The advantages and disadvantages of GEE are as follows:
 
     -   Enormous potential to collaborate with state-of-the-art technologies (Deep learning and Machine Learning)
 
--   Cons:
+-   [Cons]{.underline}:
 
     -   Easy access could mean the potential possibilities for inappropriate use by some criminals
 
@@ -40,13 +40,13 @@ The advantages and disadvantages of GEE are as follows:
 
 <h3>5.1.3 Aggregating Pixels in GEE</h3>
 
-*To allow large computations*, GEE provides users with [various scale]{.underline} options to choose from. When an image is fed into GEE, many lower resolution versions of the image are pre-computed, and these are known as `Image Pyramids`.
+[To allow large computations]{.underline}, GEE provides users with [various scale]{.underline} options to choose from. When an image is fed into GEE, many lower resolution versions of the image are pre-computed, and these are known as `Image Pyramids`.
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "GEE Image Pyramids (Source: [Google Earth Engine](https://developers.google.com/earth-engine/guides/scale#image-pyramids))"}
 knitr::include_graphics('img/Pyramids.png')
 ```
 
-The lowest level of the image pyramid represents native resolution. The ingested image data are aggregated to a higher pyramid levels until it reaches [256 \* 256]{.underline} pixel tiles. At this aggregation process, GEE uses *nearest neighbors* by default [Google Earth Engine](https://developers.google.com/earth-engine/guides/scale#image-pyramids). By default, the pyramid tiles are created by calculating *mean* values. This is called **resampling**.
+The lowest level of the image pyramid represents native resolution. The ingested image data are aggregated to a higher pyramid levels until it reaches [256 \* 256]{.underline} pixel tiles. At this aggregation process, GEE uses *nearest neighbors* by default [Google Earth Engine](https://developers.google.com/earth-engine/guides/scale#image-pyramids). By default, the pyramid tiles are created by calculating [mean]{.underline} values. This is called **resampling**.
 
 ```{r echo=FALSE, out.width='70%', out.height= "45%", fig.align='center', fig.cap="Example of Resampling (Source: [SpatialThoughts](https://spatialthoughts.com/2021/05/13/aggregating-population-data-gee/))"}
 knitr::include_graphics('img/resampling_ex.png')
@@ -62,7 +62,7 @@ knitr::include_graphics('img/classtype.png')
 
 <h3>5.1.5 Applicable Processes in GEE</h3>
 
--   Reducing images by regions:
+-   **Reducing images by regions**:
 
     -   `By region(s)`: It reduces all the pixels in the region(s) to a statistic of the pixel data in the region(s). We can take an image and generate statistics for it.
 
@@ -76,7 +76,7 @@ knitr::include_graphics('img/reduce_ex_code.png')
 knitr::include_graphics('img/reduce_ex.png')
 ```
 
--   Reducing images by neighbourhoods:
+-   **Reducing images by neighbourhoods**:
 
     -   `By neighbourhoods`: The neighbourhoods of a pixel in an image can be used to reduce the image.
 
@@ -92,15 +92,15 @@ In this section, I will focus on [how GEE can be applied in collaboration with M
 
 <h3>5.2.1 Monitoring Forest Change in the Amazon Using Multi-Temporal Remote Sensing Data and Machine Learning Classification on Google Earth Engine</h3>
 
--   **Summary**: @ijgi9100580 aimed to map and monitor forest changes from 2000 to 2019 in a rainforest region in Pará state, Brazil, using satellite imagery and machine learning classification on Google Earth Engine. The results were validated through high-resolution image interpretation and showed a peak in deforestation rates from 2000 to 2006, followed by a decrease and stabilization until 2015, and a slight increase until 2019. Future forest dynamics were simulated based on historical trends, showing a decrease in deforestation rates from 2019 to 2028. The study demonstrated that the approach can provide useful information for forest policy development.
+-   **Summary**: @ijgi9100580 aimed to [map and monitor forest changes from 2000 to 2019 in a rainforest region in Pará state, Brazil, using satellite imagery and machine learning classification on Google Earth Engine]{.underline}. The results were validated through high-resolution image interpretation and showed a peak in deforestation rates from 2000 to 2006, followed by a decrease and stabilization until 2015, and a slight increase until 2019. Future forest dynamics were simulated based on historical trends, showing a decrease in deforestation rates from 2019 to 2028. The study demonstrated that the approach can provide useful information for forest policy development.
 
 -   **Data**:
 
-    -   Building a model: Sentinel-2 and Landsat 5, 7 and 8 were used
+    -   Building a model: Sentinel-2 and Landsat 5, 7 and 8
 
-    -   Model validation: the China-Brazilian Earth Resources Satellite (CBERS) high-resolution panchromatic data were used to validate the results of the classification.
+    -   Model validation: The China-Brazilian Earth Resources Satellite (CBERS) high-resolution panchromatic data
 
--   **Model building**:
+-   **Model building process**:
 
     -   The whole process of building `Random Forest (RF)` algorithm was implemented on GEE platform
 
@@ -114,7 +114,7 @@ In this section, I will focus on [how GEE can be applied in collaboration with M
 knitr::include_graphics('img/gee_abstract.jpg')
 ```
 
--   **Results**: The RF algorithm captured the deforestation patterns with accuracy.
+-   **Results**: The RF algorithm captured the deforestation patterns with a high accuracy.
 
 ```{r echo=FALSE, out.width='75%', out.height= "40%", fig.align='center', fig.cap= "RF Classification results - (a) Landsat 7 for 2000; (b) Landsat 5 for 2006; (c) Landsat 5 for 2010; (d) Landsat 8 for 2015; (e) Sentinel-2 for 2019 (Source: @ijgi9100580)"}
 knitr::include_graphics('img/classification_rf.jpg')
@@ -125,9 +125,9 @@ knitr::include_graphics('img/classification_rf.jpg')
 knitr::include_graphics('img/confusion.png')
 ```
 
--   **Comment**: The above research was utilising GEE as a main platform to build a ML model. It was very interesting to see how the GEE platform can be used apart from monitoring land cover change. This research well-demonstrated that combining satellite images and machine learning can be an effective way to monitor and forecast changes in forests. The study found a reduction in deforestation rates, but it's important to recognise that deforestation remains an ongoing issue with severe consequences for biodiversity, climate change, and local communities. In particular, the research argues that cattle ranching and land speculation were the main driving factors for deforestation in the region. Therefore, it is vital to continue monitoring and enforcing policies that safeguard forests and encourage sustainable land use practices. Good policies like the Brazilian government's various measures to regulate illegal deforestation in the region, such as the Action Plan for Prevention and Control of Legal Amazon Deforestation (PPCDAm), are much more needed now more than ever.
+-   **Comment**: The above research was utilising GEE as a main platform to build a ML model. It was very interesting to see how the GEE platform can be used apart from monitoring land cover change. This research well-demonstrated that [combining satellite images and machine learning can be an effective way to monitor and forecast changes in forests]{.underline}. The study found a reduction in deforestation rates, but it's important to recognise that deforestation remains an ongoing issue with severe consequences for biodiversity, climate change, and local communities. In particular, the research argues that cattle ranching and land speculation were the main driving factors for deforestation in the region. Therefore, it is vital to continue monitoring and enforcing policies that safeguard forests and encourage sustainable land use practices. The Brazilian government's various measures to regulate illegal deforestation in the region, such as the Action Plan for Prevention and Control of Legal Amazon Deforestation (PPCDAm), are much more needed now more than ever.
 
--   **Limitation**: I would like to point out an overfitting issue. If we look at the validation results, the accuracy of the model is `too good to be true`!! Can we be sure that training and test data are appropriately separated? The authors only mentioned that they separated the data but did not give a detailed explanation how they did it.
+-   **Limitation**: I would like to point out an [overfitting issue]{.underline}. If we look at the validation results, the accuracy of the model is `too good to be true`!! Can we be sure that training and test data are appropriately separated? The authors only mentioned that they separated the data but did not give a detailed explanation how they did it.
 
 <h2>5.3 Reflection</h2>
 
@@ -135,22 +135,23 @@ This week's content was an introductory lecture for the GEE. The whole concept w
 
 Here are the things I noted while studying the GEE.
 
-Things I liked!!
+*Things I liked!!*
 
-1.  `Datasets`: are stored within GEE server so it was very convenient. Storing data always took up a lot of memory in my computer and sometimes it was hard to set up or remember a directory whenever I had to proceess data on R. The datasets on server saved so much space in my computer as well as the ready-made code to import the datasets was really easy.
+1.  `Datasets`: are stored within GEE server so it was very convenient. Storing data always took up a lot of memory in my computer and sometimes it was hard to set up or remember a directory whenever I had to process data on R. [The datasets on server saved so much space in my computer]{.underline} as well as the ready-made code to import the datasets was really easy.
 
-2.  `Fast`: spatial join and reducing images were much faster on GEE. With a few lines of code, I was able to get the results I wanted which would require lots of lines in other programming languages.
+2.  `Fast`: [spatial join and reducing images were much faster on GEE]{.under}. With a few lines of code, I was able to get the results I wanted which would require lots of lines in other programming languages.
 
-Things I didn't like?!
+*Things I didn't like?!*
 
 1.  `Javascript`: was a bit confusing. It kinds of looked similar to Python, but it was quite different in terms of defining variables.
+
 2.  `Image Export`: was quite challenging which I spent so much time!
 
 *A bit of thought.....*
 
-I noticed that most of datasets stored within the GEE server were mostly about "[environment-related datasets]{.underline}". Moreover, many of the [on-going research]{.underline} were mainly focusing on [identifying change in the natural environment]{.underline}...
+I noticed that most of datasets stored within the GEE server were mostly about "environment-related datasets". Moreover, many of the on-going research were mainly focusing on identifying change in the natural environment...
 
-Thus, I was wondering whether there is any current research in the context of urban environment by using the GEE platform. Although the change in an urban setting might not be as distinctive as deforestation, cities are growing and urban infrastructures are always changing. This gives us enough reason to make use of GEE to better understand fast-changing cities. Therefore, in the next session, I would love to do more research about how GEE can be potentially utilised in the urban environment.
+Thus, I was wondering whether there is any current research [in the context of urban environment by using the GEE platform]{.underline}. Although the change in an urban setting might not be as distinctive as deforestation, cities are growing and urban infrastructures are always changing. This gives us enough reason to make use of GEE to better understand fast-changing cities. Therefore, in the next session, I would love to do more research about how GEE can be potentially utilised in the urban environment.
 
 <h2>References</h2>
 

@@ -6,7 +6,7 @@ editor: visual
 
 <h2>6.1 Summary</h2>
 
-The classification methods can be divided into two approach - unsupervised and supervised algorithms. However, this diary will mainly focus on the [supervised algorithms]{.underline}.
+The classification methods can be divided into two approach - unsupervised and supervised algorithms. However, this diary will mainly focus on the supervised algorithms.
 
 Supervised ML follows the following process:
 
@@ -24,62 +24,58 @@ knitr::include_graphics('img/supervised_process.png')
 
 <h3>6.1.1 Random Forests (RF)</h3>
 
--   General Information about RF
-
-**RF** simply means that [many are better than one]{.underline}. We do "*bootstrap*" samples (*bagging* - only 70% of data is used), and create nodes with random number of variables and on and on. Eventually, we will make many decision trees from random number of variables. These different decision trees are called a forest.
+-   **Overview**: RF simply means that [many are better than one]{.underline}. We do "bootstrap" samples (bagging - only 70% of data is used), and create nodes with random number of variables and on and on. Eventually, we will make many decision trees from random number of variables. These different decision trees are called a forest. [A final decision is made by aggregating the results of a collection of decision trees]{.underline}.
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "Random Forests Classification (Source: [Feng et al, 2018](https://doi.org/10.1080/01431161.2018.1479794))"}
 knitr::include_graphics('img/rf_flowchart.jpg')
 ```
 
--   How a decision is generated in RF?
+-   **Decision process**:
 
-We test this forest with the samples that were not used to create the decision trees. These samples are called "*Out of Bag (OOB)*" (30%). The **majority of decisions** made on the OOB are chosen, and the proportion fo OOB incorrectly classified are called OOB error.
+    The forest is tested with the samples that were not used to create the decision trees. These samples are called "Out of Bag (OOB)" (30%). The **majority of decisions** made on the OOB are chosen, and the proportion fo OOB incorrectly classified are called OOB error.
 
-For example, when we want to classify a pixel, if the majority of decision trees says it is an urban area, the pixel is categorised as an urban area. One thing to note is that OOB is different from test data as test data are never included in building decision trees.
+    For example, when we want to classify a pixel, if the majority of decision trees says it is an urban area, the pixel is categorised as an urban area.
+
+    *Note.* [OOB is different from test data]{.underline} as test data are never included in building decision trees.
 
 <h3>6.1.2 Support Vector Machine (SVM)</h3>
 
--   General Information about SVM
+-   **Overview:** SVM is a maximum margin classifier. SVM looks for a place where it can separate datasets most effectively. [The benefit of SVM is that it uses structural risk minimisation which minimises errors on unseen data]{.underline}.
 
-**SVM** is a maximum margin classifier. SVM looks for a place where it can separate datasets most effectively. The benefit of SVM is that it uses structural risk minimisation which `minimises errors on unseen data`.
+    The distance from the diving line to the closest points is called the maximum margin. However, sometimes points from some datasets are very close to points of other datasets, which could lead to misclassification.
 
 ```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap= "Illustration of Support Vector Machine (Source: [skilltohire](https://medium.com/@skilltohire/support-vector-machines-4d28a427ebd))"}
 knitr::include_graphics('img/svm.png')
 ```
 
-The distance from the diving line to the closest points is called the `maximum margin`. However, sometimes points from some datasets are very close to points of other datasets, which could lead to misclassification.
-
-**Terminology**
+-   **Terminology**
 
 +-------------+---------------------------------------------------------------------------+
 | Term        | Description                                                               |
 +=============+===========================================================================+
-| Soft margin | -   allows some wrongly classified points to get the overall best results |
-|             | -   **underfitting** problem as outliers are included within the margins  |
+| Soft margin | -   Allows some wrongly classified points to get the overall best results |
+|             | -   Underfitting problem as outliers are included within the margins      |
 +-------------+---------------------------------------------------------------------------+
-| Hard margin | -   does not allow any misclassification                                  |
-|             | -   **overfitting** issue                                                 |
+| Hard margin | -   Does not allow any misclassification                                  |
+|             | -   Overfitting issue                                                     |
 +-------------+---------------------------------------------------------------------------+
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "Hard and Soft margin (Source: [Velocity Business Solutions](https://www.vebuso.com/2020/02/a-top-machine-learning-algorithm-explained-support-vector-machines-svms/))"}
 knitr::include_graphics('img/svm_margin.png')
 ```
 
-**Parameters of SVM**:
-
-The best values for C and gamma can be searched through using [grid search]{.underline}, which tests every possible values for the hyper-parameters
+-   **Parameters of SVM**: The best values for C and gamma can be searched through using [grid search]{.underline}, which tests every possible values for the hyper-parameters
 
 +-----------+------------------------------------------------------------------------------------------------------------------+
 | Parameter | Description                                                                                                      |
 +===========+==================================================================================================================+
-| C         | -   determines the extent of misclassification that SVM can allow                                                |
+| C         | -   Determines the extent of misclassification that SVM can allow                                                |
 |           | -   If 'C' is large, SVM has a hard margin                                                                       |
 |           | -   If 'C' is small, SVM has a soft margin                                                                       |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| Kernel    | -   transforms the data when the data cannot be linearly separated                                               |
+| Kernel    | -   Transforms the data when the data cannot be linearly separated                                               |
 +-----------+------------------------------------------------------------------------------------------------------------------+
-| Gamma     | -   defines the decision boundary                                                                                |
+| Gamma     | -   Defines the decision boundary                                                                                |
 |           | -   The larger the 'gamma' is, the higher probability of overfitting is                                          |
 |           | -   The smaller the 'gamma' is, the more linear the decision boundary is, which might cause underfitting issues. |
 +-----------+------------------------------------------------------------------------------------------------------------------+
@@ -92,21 +88,25 @@ knitr::include_graphics('img/svm_kernel.png')
 knitr::include_graphics('img/svm_gamma.png')
 ```
 
--   What is the example of the application of SVM?
+-   **Example of the application of SVM**:
 
-Let's say 'pixel 1' has values for band 1, band 2, band 3, and so on. For reference, a pixel which has a number of band values is called **Pattern vector**. If there are forests, they will have many pattern vectors. If we put these into a feature space, these pattern vectors will be very close and on top of each other. This is the moment where SVM can come into play and separate them by allowing some misclassification.
+    Let's say 'pixel 1' has values for band 1, band 2, band 3, and so on. For reference, a pixel which has a number of band values is called **Pattern vector**. If there are forests, they will have many pattern vectors. If we put these into a feature space, these pattern vectors will be very close and on top of each other. This is the moment where SVM can come into play and separate them by allowing some misclassification.
 
 <h2>6.2 Applications</h2>
 
-<h3>6.2.1 General Background</h3>
-
 Some land covers, such as wetland, are hard to classify due to unclear distinction with other surrounding land covers, massive seasonal changes in vegetation and hydrological variation. In this section, I looked into how somewhat classification-wise challenging land covers can be classified in conjunction with ML algorithms.
 
-<h3>6.2.2 Random Forest Classification of Wetland Landcovers from Multi-Sensor Data in the Arid Region of Xinjiang, China</h3>
+<h3>6.2.1 Random Forest Classification of Wetland Landcovers from Multi-Sensor Data in the Arid Region of Xinjiang, China</h3>
 
--   **Summary**: \@rs8110954 aimed to classify wetland land cover by using a random forest classification approach. The classification model was successfully developed with 19 features and achieved a satisfactory accuracy of 92.5%. The inclusion of spatial and temporal features has allowed for the accurate differentiation of wetland vegetation and water bodies from forests and crops. The study concludes that the proposed approach has significant practical values in supporting the effective management and protection of wetland resources.
+-   **Summary**: @rs8110954 aimed to classify wetland land cover by using a random forest classification approach. The classification model was successfully developed with 19 features and achieved a satisfactory accuracy of 92.5%. [The inclusion of spatial and temporal features has allowed for the accurate differentiation of wetland vegetation and water bodies from forests and crops]{.underline}. The study concludes that the proposed approach has significant practical values in supporting the effective management and protection of wetland resources.
 
--   **Data + Processing**: By fusing the `Pléiade-1B data` with `multi-date Landsat-8 data`. The former was performed based on an object-oriented approach, and the geometric and spectral features were extracted. From the latter, the *normalized difference vegetation index (NDVI) data* were calculated and this enabled to reflect [phenological changes in vegetation]{.underline}. The feature datasets obtained from two sensors were optimised and used to build a `RF model`.
+-   **Data + Processing**:
+
+    -   By fusing the `Pléiade-1B data` with `multi-date Landsat-8 data`.
+
+    -   The former was performed based on an object-oriented approach, and the [geometric and spectral features were extracted]{.underline}.
+
+    -   From the latter, the [normalized difference vegetation index (NDVI) data]{.underline} were calculated and this enabled to reflect [phenological changes in vegetation]{.underline}. The feature datasets obtained from two sensors were optimised and used to build a RF model.
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "Flowchart of building a RF Model (Source: @rs8110954)"}
 knitr::include_graphics('img/wk6_application_abstract.png')
@@ -114,7 +114,9 @@ knitr::include_graphics('img/wk6_application_abstract.png')
 
 -   **Result**:
 
-    -   The RF classifier obtained an [overall accuracy of 93 %]{.underline} and the research team found out that the inclusion of the *geometric shapes improved the classification accuracy of the farming lands and water bodies by 5% - 10%*. In addition, there has been a challenge in classifying wetland due to similar spectral features of vegetation covers. By making use of the *phenological difference* and the *textual information*, the team reduced the classification errors and [improved the overall accuracy about 10%]{.underline}.
+    -   The RF classifier obtained an overall accuracy of 93 % and the research team found out that the inclusion of the [geometric shapes improved the classification accuracy of the farming lands and water bodies by 5% - 10%.]{.underline}
+
+    -   The challenge in classifying wetland due to similar spectral features of vegetation covers: [By making use of the phenological difference and the textual information, the team reduced the classification errors and improved the overall accuracy about 10%]{.underline}.
 
     -   The overall accuracy of the RF model was 10% higher than that of Support Vector Machine (SVM) and Artificial Neural Network (ANN) classifiers.
 
@@ -130,7 +132,7 @@ knitr::include_graphics('img/wk6_result_contribution.png')
 
     As shown in the results, the most advanced ML algorithms - SVM and ANN - did not achieve the best classification results. They were 10% behind the overall accuracy compared to the RF model's result.
 
-    The author stated that the way that RF model builds [each decision tree was significant in achieving a higher accuracy]{.underline}. In the RF model, each decision tree is a **"specialist tree"** which considers the `feature domain` - the data from [geometric and textual features]{.underline}.
+    The author stated that the way that RF model builds [each decision tree was significant in achieving a higher accuracy]{.underline}. In the RF model, each decision tree is a **"specialist tree"** which considers the feature domain - the data from geometric and textual features.
 
     For instance, the lakes which are characterised as being large and in a circular shape with a smoother shoreline, which are rather easy to classify. However, marshes and ponds inherit heterogeneous features, and are in irregular shape, which pose difficulties in classifying them.
 
@@ -148,23 +150,25 @@ knitr::include_graphics('img/wk6_application_results.png')
 
 The week 6's lecture covers a number of ML algorithms that are being used in satellite imagery classification. These classification methods are employed to better distinguish one band from the other band which help classifying land cover in the image. They essentially do the same functionality in classifying data but they do it in different ways.
 
-However, there are some aspects that we have to ponder.
+*Any considerations?*.
 
-*Firstly*, these classifiers often make things very [complicated]{.underline}. While state-of-the-art ML algorithms are highly accurate, they are very difficult to interpret.
+-   The ML classifiers often make things very [complicated]{.underline}. While state-of-the-art ML algorithms are highly accurate, they are very difficult to interpret.
 
-*Secondly*, we need to consider [why we are using a specific ML algorithm to classify our data]{.underline}. If we could differentiate one band from the other with a simple method, is there still a necessity to use a highly developed classification method?
+-   We need to consider [why we are using a specific ML algorithm to classify our data]{.underline}. If we could differentiate one band from the other with a simple method, is there still a necessity to use a highly developed classification method?
 
-*The last but not the least*, we have to think about [classification itself]{.underline}. In reality, one pixel is not solely composed of one type of land cover types. It can co-exist with other types of land cover types. Therefore, we need to contemplate on to what extent we have to classify or ignore the values in a pixel.
+-   We have to think about [classification itself]{.underline}. In reality, one pixel is not solely composed of one type of land cover types. It can co-exist with other types of land cover types. Therefore, we need to contemplate on to what extent we have to classify or ignore the values in a pixel.
 
-As a whole, the lecture enabled me to think critically about
+*Takeaway message?*
 
-***Why do we use this method?***
+-   As a whole, the lecture enabled me to think critically about
 
-and
+    ***Why do we use this method?***
 
-***What are the assumptions of this specific method and are we aware of them?***
+    and
 
-The comprehensive understanding of the rationale behind the ML algorithm will help me choose an appropriate method based on data I am trying to analyse. Moreover, this will enable me to comprehend not only the accuracy of the model but to approach to my data in a holistic manner.
+    ***What are the assumptions of this specific method and are we aware of them?***
+
+    The comprehensive understanding of the rationale behind the ML algorithm will help me choose an appropriate method based on data I am trying to analyse. I believe this will enable me to comprehend not only the accuracy of the model but to approach to my data in a holistic manner.
 
 ```{r echo=FALSE, out.width='60%', out.height= "30%", fig.align='center', fig.cap= "Classification of Pixels (Source: [Peter Fisher](https://www.researchgate.net/figure/Four-causes-of-mixed-pixels_fig3_242103275))"}
 knitr::include_graphics('img/mixed_pixels.png')

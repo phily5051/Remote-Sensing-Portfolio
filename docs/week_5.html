@@ -114,7 +114,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Hello!</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -210,14 +210,14 @@ div.csl-indent {
 </h3>
 <p>The advantages and disadvantages of GEE are as follows:</p>
 <ul>
-<li><p>Pros:</p>
+<li><p><u>Pros</u>:</p>
 <ul>
 <li><p>GEE stores various, rich and ready-to-use datasets within its server</p></li>
 <li><p>Cloud-based processing: quickly analyses big data</p></li>
 <li><p>User-friendly interface: easy and free access</p></li>
 <li><p>Enormous potential to collaborate with state-of-the-art technologies (Deep learning and Machine Learning)</p></li>
 </ul></li>
-<li><p>Cons:</p>
+<li><p><u>Cons</u>:</p>
 <ul>
 <li><p>Easy access could mean the potential possibilities for inappropriate use by some criminals</p></li>
 <li><p>Dependence on Google: concerns around data privacy and security</p></li>
@@ -228,7 +228,7 @@ div.csl-indent {
 <h3 class="anchored">
 5.1.3 Aggregating Pixels in GEE
 </h3>
-<p><em>To allow large computations</em>, GEE provides users with <u>various scale</u> options to choose from. When an image is fed into GEE, many lower resolution versions of the image are pre-computed, and these are known as <code>Image Pyramids</code>.</p>
+<p><u>To allow large computations</u>, GEE provides users with <u>various scale</u> options to choose from. When an image is fed into GEE, many lower resolution versions of the image are pre-computed, and these are known as <code>Image Pyramids</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -239,7 +239,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>The lowest level of the image pyramid represents native resolution. The ingested image data are aggregated to a higher pyramid levels until it reaches <u>256 * 256</u> pixel tiles. At this aggregation process, GEE uses <em>nearest neighbors</em> by default <a href="https://developers.google.com/earth-engine/guides/scale#image-pyramids">Google Earth Engine</a>. By default, the pyramid tiles are created by calculating <em>mean</em> values. This is called <strong>resampling</strong>.</p>
+<p>The lowest level of the image pyramid represents native resolution. The ingested image data are aggregated to a higher pyramid levels until it reaches <u>256 * 256</u> pixel tiles. At this aggregation process, GEE uses <em>nearest neighbors</em> by default <a href="https://developers.google.com/earth-engine/guides/scale#image-pyramids">Google Earth Engine</a>. By default, the pyramid tiles are created by calculating <u>mean</u> values. This is called <strong>resampling</strong>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -268,7 +268,7 @@ div.csl-indent {
 5.1.5 Applicable Processes in GEE
 </h3>
 <ul>
-<li><p>Reducing images by regions:</p>
+<li><p><strong>Reducing images by regions</strong>:</p>
 <ul>
 <li><code>By region(s)</code>: It reduces all the pixels in the region(s) to a statistic of the pixel data in the region(s). We can take an image and generate statistics for it.</li>
 </ul></li>
@@ -295,7 +295,7 @@ div.csl-indent {
 </div>
 </div>
 <ul>
-<li><p>Reducing images by neighbourhoods:</p>
+<li><p><strong>Reducing images by neighbourhoods</strong>:</p>
 <ul>
 <li><code>By neighbourhoods</code>: The neighbourhoods of a pixel in an image can be used to reduce the image.</li>
 </ul></li>
@@ -319,13 +319,13 @@ div.csl-indent {
 5.2.1 Monitoring Forest Change in the Amazon Using Multi-Temporal Remote Sensing Data and Machine Learning Classification on Google Earth Engine
 </h3>
 <ul>
-<li><p><strong>Summary</strong>: <span class="citation" data-cites="ijgi9100580">Brovelli, Sun, and Yordanov (<a href="references.html#ref-ijgi9100580" role="doc-biblioref">2020</a>)</span> aimed to map and monitor forest changes from 2000 to 2019 in a rainforest region in Pará state, Brazil, using satellite imagery and machine learning classification on Google Earth Engine. The results were validated through high-resolution image interpretation and showed a peak in deforestation rates from 2000 to 2006, followed by a decrease and stabilization until 2015, and a slight increase until 2019. Future forest dynamics were simulated based on historical trends, showing a decrease in deforestation rates from 2019 to 2028. The study demonstrated that the approach can provide useful information for forest policy development.</p></li>
+<li><p><strong>Summary</strong>: <span class="citation" data-cites="ijgi9100580">Brovelli, Sun, and Yordanov (<a href="references.html#ref-ijgi9100580" role="doc-biblioref">2020</a>)</span> aimed to <u>map and monitor forest changes from 2000 to 2019 in a rainforest region in Pará state, Brazil, using satellite imagery and machine learning classification on Google Earth Engine</u>. The results were validated through high-resolution image interpretation and showed a peak in deforestation rates from 2000 to 2006, followed by a decrease and stabilization until 2015, and a slight increase until 2019. Future forest dynamics were simulated based on historical trends, showing a decrease in deforestation rates from 2019 to 2028. The study demonstrated that the approach can provide useful information for forest policy development.</p></li>
 <li><p><strong>Data</strong>:</p>
 <ul>
-<li><p>Building a model: Sentinel-2 and Landsat 5, 7 and 8 were used</p></li>
-<li><p>Model validation: the China-Brazilian Earth Resources Satellite (CBERS) high-resolution panchromatic data were used to validate the results of the classification.</p></li>
+<li><p>Building a model: Sentinel-2 and Landsat 5, 7 and 8</p></li>
+<li><p>Model validation: The China-Brazilian Earth Resources Satellite (CBERS) high-resolution panchromatic data</p></li>
 </ul></li>
-<li><p><strong>Model building</strong>:</p>
+<li><p><strong>Model building process</strong>:</p>
 <ul>
 <li><p>The whole process of building <code>Random Forest (RF)</code> algorithm was implemented on GEE platform</p>
 <ul>
@@ -348,7 +348,7 @@ div.csl-indent {
 </div>
 </div>
 <ul>
-<li><strong>Results</strong>: The RF algorithm captured the deforestation patterns with accuracy.</li>
+<li><strong>Results</strong>: The RF algorithm captured the deforestation patterns with a high accuracy.</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -371,27 +371,27 @@ div.csl-indent {
 </div>
 </div>
 <ul>
-<li><p><strong>Comment</strong>: The above research was utilising GEE as a main platform to build a ML model. It was very interesting to see how the GEE platform can be used apart from monitoring land cover change. This research well-demonstrated that combining satellite images and machine learning can be an effective way to monitor and forecast changes in forests. The study found a reduction in deforestation rates, but it’s important to recognise that deforestation remains an ongoing issue with severe consequences for biodiversity, climate change, and local communities. In particular, the research argues that cattle ranching and land speculation were the main driving factors for deforestation in the region. Therefore, it is vital to continue monitoring and enforcing policies that safeguard forests and encourage sustainable land use practices. Good policies like the Brazilian government’s various measures to regulate illegal deforestation in the region, such as the Action Plan for Prevention and Control of Legal Amazon Deforestation (PPCDAm), are much more needed now more than ever.</p></li>
-<li><p><strong>Limitation</strong>: I would like to point out an overfitting issue. If we look at the validation results, the accuracy of the model is <code>too good to be true</code>!! Can we be sure that training and test data are appropriately separated? The authors only mentioned that they separated the data but did not give a detailed explanation how they did it.</p></li>
+<li><p><strong>Comment</strong>: The above research was utilising GEE as a main platform to build a ML model. It was very interesting to see how the GEE platform can be used apart from monitoring land cover change. This research well-demonstrated that <u>combining satellite images and machine learning can be an effective way to monitor and forecast changes in forests</u>. The study found a reduction in deforestation rates, but it’s important to recognise that deforestation remains an ongoing issue with severe consequences for biodiversity, climate change, and local communities. In particular, the research argues that cattle ranching and land speculation were the main driving factors for deforestation in the region. Therefore, it is vital to continue monitoring and enforcing policies that safeguard forests and encourage sustainable land use practices. The Brazilian government’s various measures to regulate illegal deforestation in the region, such as the Action Plan for Prevention and Control of Legal Amazon Deforestation (PPCDAm), are much more needed now more than ever.</p></li>
+<li><p><strong>Limitation</strong>: I would like to point out an <u>overfitting issue</u>. If we look at the validation results, the accuracy of the model is <code>too good to be true</code>!! Can we be sure that training and test data are appropriately separated? The authors only mentioned that they separated the data but did not give a detailed explanation how they did it.</p></li>
 </ul>
 <h2 class="anchored">
 5.3 Reflection
 </h2>
 <p>This week’s content was an introductory lecture for the GEE. The whole concept was somewhat very new and interesting for me as I have not ever heard of GEE before.</p>
 <p>Here are the things I noted while studying the GEE.</p>
-<p>Things I liked!!</p>
+<p><em>Things I liked!!</em></p>
 <ol type="1">
-<li><p><code>Datasets</code>: are stored within GEE server so it was very convenient. Storing data always took up a lot of memory in my computer and sometimes it was hard to set up or remember a directory whenever I had to proceess data on R. The datasets on server saved so much space in my computer as well as the ready-made code to import the datasets was really easy.</p></li>
-<li><p><code>Fast</code>: spatial join and reducing images were much faster on GEE. With a few lines of code, I was able to get the results I wanted which would require lots of lines in other programming languages.</p></li>
+<li><p><code>Datasets</code>: are stored within GEE server so it was very convenient. Storing data always took up a lot of memory in my computer and sometimes it was hard to set up or remember a directory whenever I had to process data on R. <u>The datasets on server saved so much space in my computer</u> as well as the ready-made code to import the datasets was really easy.</p></li>
+<li><p><code>Fast</code>: <span class="under">spatial join and reducing images were much faster on GEE</span>. With a few lines of code, I was able to get the results I wanted which would require lots of lines in other programming languages.</p></li>
 </ol>
-<p>Things I didn’t like?!</p>
+<p><em>Things I didn’t like?!</em></p>
 <ol type="1">
-<li><code>Javascript</code>: was a bit confusing. It kinds of looked similar to Python, but it was quite different in terms of defining variables.</li>
-<li><code>Image Export</code>: was quite challenging which I spent so much time!</li>
+<li><p><code>Javascript</code>: was a bit confusing. It kinds of looked similar to Python, but it was quite different in terms of defining variables.</p></li>
+<li><p><code>Image Export</code>: was quite challenging which I spent so much time!</p></li>
 </ol>
 <p><em>A bit of thought…..</em></p>
-<p>I noticed that most of datasets stored within the GEE server were mostly about “<u>environment-related datasets</u>”. Moreover, many of the <u>on-going research</u> were mainly focusing on <u>identifying change in the natural environment</u>…</p>
-<p>Thus, I was wondering whether there is any current research in the context of urban environment by using the GEE platform. Although the change in an urban setting might not be as distinctive as deforestation, cities are growing and urban infrastructures are always changing. This gives us enough reason to make use of GEE to better understand fast-changing cities. Therefore, in the next session, I would love to do more research about how GEE can be potentially utilised in the urban environment.</p>
+<p>I noticed that most of datasets stored within the GEE server were mostly about “environment-related datasets”. Moreover, many of the on-going research were mainly focusing on identifying change in the natural environment…</p>
+<p>Thus, I was wondering whether there is any current research <u>in the context of urban environment by using the GEE platform</u>. Although the change in an urban setting might not be as distinctive as deforestation, cities are growing and urban infrastructures are always changing. This gives us enough reason to make use of GEE to better understand fast-changing cities. Therefore, in the next session, I would love to do more research about how GEE can be potentially utilised in the urban environment.</p>
 <h2 class="anchored">
 References
 </h2>

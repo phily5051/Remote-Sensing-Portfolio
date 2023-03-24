@@ -115,7 +115,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Hello!</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -192,14 +192,13 @@ div.csl-indent {
 <h2 class="anchored">
 7.1 Summary
 </h2>
-<p>In this section, I am going to give an overall idea of how Machine Learning (ML) classification algorithm works, explain the basic concept of sub pixel analysis, and understand how to assess the accuracy of the models we build.</p>
+<p>In this section, I am going to give an overall idea of how Machine Learning (ML) classification algorithm works, explain the basic concept of sub pixel analysis and how to assess the accuracy of the models we build.</p>
 <h3 class="anchored">
 7.1.1 Remote Sensing ML Classification Methods In a Nutshell
 </h3>
 <ul>
-<li>How to build a ML model in Remote Sensing?</li>
+<li><strong>Building a ML model in Remote Sensing</strong>: The drawing below illustrates the general idea of how ML models are built in remote sensing. The pixel values are extracted from <u>Region of Interest (ROI)</u>, and the data are stored in a tabular format. Each row contains the values of each pixel. The output value (land cover type) that we are trying to predict is called <u>‘Label’</u>, and the input data is [‘Feature’{.underline}. 70% of the values are used for training a model, the rest is withheld for testing the accuracy of the model.</li>
 </ul>
-<p>The drawing below illustrates the general idea of how ML models are built in remote sensing. The pixel values are extracted from <strong>Region of Interest (ROI)</strong>, and the data are stored in a tabular format. Each row contains the values of each pixel. The output value (land cover type) that we are trying to predict is called <em>‘Label’</em>,and the input data is <em>‘Feature’</em>. 70% of the values are used for training a model, the rest is withheld for testing the accuracy of the model.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -211,21 +210,20 @@ div.csl-indent {
 </div>
 </div>
 <ul>
-<li><p>Any Considerations?:</p>
+<li><p><strong>Any considerations?</strong>:</p>
 <ul>
-<li>For generalizability, better use <code>multi-year data</code>, rather than data from one single year</li>
-<li>Understanding of <strong>spatial autocorrelation</strong></li>
-<li><code>Hard</code> vs <code>Soft</code> classification</li>
+<li>For generalizability, better use <u>multi-year data</u>, rather than data from one single year</li>
+<li>Understanding of <u>spatial autocorrelation</u></li>
+<li>Hard vs Soft classification</li>
 </ul></li>
+<li><p><em>A bit of thought…..</em></p>
+<p>So far, the classification methods we covered are at a per pixel approach, which assumes that a pixel contains only one land type. However, in reality, this is hardly true as each pixel can consist of different types of land. If we are doing a research, don’t we need to set <u>detailed criteria or reasons to say a certain pixel a specific land type</u> when building a model and share this with people?</p></li>
 </ul>
-<p><em>A bit of thought…..</em></p>
-<p>So far, the classification methods we covered are at a per pixel approach, which assumes that a pixel contains only one land type. However, in reality, this is hardly true as each pixel can consist of different types of land. If we are doing a research, don’t we need to set <code>detailed criteria or reasons to say a certain pixel a specific land type</code> when building a model and share this with people?</p>
 <h3 class="anchored">
 7.1.2 Spectral Mixture Analysis (SMA)
 </h3>
 <ul>
-<li><p>Definition:</p>
-<p>SMA is a sub-pixel analysis technique which <code>estimates the proportion of different land covers within a pixel</code> based on their <code>spectral signatures</code> <span class="citation" data-cites="manolakislockwoodcooley2016">(<a href="references.html#ref-manolakislockwoodcooley2016" role="doc-biblioref">Manolakis, Lockwood, and Cooley 2016</a>)</span>.</p></li>
+<li><strong>Definition</strong>: SMA is a sub-pixel analysis technique which <u>estimates the proportion of different land covers within a pixel based on their spectral signatures</u> <span class="citation" data-cites="manolakislockwoodcooley2016">(<a href="references.html#ref-manolakislockwoodcooley2016" role="doc-biblioref">Manolakis, Lockwood, and Cooley 2016</a>)</span>.</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -238,9 +236,8 @@ div.csl-indent {
 </div>
 </div>
 <ul>
-<li><p>Assumption:</p>
-<p>The reflectance spectrum of a pixel is a <strong>linear sum</strong> of the reflectance spectra of <code>Endmembers</code> (different land cover types) present within that pixel <span class="citation" data-cites="articlea">(<a href="references.html#ref-articlea" role="doc-biblioref">Roberts et al. 1998</a>)</span>.</p>
-<p><em>Note</em>. <code>Endmembers</code> are spectrally pure pixels which have homogeneuos land cover, and there are typically only a few of them.</p></li>
+<li><p><strong>Assumption</strong>: <u>The reflectance spectrum of a pixel is a linear sum of the reflectance spectra of Endmembers</u> (different land cover types) present within that pixel <span class="citation" data-cites="articlea">(<a href="references.html#ref-articlea" role="doc-biblioref">Roberts et al. 1998</a>)</span>.</p>
+<p><em>Note</em>. <u>Endmembers</u> are spectrally-pure pixels which have homogeneous land cover, and there are typically only a few of them.</p></li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -253,42 +250,42 @@ div.csl-indent {
 </div>
 </div>
 <ul>
-<li><p>Any Considerations?:</p>
+<li><p><em>Any considerations?</em>:</p>
 <ul>
-<li>number of Endmembers</li>
-<li>pixel purity</li>
+<li>Number of Endmembers</li>
+<li>Pixel purity</li>
 </ul></li>
+<li><p><em>A bit of thought…..</em></p>
+<p>Can we really tell that <u>Endmembers are representative of each land cover type?</u> In previous lecture on signature reflectance, there was disparities in signature reflectance even between the same land cover type. For example, different tree species had different signature reflectance.</p></li>
 </ul>
-<p><em>A bit of thought…..</em></p>
-<p>Can we really tell that Endmembers are <em>representative</em> of each land cover type? In previous lecture on signature reflectance, there was disparities in signature reflectance even between the same land cover type. For example, different tree species had different signature reflectance.</p>
 <h3 class="anchored">
 7.1.3 Accuracy Assessment
 </h3>
+<ol type="1">
+<li><p><strong>Error matrix</strong>:</p>
 <ul>
-<li><p>Error matrix:</p>
-<ul>
-<li><p><code>Producer accuracy (Recall)</code>:</p>
+<li><p><u>Producer accuracy (Recall)</u>:</p>
 <ul>
 <li>How often are a map maker’s classification of real features on the ground is correct</li>
 <li><span class="math inline">\(TP\)</span> / <span class="math inline">\(TP\)</span> + <span class="math inline">\(FN\)</span></li>
 </ul></li>
-<li><p><code>User accuracy (Precision)</code>:</p>
+<li><p><u>User accuracy (Precision)</u>:</p>
 <ul>
 <li>How often the class on the map will actually be present on the ground</li>
 <li><span class="math inline">\(TP\)</span> / <span class="math inline">\(TP\)</span> + <span class="math inline">\(FP\)</span></li>
 </ul></li>
-<li><p><code>Overall accuracy (OA)</code>:</p>
+<li><p><u>Overall accuracy (OA)</u>:</p>
 <ul>
 <li>How well a map accurately represents all the reference sites</li>
 <li><span class="math inline">\(TP\)</span> <span class="math inline">\(+\)</span> <span class="math inline">\(TN\)</span> / <span class="math inline">\(TP + FP + FN + TN\)</span></li>
 </ul></li>
 </ul></li>
-<li><p>F1:</p>
+<li><p><strong>F1</strong>:</p>
 <ul>
-<li>combines both recall and precision</li>
+<li>Combines both recall and precision</li>
 <li><span class="math inline">\(F1 = 2 * Precision * Recall / Precision + Recall\)</span></li>
 </ul></li>
-</ul>
+</ol>
 <h2 class="anchored">
 7.2 Application
 </h2>
@@ -299,19 +296,19 @@ div.csl-indent {
 7.2.1 Spatial dependence between training and test sets: another pitfall of classification accuracy assessment in remote sensing
 </h3>
 <ul>
-<li><p><strong>Summary</strong>: <span class="citation" data-cites="karasiak">Karasiak et al. (<a href="references.html#ref-karasiak" role="doc-biblioref">2021</a>)</span> discuss how spatial autocorrelation affects remote sensing image classification and emphasizes the need to account for spatial independence between training and test sets to avoid overestimating the model’s generalization capabilities. The authors built a random forest (RF) model to classify forest stands. The research team compares the overall accuracy (OA) of six cross-validation (CV) strategies with different sample sizes - pixel and object levels, and demonstrates that spatial leave-one-out cross-validation is the most effective approach to obtaining unbiased estimates of predictive error.</p></li>
+<li><p><strong>Summary</strong>: <span class="citation" data-cites="karasiak">Karasiak et al. (<a href="references.html#ref-karasiak" role="doc-biblioref">2021</a>)</span> discuss <u>how spatial autocorrelation affects remote sensing image classification and emphasizes the need to account for spatial independence between training and test sets to avoid overestimating the model’s generalization capabilities.</u> The authors built a random forest (RF) model to classify forest stands. The research team compares the overall accuracy (OA) of six cross-validation (CV) strategies with different sample sizes - pixel and object levels, and demonstrates that spatial leave-one-out cross-validation is the most effective approach to obtaining unbiased estimates of predictive error.</p></li>
 <li><p><strong>Main Findings</strong>:</p>
 <ul>
-<li><p>Ignoring spatial autocorrelation resulted in a high accuracy in both sample levels</p></li>
-<li><p>Non-spatial LOO or <em>k</em> - fold CV at the object level can mitigate the effect of spatial autocorrelation, when the number of sample size is not too large (50 forest stands)</p>
+<li><p>Ignoring spatial autocorrelation <u>resulted in a high accuracy - overfitting-</u> in both sample levels</p></li>
+<li><p><u>Non-spatial LOO or <em>k</em> - fold CV at the object level can mitigate the effect of spatial autocorrelation, when the number of sample size is not too large</u> (50 forest stands)</p>
 <ul>
 <li>If the number of sample increases (over 500 forest stands), the distance between forest stands reduces, leading to increased effect of spatial dependence between training and test datasets</li>
 </ul></li>
-<li><p>Spatial LOO CV is a better choice</p></li>
+<li><p><u>Spatial LOO CV is a better choice</u></p></li>
 </ul></li>
 <li><p><strong>Comment</strong>:</p>
-<p>This paper emphasises the importance of spatial autocorrelation and spatial independence between training and test datasets in accuracy assessment. The authors show that traditional non-spatial cross-validation methods can lead to overestimating accuracy, and spatial cross-validation provides better estimates of predictive error.</p>
-<p>However, the paper has limitations in terms of its generalizability to other types of remote sensing imagery and classification tasks since it only focuses on forest classification using Sentinel-2 data. Furthermore, the authors did not provide a thorough analysis of the proposed approach’s limitations and the possible trade-offs between accuracy and computational efficiency. Further research is necessary to validate the proposed approach in various contexts and to investigate its potential drawbacks and trade-offs.</p></li>
+<p>This paper emphasises <u>the importance of spatial autocorrelation and spatial independence between training and test datasets in accuracy assessment</u>. The authors show that traditional non-spatial cross-validation methods can lead to overestimating accuracy, and spatial cross-validation provides better estimates of predictive error.</p></li>
+<li><p><strong>Limitation</strong>: However, the paper has <u>limitations in terms of its generalizability to other types of remote sensing imagery and classification tasks since it only focuses on forest classification using Sentinel-2 data</u>. Furthermore, the authors did not provide a thorough analysis of the proposed approach’s limitations and the possible trade-offs between accuracy and computational efficiency. Further research is necessary to validate the proposed approach in various contexts and to investigate its potential drawbacks and trade-offs.</p></li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">

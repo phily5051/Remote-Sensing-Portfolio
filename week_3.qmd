@@ -10,13 +10,13 @@ editor: visual
 
 Remotely sensed images often require corrections to be available for analysis. The image distortions occur due to the following factors:
 
--   **View angle**: depending on the angle of the sensor, the area of interest might look different.
+-   **View angle**: Depending on the angle of the sensor, the area of interest might look different.
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "View angle (Source: [Shen et al., 2021](https://www.mdpi.com/2072-4292/13/24/5094))"}
 knitr::include_graphics('img/view_angle.jpeg')
 ```
 
--   **Topography**: the shape of terrain might cause some flaws in the image.
+-   **Topography**: The shape of terrain might cause some flaws in the image.
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "Impact of Topography on Remote Sensing Images (Source: [Julia Lenhardt](https://community.esri.com/t5/imagery-and-remote-sensing-blog/bg-p/imagery-and-remote-sensing-blog/page/4))"}
 knitr::include_graphics('img/topography.png')
@@ -30,19 +30,19 @@ knitr::include_graphics('img/rotation.gif')
 
 <h3>3.1.2 Data Corrections</h3>
 
-Geometric, Atmospheric and Orthorectification corrections can be applied to corrected distorted images.
+Geometric, Atmospheric and Orthorectification corrections can be applied to correct distorted images.
 
 <h4>**(1)** **Geometric Correction**</h4>
 
--   Cause: **geometric error**, introduced by internal and external factors (attitude and altitude change).
+-   **Cause**: geometric error, introduced by internal and external factors (attitude and altitude change).
 
--   Solution:
+-   **Solution**:
 
-    -   **Ground Control Points** (**GCP**): "known points" in both sensed image and a reference data
+    -   `Ground Control Points (GCP)`: "known points" in both sensed image and a reference data
 
-        -   **Backward mapping** (**Linear model**): process of using GCP to infer the characteristics of the corresponding remote sensing data by building or refining models
+        -   `Backward mapping (Linear model)`: process of using GCP to infer the characteristics of the corresponding remote sensing data by building or refining models
 
-        -   Model verification: **RMSE** can be used - threshold 0.5
+        -   Model verification: RMSE can be used - threshold 0.5
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "GPS points from a map and Landsat image (Source: [GeoLearn](https://geolearn.in/geometric-corrections-in-remote-sensing-images/))"}
 knitr::include_graphics('img/geomet.png')
@@ -60,7 +60,7 @@ knitr::include_graphics('img/Geometric.png')
 knitr::include_graphics('img/atmos.jpeg')
 ```
 
--   Solution: Relative and Absolute approaches
+-   **Solution**: Relative and Absolute approaches
 
 **Relative atmospheric correction**
 
@@ -108,9 +108,7 @@ knitr::include_graphics('img/mosaicking.gif')
 
     The following methods could enhance the visual appearance of images by expanding this range.
 
-<!-- -->
-
--   **Minimum-Maximum**: utilises the [full range of available brightness values]{.underline}
+-   **Minimum-Maximum**: Utilises the [full range of available brightness values]{.underline}
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap= "Minimum-Maximum Linear Stretch (Source: [OneStopGIS](https://www.onestopgis.com/Aerial-Photography/Digital-Imaging/Imaging-by-Scanning-Techniques/3-Contrast-Stretch.html))"}
 knitr::include_graphics('img/minmax.png')
@@ -124,7 +122,7 @@ knitr::include_graphics('img/minmax.png')
 knitr::include_graphics('img/percentage_stretch.png')
 ```
 
--   **Piecewise Linear Contrast Stretch**: is used when the distribution of a histogram in an image is bi or trimodal ([Jensen and Schill, n.d.](http://knightlab.org/rscc/legacy/RSCC_Contrast_Enhancement.pdf)).
+-   **Piecewise Linear Contrast Stretch**: Used when the distribution of a histogram in an image is bi or trimodal ([Jensen and Schill, n.d.](http://knightlab.org/rscc/legacy/RSCC_Contrast_Enhancement.pdf)).
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap="Piecewise Linear Contrast Stretch (Source: [Tsai and Yeh, 2008](http://dx.doi.org/10.1109/TCE.2008.4560077))"}
 knitr::include_graphics('img/piecewise.png')
@@ -136,15 +134,23 @@ Image enhancement techniques not only enhance visual appearance but also allow f
 
 <h3>3.2.1 An Image Processing Technique for the Study of Urban Heat Island Changes Using Different Seasonal Remote Sensing Data</h3>
 
--   **Summary**: @Hanqiu2011AnIP showed a method to address the challenge of comparing thermal remote sensing imagery data from different dates when studying UHI phenomena. The method involves using image enhancement technologies to generate 3D images that highlight UHI heat characteristics and spatial distribution features. To reduce the impacts caused by seasonal differences or weather conditions, normalization and scaling are used. Then, the images were overlaid to show difference between images by subtracting corresponding pixels. The study also introduces the Urban Heat Island Ratio Index (URI) to quantitatively compare UHI intensity within urban areas.
+-   **Summary**: @Hanqiu2011AnIP showed a method to address the challenge of comparing thermal remote sensing imagery data from different dates when studying UHI phenomena. The method involves using image enhancement technologies to generate 3D images that highlight UHI heat characteristics and spatial distribution features. [To reduce the impacts caused by seasonal differences or weather conditions, normalization and scaling are used. Then, the images were overlaid to show difference between images by subtracting corresponding pixels]{.underline}. The study also introduces the Urban Heat Island Ratio Index (URI) to quantitatively compare UHI intensity within urban areas.
 
--   **Comment**: The study focuses on the difficulty of comparing thermal remote sensing imagery data from different dates due to seasonal variations and cloudy/rainy conditions, which is crucial to studying urban heat island (UHI) phenomena. The proposed solution involves processing the thermal data from different dates separately, using image enhancement technologies to generate 3D images, and reducing seasonal differences using normalization and scaling. The study also introduces a quantitative measure, the Urban Heat Island Ratio Index (URI), to compare UHI intensity within urban areas. However, more information is needed on the specific image enhancement technologies used and how they were selected. Additionally, I think it would be valuable to test this method in locations with different UHI patterns and environmental conditions beyond the case study city presented in the paper.
+-   **Comment**: The study focuses on the difficulty of comparing thermal remote sensing imagery data from different dates due to seasonal variations and cloudy/rainy conditions, which is crucial to studying urban heat island (UHI) phenomena. The proposed solution involves processing the thermal data from different dates separately, using image enhancement technologies to generate 3D images, and reducing seasonal differences using normalization and scaling. The study also introduces a quantitative measure, the Urban Heat Island Ratio Index (URI), to compare UHI intensity within urban areas.
 
-\<h3\>3.2.2 RSCNN: A CNN-Based Method to Enhance Low-Light Remote-Sensing Images\</h3\>
+-   **Limitation**: More information is needed on the specific image enhancement technologies used and how they were selected. Additionally, I think it would be valuable to [test this method in locations with different UHI patterns and environmental conditions]{.underline} beyond the case study city presented in the paper.
 
--   **Summary**: @article proposes a new neural network architecture called Remote-Sensing CNN (RSCNN) for enhancing low-light remote-sensing images. RSCNN uses CNNs, including LLCNN and SRCNN, and an upsampling operator to learn multi-scaled features. Due to the lack of labeled training data in remote-sensing image datasets, the study uses real natural image patches to train initially and fine-tunes with simulated remote-sensing image pairs. The study's experiments show that RSCNN outperforms conventional techniques in terms of SSIM and PSNR and has qualitative advantages in denoising and maintaining color and texture authenticity.
+<h3>3.2.2 RSCNN: A CNN-Based Method to Enhance Low-Light Remote-Sensing Images</h3>
 
--   **Comment**: In addition to image enhancement technologies covered in the lecture, this study demonstrates that Convolutional Neural Networks (CNN) can enhance visual appearance of image greatly. The study's proposed RSCNN architecture is an exciting development in image enhancement technology, particularly for remote-sensing images. The use of real natural image patches for initial training and fine-tuning with simulated remote-sensing images is a smart approach to addressing the lack of labeled training data. The experiments' qualitative and quantative results demonstrate RSCNN's superiority over conventional techniques, which is encouraging. Lastly, I would like to point that this research somehow offered potentials in combining two different fields of studies - CNN and remote sensing -, and suggested that adding complexity to imagery can help us more natural results with more realistic textures and vivid details.
+-   **Summary**: @article proposes [a new neural network architecture called Remote-Sensing CNN (RSCNN) for enhancing low-light remote-sensing images]{.underline}. RSCNN uses CNNs, including LLCNN and SRCNN, and an upsampling operator to learn multi-scaled features. Due to the lack of labeled training data in remote-sensing image datasets, the study uses real natural image patches to train initially and fine-tunes with simulated remote-sensing image pairs. The study's experiments show that RSCNN outperforms conventional techniques in terms of SSIM and PSNR and has qualitative advantages in denoising and maintaining color and texture authenticity.
+
+-   **Comment**:
+
+    In addition to image enhancement technologies covered in the lecture, this study demonstrates that Convolutional Neural Networks (CNN) can enhance visual appearance of image greatly. The study's proposed RSCNN architecture is an exciting development in image enhancement technology, particularly for remote-sensing images.
+
+    [The use of real natural image patches for initial training and fine-tuning with simulated remote-sensing images is a smart approach to addressing the lack of labeled training data]{.underline}. The experiments' qualitative and quantitative results demonstrate RSCNN's superiority over conventional techniques, which is encouraging.
+
+    Overall, this research offered [potentials in combining two different fields of studies - CNN and remote sensing -, and suggested that adding complexity to imagery can help us more natural results with more realistic textures and vivid details]{.underline}.
 
 ```{r echo=FALSE, out.width='60%', out.height= "40%", fig.align='center', fig.cap="Results of different image enhancement methods (Source: Hu et al., 2020)"}
 knitr::include_graphics('img/ie_methods.jpg')
@@ -156,7 +162,7 @@ knitr::include_graphics('img/rscnn_result.jpg')
 
 <h2>3.3 Reflection</h2>
 
-This week's content gave me an answer for the questions I had from the first week. Numerous **data correction technologies improve the quality of image collected and allow for facilitating data to be ready for analysis**.
+This week's content gave me an answer for the questions I had from the first week. [Numerous data correction technologies improve the quality of image collected and allow for facilitating data to be ready for analysis]{.underline}.
 
 *Takeaway message*
 
