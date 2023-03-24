@@ -119,7 +119,7 @@ I was mind-blown when I found out that spectral signature is like DNA!! Initiall
 
 Furthermore, with spectral signature, could we develop a ML model that helps us detect vulnerable or endangered species in the nature? This could be more time-, cost-effective than previous methods that are being employed in the field.
 
-<h2>Personal Reflection</h2>
+<h2>1.3 Reflection</h2>
 
 Before taking this lecture, I did hear about the terminology "remote sensing". But I have to admit that I was quite scared of it as it appealed to me so-called "elite-science". Of course, we do see a lot of remote sensing imagery in our daily life but not many of us actually use the imagery to do work or study. In this regard, the introduction to remote sensing helped me feel more familiar with this domain of study field.
 

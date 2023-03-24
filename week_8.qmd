@@ -103,7 +103,7 @@ knitr::include_graphics('img/park.jpg')
 
     [Some of the mitigation activities do not necessarily cope with main causes of UHI]{.underline}. There should also consideration for road paving materials which enable percolation of rainwater.
 
--   [More specific and granular-scale guidelines for implementing UHI-mitigation urban parks are needed to better locate the urban parks within the city]{.underline}. This is where remote sensing data could come into play in deciding the optimal location of urban green spaces. Sentinel 3 can be used to detect highly unusual temperature in cities.
+    [More specific and granular-scale guidelines for implementing UHI-mitigation urban parks are needed to better locate the urban parks within the city]{.underline}. This is where remote sensing data could come into play in deciding the optimal location of urban green spaces. Sentinel 3 can be used to detect highly unusual temperature in cities.
 
 -   **A link to Global Agenda**: Seoul Plan's UHI reduction activities could contribute to [UN SDG 11](https://sdgs.un.org/goals). The activities listed contribute to building an environment risk resilient city. In particular, one of the UHI reduction activities under **Guideline 1.2.2**: configuration of urban waterfronts and urban parks is linked to
 

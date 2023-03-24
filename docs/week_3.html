@@ -420,22 +420,20 @@ div.csl-indent {
 </h2>
 <p>Image enhancement techniques not only enhance visual appearance but also allow for comparison between images retrieved from different years. In this part, I did research about how else image enhancement technology can be utilised apart from improving an image quality, and a novel way of using a deep learning model to enhance the quality of image.</p>
 <h3 class="anchored">
-3.2.1 An Image Processing Technique for the Study of Urban Heat Island Changes Using Different Seasonal Remote Sensing Data
-</h3>
-<ul>
-<li><p><strong>Summary</strong>: <span class="citation" data-cites="Hanqiu2011AnIP">Han-qiu (<a href="references.html#ref-Hanqiu2011AnIP" role="doc-biblioref">2011</a>)</span> showed a method to address the challenge of comparing thermal remote sensing imagery data from different dates when studying UHI phenomena. The method involves using image enhancement technologies to generate 3D images that highlight UHI heat characteristics and spatial distribution features. <u>To reduce the impacts caused by seasonal differences or weather conditions, normalization and scaling are used. Then, the images were overlaid to show difference between images by subtracting corresponding pixels</u>. The study also introduces the Urban Heat Island Ratio Index (URI) to quantitatively compare UHI intensity within urban areas.</p></li>
-<li><p><strong>Comment</strong>: The study focuses on the difficulty of comparing thermal remote sensing imagery data from different dates due to seasonal variations and cloudy/rainy conditions, which is crucial to studying urban heat island (UHI) phenomena. The proposed solution involves processing the thermal data from different dates separately, using image enhancement technologies to generate 3D images, and reducing seasonal differences using normalization and scaling. The study also introduces a quantitative measure, the Urban Heat Island Ratio Index (URI), to compare UHI intensity within urban areas.</p></li>
-<li><p><strong>Limitation</strong>: More information is needed on the specific image enhancement technologies used and how they were selected. Additionally, I think it would be valuable to <u>test this method in locations with different UHI patterns and environmental conditions</u> beyond the case study city presented in the paper.</p></li>
-</ul>
-<h3 class="anchored">
-3.2.2 RSCNN: A CNN-Based Method to Enhance Low-Light Remote-Sensing Images
+3.2.1 RSCNN: A CNN-Based Method to Enhance Low-Light Remote-Sensing Images
 </h3>
 <ul>
 <li><p><strong>Summary</strong>: <span class="citation" data-cites="article">Hu et al. (<a href="references.html#ref-article" role="doc-biblioref">2020</a>)</span> proposes <u>a new neural network architecture called Remote-Sensing CNN (RSCNN) for enhancing low-light remote-sensing images</u>. RSCNN uses CNNs, including LLCNN and SRCNN, and an upsampling operator to learn multi-scaled features. Due to the lack of labeled training data in remote-sensing image datasets, the study uses real natural image patches to train initially and fine-tunes with simulated remote-sensing image pairs. The study’s experiments show that RSCNN outperforms conventional techniques in terms of SSIM and PSNR and has qualitative advantages in denoising and maintaining color and texture authenticity.</p></li>
+<li><p><strong>Data</strong>:</p>
+<ul>
+<li><p>DeepISP: It consists of 110 pairs of normal and low-light exposure images</p></li>
+<li><p>UCMerced: This dataset contain 21 types of land use images</p></li>
+</ul></li>
 <li><p><strong>Comment</strong>:</p>
 <p>In addition to image enhancement technologies covered in the lecture, this study demonstrates that Convolutional Neural Networks (CNN) can enhance visual appearance of image greatly. The study’s proposed RSCNN architecture is an exciting development in image enhancement technology, particularly for remote-sensing images.</p>
 <p><u>The use of real natural image patches for initial training and fine-tuning with simulated remote-sensing images is a smart approach to addressing the lack of labeled training data</u>. The experiments’ qualitative and quantitative results demonstrate RSCNN’s superiority over conventional techniques, which is encouraging.</p>
 <p>Overall, this research offered <u>potentials in combining two different fields of studies - CNN and remote sensing -, and suggested that adding complexity to imagery can help us more natural results with more realistic textures and vivid details</u>.</p></li>
+<li><p><strong>Limitation</strong>: The proposed method is evaluated on a limited set of datasets, and the generalization of the method to other remote-sensing datasets needs to be further investigated.</p></li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -463,7 +461,7 @@ div.csl-indent {
 <p>This week’s content gave me an answer for the questions I had from the first week. <u>Numerous data correction technologies improve the quality of image collected and allow for facilitating data to be ready for analysis</u>.</p>
 <p><em>Takeaway message</em></p>
 <ul>
-<li>As there are a variety of correction methods, it seems necessary to understand <strong>what causes flaws in the remotely sensed images</strong> and <strong>how to employ an appropriate correction method to that specific datasets</strong>.</li>
+<li>As there are a variety of correction methods, it seems necessary to understand <u>what causes flaws in the remotely sensed images and how to employ an appropriate correction method to that specific datasets.</u></li>
 </ul>
 <p><em>A bit of thought…..</em></p>
 <ul>
@@ -489,16 +487,13 @@ div.csl-indent {
 </div>
 </div>
 <h2 class="anchored">
-3.4 References
+References
 </h2>
 <p>Google Earth Engine for OSINT. (n.d.) ‘Object Detection in Satellite Imagery’[Online]. Available at: <a href="https://oballinger.github.io/GEE_OSINT/object_detection.html" class="uri">https://oballinger.github.io/GEE_OSINT/object_detection.html</a> (Acessed: 08.02.2023)</p>
 <p>Jensen, J.H. and Schill, S.R. (n.d.) ‘Contrast Enhancement’[PDF]. Available at: <a href="http://knightlab.org/rscc/legacy/RSCC_Contrast_Enhancement.pdf" class="uri">http://knightlab.org/rscc/legacy/RSCC_Contrast_Enhancement.pdf</a> (Accessed: 08.02.2023)</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-Hanqiu2011AnIP" class="csl-entry" role="doc-biblioentry">
-Han-qiu, Chen. 2011. <span>“An Image Processing Technique for the Study of Urban Heat Island Changes Using Different Seasonal Remote Sensing Data.”</span> <em>Remote Sensing Technology and Application</em> 18: 129–33.
-</div>
 <div id="ref-article" class="csl-entry" role="doc-biblioentry">
 Hu, Linshu, Mengjiao Qin, Feng Zhang, Zhenhong Du, and Renyi Liu. 2020. <span>“RSCNN: A CNN-Based Method to Enhance Low-Light Remote-Sensing Images.”</span> <em>Remote Sensing</em> 13 (December): 62. <a href="https://doi.org/10.3390/rs13010062">https://doi.org/10.3390/rs13010062</a>.
 </div>
