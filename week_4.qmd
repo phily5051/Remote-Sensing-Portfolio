@@ -4,7 +4,7 @@ bibliography: references.bib
 editor: visual
 ---
 
-# 2030 Seoul Plan - Particulate Matter (PM) Policy
+## 2030 Seoul Plan - Particulate Matter (PM) Policy
 
 This week covers the way we can use remote sensing to assist in implementing data-driven local-, country-, regional-level policies, while in compliance to global agendas. As a case study, we will look into Seoul's city plan - the biggest city plan in South Korea -, with special focus on the PM-related policies.
 
