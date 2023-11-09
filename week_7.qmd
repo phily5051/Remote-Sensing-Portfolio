@@ -112,7 +112,7 @@ knitr::include_graphics('img/rs_cv.jpg')
 knitr::include_graphics('img/rs_learningcurve.jpg')
 ```
 
-## 7.3 Reflection
+## Reflection
 
 This week's contents helped me understand the particular characteristics of remote sensing ML models. As ML models are grounded on spatial data, spatial autocorrelation is always inherent in the data we use.
 
