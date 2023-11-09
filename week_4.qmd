@@ -96,7 +96,7 @@ knitr::include_graphics('img/dist.png')
 
 ### Three Types of PM Mitigation Urban Forest Types
 
-The urban forest types can be grouped into 3 types of urban forests in terms of their objective and functionality. These are PM blockage urban forests, PM mitigation urban forests and Wind corridor urban forests.
+The urban forest types can be grouped into three types of urban forests in terms of their objective and functionality. These are PM blockage urban forests, PM mitigation urban forests and Wind corridor urban forests.
 
 -   PM blockage urban forests:
 
