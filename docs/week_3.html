@@ -171,13 +171,17 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">3.1</span>  3.1 Summary</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">3.1</span>  Summary</a>
   <ul class="collapse">
-  <li><a href="#data-distortion" id="toc-data-distortion" class="nav-link" data-scroll-target="#data-distortion"><span class="toc-section-number">3.1.1</span>  3.1.1 Data Distortion</a></li>
-  <li><a href="#data-corrections" id="toc-data-corrections" class="nav-link" data-scroll-target="#data-corrections"><span class="toc-section-number">3.1.2</span>  3.1.2 Data Corrections</a></li>
+  <li><a href="#data-distortion" id="toc-data-distortion" class="nav-link" data-scroll-target="#data-distortion"><span class="toc-section-number">3.1.1</span>  Data Distortion</a></li>
+  <li><a href="#data-corrections" id="toc-data-corrections" class="nav-link" data-scroll-target="#data-corrections"><span class="toc-section-number">3.1.2</span>  Data Corrections</a></li>
+  <li><a href="#data-join" id="toc-data-join" class="nav-link" data-scroll-target="#data-join"><span class="toc-section-number">3.1.3</span>  Data Join</a></li>
   </ul></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">3.2</span>  3.2 Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">3.3</span>  3.3 Reflection</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">3.2</span>  Application</a>
+  <ul class="collapse">
+  <li><a href="#rscnn-a-cnn-based-method-to-enhance-low-light-remote-sensing-images" id="toc-rscnn-a-cnn-based-method-to-enhance-low-light-remote-sensing-images" class="nav-link" data-scroll-target="#rscnn-a-cnn-based-method-to-enhance-low-light-remote-sensing-images"><span class="toc-section-number">3.2.1</span>  RSCNN: A CNN-Based Method to Enhance Low-Light Remote-Sensing Images</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">3.3</span>  Reflection</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">3.4</span>  References</a></li>
   </ul>
 </nav>
@@ -202,9 +206,9 @@ div.csl-indent {
 </header>
 
 <section id="summary" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> 3.1 Summary</h2>
+<h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
 <section id="data-distortion" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="data-distortion"><span class="header-section-number">3.1.1</span> 3.1.1 Data Distortion</h3>
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="data-distortion"><span class="header-section-number">3.1.1</span> Data Distortion</h3>
 <p>Remotely sensed images often require corrections to be available for analysis. The image distortions occur due to the following factors:</p>
 <ul>
 <li><strong>View angle</strong>: Depending on the angle of the sensor, the area of interest might look different.</li>
@@ -247,10 +251,10 @@ div.csl-indent {
 </div>
 </section>
 <section id="data-corrections" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="data-corrections"><span class="header-section-number">3.1.2</span> 3.1.2 Data Corrections</h3>
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="data-corrections"><span class="header-section-number">3.1.2</span> Data Corrections</h3>
 <p>Geometric, Atmospheric and Orthorectification corrections can be applied to correct distorted images.</p>
 <section id="geometric-correction" class="level4" data-number="3.1.2.1">
-<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="geometric-correction"><span class="header-section-number">3.1.2.1</span> <strong>(1)</strong> <strong>Geometric Correction</strong></h4>
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="geometric-correction"><span class="header-section-number">3.1.2.1</span> <strong>Geometric Correction</strong></h4>
 <ul>
 <li><p><strong>Cause</strong>: geometric error, introduced by internal and external factors (attitude and altitude change).</p></li>
 <li><p><strong>Solution</strong>:</p>
@@ -284,7 +288,7 @@ div.csl-indent {
 </div>
 </section>
 <section id="atmospheric-correction" class="level4" data-number="3.1.2.2">
-<h4 data-number="3.1.2.2" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">3.1.2.2</span> <strong>(2)</strong> <strong>Atmospheric Correction</strong></h4>
+<h4 data-number="3.1.2.2" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">3.1.2.2</span> <strong>Atmospheric Correction</strong></h4>
 <ul>
 <li>This method removes scattering and absorption effects of the atmosphere to improve the image - absorption and scattering makes an image somewhat blurry as they reduce contrast of image.</li>
 </ul>
@@ -349,7 +353,7 @@ div.csl-indent {
 </div>
 </section>
 <section id="orthorectification-correction" class="level4" data-number="3.1.2.3">
-<h4 data-number="3.1.2.3" class="anchored"><span class="header-section-number">3.1.2.3</span> <strong>(3)</strong> <strong>Orthorectification Correction</strong></h4>
+<h4 data-number="3.1.2.3" class="anchored" data-anchor-id="orthorectification-correction"><span class="header-section-number">3.1.2.3</span> <strong>Orthorectification Correction</strong></h4>
 <ul>
 <li>This method removes distortions by making the images <u>looked right above</u> (at nadir). This correction necessitates <u>sensor geometry</u> and an <u>elevation model</u>.</li>
 </ul>
@@ -363,9 +367,10 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<h3 class="anchored" data-anchor-id="orthorectification-correction">
-3.1.3 Data Join
-</h3>
+</section>
+</section>
+<section id="data-join" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="data-join"><span class="header-section-number">3.1.3</span> Data Join</h3>
 <p>Joining remote sensed images are coined as “<strong>Mosaicking</strong>”. Using histogram matching algorithm, similar brightness values are given to two images that are overlapped, and then the feathering is conducted.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -377,9 +382,8 @@ div.csl-indent {
 </div>
 </div>
 </div>
-</section>
-<section id="image-enhancement" class="level4" data-number="3.1.2.4">
-<h4 data-number="3.1.2.4" class="anchored" data-anchor-id="image-enhancement"><span class="header-section-number">3.1.2.4</span> 3.1.4 Image Enhancement</h4>
+<section id="image-enhancement" class="level4" data-number="3.1.3.1">
+<h4 data-number="3.1.3.1" class="anchored" data-anchor-id="image-enhancement"><span class="header-section-number">3.1.3.1</span> Image Enhancement</h4>
 <ul>
 <li><p>Materials reflect different amounts of energy in the same wavelengths. However, sensors have <u>a fixed range of Digital Number (DN)</u> values between 4 to 105.</p>
 <p>The following methods could enhance the visual appearance of images by expanding this range.</p></li>
@@ -429,10 +433,10 @@ div.csl-indent {
 </section>
 </section>
 <section id="application" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> 3.2 Application</h2>
+<h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> Application</h2>
 <p>Image enhancement techniques not only enhance visual appearance but also allow for comparison between images retrieved from different years. In this part, I did research about how else image enhancement technology can be utilised apart from improving an image quality, and a novel way of using a deep learning model to enhance the quality of image.</p>
-<section id="rscnn-a-cnn-based-method-to-enhance-low-light-remote-sensing-images" class="level4" data-number="3.2.0.1">
-<h4 data-number="3.2.0.1" class="anchored" data-anchor-id="rscnn-a-cnn-based-method-to-enhance-low-light-remote-sensing-images"><span class="header-section-number">3.2.0.1</span> 3.2.1 RSCNN: A CNN-Based Method to Enhance Low-Light Remote-Sensing Images</h4>
+<section id="rscnn-a-cnn-based-method-to-enhance-low-light-remote-sensing-images" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="rscnn-a-cnn-based-method-to-enhance-low-light-remote-sensing-images"><span class="header-section-number">3.2.1</span> RSCNN: A CNN-Based Method to Enhance Low-Light Remote-Sensing Images</h3>
 <ul>
 <li><p><strong>Summary</strong>: <span class="citation" data-cites="article">Hu et al. (<a href="references.html#ref-article" role="doc-biblioref">2020</a>)</span> proposes <u>a new neural network architecture called Remote-Sensing CNN (RSCNN) for enhancing low-light remote-sensing images</u>. RSCNN uses CNNs, including LLCNN and SRCNN, and an upsampling operator to learn multi-scaled features. Due to the lack of labeled training data in remote-sensing image datasets, the study uses real natural image patches to train initially and fine-tunes with simulated remote-sensing image pairs. The study’s experiments show that RSCNN outperforms conventional techniques in terms of SSIM and PSNR and has qualitative advantages in denoising and maintaining color and texture authenticity.</p></li>
 <li><p><strong>Data</strong>:</p>
@@ -470,7 +474,7 @@ div.csl-indent {
 </section>
 </section>
 <section id="reflection" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> 3.3 Reflection</h2>
+<h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
 <p>This week’s content gave me an answer for the questions I had from the first week. <u>Numerous data correction technologies improve the quality of image collected and allow for facilitating data to be ready for analysis</u>.</p>
 <p><em>Takeaway message</em></p>
 <ul>

@@ -4,7 +4,7 @@ bibliography: references.bib
 editor: visual
 ---
 
-## 6.1 Summary
+## Summary
 
 The classification methods can be divided into two approach - unsupervised and supervised algorithms. However, this diary will mainly focus on the supervised algorithms.
 
@@ -22,7 +22,7 @@ Supervised ML follows the following process:
 knitr::include_graphics('img/supervised_process.png')
 ```
 
-### 6.1.1 Random Forests (RF)
+### Random Forests (RF)
 
 -   **Overview**: RF simply means that [many are better than one]{.underline}. We do "bootstrap" samples (bagging - only 70% of data is used), and create nodes with random number of variables and on and on. Eventually, we will make many decision trees from random number of variables. These different decision trees are called a forest. [A final decision is made by aggregating the results of a collection of decision trees]{.underline}.
 
@@ -38,7 +38,7 @@ knitr::include_graphics('img/rf_flowchart.jpg')
 
     *Note.* [OOB is different from test data]{.underline} as test data are never included in building decision trees.
 
-### 6.1.2 Support Vector Machine (SVM)
+### Support Vector Machine (SVM)
 
 -   **Overview:** SVM is a maximum margin classifier. SVM looks for a place where it can separate datasets most effectively. [The benefit of SVM is that it uses structural risk minimisation which minimises errors on unseen data]{.underline}.
 
@@ -92,11 +92,11 @@ knitr::include_graphics('img/svm_gamma.png')
 
     Let's say 'pixel 1' has values for band 1, band 2, band 3, and so on. For reference, a pixel which has a number of band values is called **Pattern vector**. If there are forests, they will have many pattern vectors. If we put these into a feature space, these pattern vectors will be very close and on top of each other. This is the moment where SVM can come into play and separate them by allowing some misclassification.
 
-## 6.2 Applications
+## Applications
 
 Some land covers, such as wetland, are hard to classify due to unclear distinction with other surrounding land covers, massive seasonal changes in vegetation and hydrological variation. In this section, I looked into how somewhat classification-wise challenging land covers can be classified in conjunction with ML algorithms.
 
-### 6.2.1 Random Forest Classification of Wetland Landcovers from Multi-Sensor Data in the Arid Region of Xinjiang, China
+### Random Forest Classification of Wetland Landcovers from Multi-Sensor Data in the Arid Region of Xinjiang, China
 
 -   **Summary**: @rs8110954 aimed to classify wetland land cover by using a random forest classification approach. The classification model was successfully developed with 19 features and achieved a satisfactory accuracy of 92.5%. [The inclusion of spatial and temporal features has allowed for the accurate differentiation of wetland vegetation and water bodies from forests and crops]{.underline}. The study concludes that the proposed approach has significant practical values in supporting the effective management and protection of wetland resources.
 
@@ -146,7 +146,7 @@ knitr::include_graphics('img/wk6_research_area.png')
 knitr::include_graphics('img/wk6_application_results.png')
 ```
 
-## 6.3 Reflections
+## Reflections
 
 The week 6's lecture covers a number of ML algorithms that are being used in satellite imagery classification. These classification methods are employed to better distinguish one band from the other band which help classifying land cover in the image. They essentially do the same functionality in classifying data but they do it in different ways.
 

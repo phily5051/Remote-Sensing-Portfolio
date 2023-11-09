@@ -4,11 +4,11 @@ bibliography: references.bib
 editor: visual
 ---
 
-## 7.1 Summary
+## Summary
 
 In this section, I am going to give an overall idea of how Machine Learning (ML) classification algorithm works, explain the basic concept of sub pixel analysis and how to assess the accuracy of the models we build.
 
-### 7.1.1 Remote Sensing ML Classification Methods In a Nutshell
+### Remote Sensing ML Classification Methods In a Nutshell
 
 -   **Building a ML model in Remote Sensing**: I drew the image below to illustrate the general idea of how ML models are built in remote sensing. The pixel values are extracted from [Region of Interest (ROI)]{.underline}, and the data are stored in a tabular format. Each row contains the values of each pixel. The output value (land cover type) that we are trying to predict is called '[Label]{.underline}', and the input data are called '[Features]{.underline}'. 70% of the values are used for training a model, the rest is withheld for testing the accuracy of the model.
 
@@ -26,7 +26,7 @@ knitr::include_graphics('img/drawing.jpg')
 
     So far, the classification methods we covered are at a per pixel approach, which assumes that a pixel contains only one land type. However, in reality, this is hardly true as each pixel can consist of different types of land. If we are doing a research, don't we need to set [detailed criteria or reasons to say a certain pixel a specific land type]{.underline} when building a model and share this with people?
 
-### 7.1.2 Spectral Mixture Analysis (SMA)
+### Spectral Mixture Analysis (SMA)
 
 -   **Definition**: SMA is a sub-pixel analysis technique which [estimates the proportion of different land covers within a pixel based on their spectral signatures]{.underline} [@manolakislockwoodcooley2016].
 
@@ -51,7 +51,7 @@ knitr::include_graphics('img/vis.jpg')
 
     Can we really tell that [Endmembers are representative of each land cover type?]{.underline} In previous lecture on signature reflectance, there was disparities in signature reflectance even between the same land cover type. For example, different tree species had different signature reflectance.
 
-### 7.1.3 Accuracy Assessment
+### Accuracy Assessment
 
 1.  **Error matrix**:
 
@@ -75,7 +75,7 @@ knitr::include_graphics('img/vis.jpg')
     -   Combines both recall and precision
     -   $F1 = 2 * Precision * Recall / Precision + Recall$
 
-## 7.2 Application
+## Application
 
 All ML models need to be tested with withheld data to avoid over-fitting issues. When it comes to ML classification models in remote sensing, however, this is not enough!. There is another factor that we have to consider...
 
@@ -83,7 +83,7 @@ All ML models need to be tested with withheld data to avoid over-fitting issues.
 
 @tobler argued the first law of geography is that [near things are more closely related than distant things]{.underline}. Even if we split our spatial data into training and test data, there will always be "possibilities of spatial autocorrelation".
 
-### 7.2.1 Spatial dependence between training and test sets: another pitfall of classification accuracy assessment in remote sensing
+### Spatial dependence between training and test sets: another pitfall of classification accuracy assessment in remote sensing
 
 -   **Summary**: @karasiak discuss [how spatial autocorrelation affects remote sensing image classification and emphasizes the need to account for spatial independence between training and test sets to avoid overestimating the model's generalization capabilities.]{.underline} The authors built a random forest (RF) model to classify forest stands. The research team compares the overall accuracy (OA) of six cross-validation (CV) strategies with different sample sizes - pixel and object levels, and demonstrates that spatial leave-one-out cross-validation is the most effective approach to obtaining unbiased estimates of predictive error.
 
