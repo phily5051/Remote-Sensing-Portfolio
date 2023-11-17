@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Phil’s remote sensing learning diary - 1&nbsp; Introduction</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./week_2.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Phil’s remote sensing learning diary</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Hello!</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week_1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">SAR Sensor</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Introduction to Google Earth Engine</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week_6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week_7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week_8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Urban Heat Island</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">1.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#definition-of-remote-sensing" id="toc-definition-of-remote-sensing" class="nav-link" data-scroll-target="#definition-of-remote-sensing"><span class="toc-section-number">1.1.1</span>  Definition of Remote Sensing</a></li>
+  <li><a href="#what-kinds-of-energy" id="toc-what-kinds-of-energy" class="nav-link" data-scroll-target="#what-kinds-of-energy"><span class="toc-section-number">1.1.2</span>  What kinds of energy?</a></li>
+  <li><a href="#sensor-types" id="toc-sensor-types" class="nav-link" data-scroll-target="#sensor-types"><span class="toc-section-number">1.1.3</span>  Sensor Types</a></li>
+  <li><a href="#does-emr-interact-with-other-factors" id="toc-does-emr-interact-with-other-factors" class="nav-link" data-scroll-target="#does-emr-interact-with-other-factors"><span class="toc-section-number">1.1.4</span>  Does EMR interact with other factors?</a></li>
+  <li><a href="#four-resolutions-of-remote-sensing-data" id="toc-four-resolutions-of-remote-sensing-data" class="nav-link" data-scroll-target="#four-resolutions-of-remote-sensing-data"><span class="toc-section-number">1.1.5</span>  Four Resolutions of Remote Sensing Data</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">1.2</span>  Application</a>
+  <ul class="collapse">
+  <li><a href="#species-spectral-signature-discriminating-closely-related-plant-species-in-the-amazon-with-near-infraredleaf-spectroscopy" id="toc-species-spectral-signature-discriminating-closely-related-plant-species-in-the-amazon-with-near-infraredleaf-spectroscopy" class="nav-link" data-scroll-target="#species-spectral-signature-discriminating-closely-related-plant-species-in-the-amazon-with-near-infraredleaf-spectroscopy"><span class="toc-section-number">1.2.1</span>  Species Spectral Signature: Discriminating Closely Related Plant Species in the Amazon with Near-InfraredLeaf-Spectroscopy</a></li>
+  <li><a href="#classification-of-blueberry-fruit-and-leaves-based-on-spectral-signatures" id="toc-classification-of-blueberry-fruit-and-leaves-based-on-spectral-signatures" class="nav-link" data-scroll-target="#classification-of-blueberry-fruit-and-leaves-based-on-spectral-signatures"><span class="toc-section-number">1.2.2</span>  Classification of blueberry fruit and leaves based on spectral signatures</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">1.3</span>  Reflection</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">1.4</span>  References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="summary" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
+<section id="definition-of-remote-sensing" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="definition-of-remote-sensing"><span class="header-section-number">1.1.1</span> Definition of Remote Sensing</h3>
+<p>According to <a href="https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing#:~:text=Remote%20sensing%20is%20the%20acquiring,record%20reflected%20or%20emitted%20energy.">NASA</a> (n.d.), remote sensing refers to <u>information obtained at a distance</u>. These sensors are placed on satellites or aircrafts and they detect and document reflected or emitted energy.</p>
+</section>
+<section id="what-kinds-of-energy" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="what-kinds-of-energy"><span class="header-section-number">1.1.2</span> What kinds of energy?</h3>
+<p>To cut it short, the answer is <u>Electromagnetic Radiation (EMR)</u>. Electromagnetic waves are waves comprising of oscillations of electric and magnetic fields that oscillate at right angles to each other. They exist as a large range of frequencies, with gamma waves having the highest frequency and radio waves the lowest frequency. While human eyes only detects visible light, the sensors can utilise the full range of the electromagnetic spectrum to collect data.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/light_spec.jpeg" style="width:100.0%;height:50.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Electromagnetic Spectrum (Source: NASA Science)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="sensor-types" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="sensor-types"><span class="header-section-number">1.1.3</span> Sensor Types</h3>
+<p>There are two types of remote sensors: active and passive sensors.</p>
+<table class="table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 88%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sensor Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Active sensor</td>
+<td><ul>
+<li>Emits electromagnetic energy and receives the reflected energy</li>
+<li>Can observe areas under most conditions as most active sensors operate in the microwave band of the electromagnetic spectrum</li>
+<li>Requires power source energy - solar energy</li>
+<li>Affected by space weather - solar flares</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td>Passive sensor</td>
+<td><ul>
+<li>Usually detects reflected energy</li>
+<li>Used for measuring physical attributes, such as land/sea surface temperature and vegetation cover</li>
+<li>Has limitations in observing areas in the presence of dense cloud cover</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/sensor_type.png" style="width:100.0%;height:50.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Passive and Active Sensors (Source: NASA)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="does-emr-interact-with-other-factors" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="does-emr-interact-with-other-factors"><span class="header-section-number">1.1.4</span> Does EMR interact with other factors?</h3>
+<p>Yes, these radiations are often influenced by Earth’s surface and atmospheric conditions, which might distort the original information.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/interaction.jpg" style="width:100.0%;height:50.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">EMR’s interaction with surface and atmosphere (Source: <span class="citation" data-cites="daneshgar2015">Daneshgar (<a href="references.html#ref-daneshgar2015" role="doc-biblioref">2015</a>)</span>)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="four-resolutions-of-remote-sensing-data" class="level3" data-number="1.1.5">
+<h3 data-number="1.1.5" class="anchored" data-anchor-id="four-resolutions-of-remote-sensing-data"><span class="header-section-number">1.1.5</span> Four Resolutions of Remote Sensing Data</h3>
+<ul>
+<li><p><strong>Spatial</strong>:</p>
+<ul>
+<li>Sizes of the raster cells</li>
+<li>The smaller the measure is, the more detailed the image is</li>
+</ul></li>
+<li><p><strong>Spectral</strong>:</p>
+<ul>
+<li>Values for each wavelength across the electromagnetic spectrum creates a spectral signature</li>
+<li>Every object has its own unique spectral signature, thus it can be used for identifying a specific object</li>
+<li>But spectral resolution is often affected by atmospheric particles which absorb parts of the spectrum</li>
+</ul></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/Atmospheric-Electromagnetic-Opacity.png" style="width:100.0%;height:50.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Atmospheric Electromagnetic Opacity (Source: <a href="https://gisgeography.com/atmospheric-window/">GIS Geography</a>)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p><strong>Temporal</strong>:</p>
+<ul>
+<li>Frequency of the recorded data</li>
+<li>There is typically a trade-off between how detailed an image is and how frequently it is updated in terms of pixels</li>
+</ul></li>
+<li><p><strong>Radiometric</strong>:</p>
+<ul>
+<li>Sensor’s ability to detect subtle differences in energy which determines the quality of images</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="application" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> Application</h2>
+<p>In this section, we will have a look at two studies in which spectral signature are employed in both academia and business.</p>
+<section id="species-spectral-signature-discriminating-closely-related-plant-species-in-the-amazon-with-near-infraredleaf-spectroscopy" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="species-spectral-signature-discriminating-closely-related-plant-species-in-the-amazon-with-near-infraredleaf-spectroscopy"><span class="header-section-number">1.2.1</span> Species Spectral Signature: Discriminating Closely Related Plant Species in the Amazon with Near-InfraredLeaf-Spectroscopy</h3>
+<ul>
+<li><p><strong>Summary</strong>: <span class="citation" data-cites="durgante2013">Durgante et al. (<a href="references.html#ref-durgante2013" role="doc-biblioref">2013</a>)</span> explored the use of Fourier-Transform Near-Infrared (FT-NIR) Leaf Spectroscopy* as a tool for discriminating closely related tree species in Amazonian forests. The researchers collected 36 spectral readings from the adaxial and abaxial surfaces of dried leaves for 159 individuals representing 10 species. Each spectral reading consisted of 1557 FT-NIR absorbance values. From these spectral readings, the researchers extracted Species Spectral Signatures (SSS) using discriminant analysis techniques, which represent the unique spectral properties of each species. <u>The study suggests that Species Spectral Signatures (SSS) from FT-NIR Leaf Spectroscopy provides better results than current DNA barcoding for plant identification in tropical forests, and represents a fast, low-cost sampling technique</u>.</p>
+<p>FT-NIR* measures the interaction of near-infrared light with a plant leaf sample to analyze its chemical composition and physiological status.</p></li>
+<li><p><strong>Result</strong>: The best results showed 99.4% correct specimen identification when using the average of all 36 spectral readings per specimen and stepwise selected variables.</p></li>
+<li><p><strong>Comment</strong>:</p>
+<p>This study was meaningful in contributing to the field of biodiversity inventory in tropical countries. The use of high technology instruments and appropriate techniques for discriminating tree species is essential for better forest management and conservation.</p>
+<p>The results of this study suggest that the Species Spectral Signatures (SSS) from FT-NIR Leaf Spectroscopy could be a powerful tool for plant identification, especially in areas where DNA barcoding is challenging due to the lack of reproductive structures.</p></li>
+<li><p><strong>Limitation</strong>: It should be noted that further tests are required to assess the potential of FT-NIR spectroscopy for plant identification at broader geographical and phylogenetic scales.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/tree_species.jpg" style="width:100.0%;height:50.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Spectral Signatures of Each Tree (Source: <span class="citation" data-cites="durgante2013">Durgante et al. (<a href="references.html#ref-durgante2013" role="doc-biblioref">2013</a>)</span>)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="classification-of-blueberry-fruit-and-leaves-based-on-spectral-signatures" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="classification-of-blueberry-fruit-and-leaves-based-on-spectral-signatures"><span class="header-section-number">1.2.2</span> Classification of blueberry fruit and leaves based on spectral signatures</h3>
+<ul>
+<li><p><strong>Summary</strong>: <span class="citation" data-cites="yang2012">Yang, Lee, and Williamson (<a href="references.html#ref-yang2012" role="doc-biblioref">2012</a>)</span> investigated the use of blueberry spectral analysis to provide necessary wavelengths for the development of a multispectral imaging system for estimating blueberry yield. Samples of fruit and leaves from different stages of maturity were collected from two blueberry fields in Florida, USA, in 2010 and 2011. The researchers used 3 classification models and found that an Multi-Nomial Logistic regression (MNR) model was the most efficient. The study suggests that a blueberry fruit detector could be developed using multispectral imaging.</p></li>
+<li><p><strong>Pre-Processing</strong>: Spectral reflectance was measured, and normalised indices were used to develop classification models using classification tree, principal component analysis, and multinomial logistic regression.</p></li>
+<li><p><strong>Result</strong>: The study found that an Multi-Nomial Logistic regression (MNR) model with six wavelengths performed the best for the 2011 dataset, with a prediction accuracy of 100% for leaf and mature fruit, 97.8% for young fruit, 97.9% for near-young fruit, and 94.6% for near-mature fruit.</p></li>
+<li><p><strong>Comment</strong>: It was surprising to see that spectral signature can be also applied to business sector. <u>The use of spectral analysis for crop yield estimation has the potential to significantly impact agricultural productivity</u>. The findings of this study demonstrate the potential of using multispectral imaging to accurately estimate blueberry yield. This technology can help farmers make data-informed decisions regarding their crop management practices, leading to increased yields and reduced costs.</p></li>
+<li><p><strong>Limitation</strong>: There should be more research that explore the potential of multispectral imaging for yield estimation in other crops too.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/blueberry.jpg" style="width:100.0%;height:50.0%" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Different Absorbance Rate depending on blueberry’s growth (Source: <span class="citation" data-cites="yang2012">Yang, Lee, and Williamson (<a href="references.html#ref-yang2012" role="doc-biblioref">2012</a>)</span>)</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><em>A bit of thought…..</em></p>
+<p>I was mind-blown when I found out that spectral signature is like DNA!! Initially, I thought the remote sensing imagery are just images taken from a far distance but it turned out that they contain a whole lot of information than they look. This fact sparked my curiosity. If each object has its own distinctive spectral signature, could we also use this for mining valuable resources buried somewhere on this planet that might save millions of life?!</p>
+<p>Furthermore, with spectral signature, could we develop a ML model that helps us detect vulnerable or endangered species in the nature? This could be more time-, cost-effective than previous methods that are being employed in the field.</p>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
+<p>Before taking this lecture, I did hear about the terminology “remote sensing”. But I have to admit that I was quite scared of it as it appealed to me so-called “elite-science”. Of course, we do see a lot of remote sensing imagery in our daily life but not many of us actually use the imagery to do work or study. In this regard, the introduction to remote sensing helped me feel more familiar with this domain of study field.</p>
+<p><em>Things I found interesting!!</em></p>
+<ul>
+<li>I, personally, found the spectral resolution very interesting. Its limitless usage - both in academia and business - made me wonder if it could be also used in the context of the <strong>urban environment</strong>. As a person who is interested in urban green spaces, I wondered whether the health of green spaces in a city can also be measured with the spectral resolution. For instance, ill trees could show different patterns compared to those of the healthy ones.</li>
+<li>Furthermore, I was wondering whether there are any methods that <strong>improve the quality of data obtained from passive sensors</strong> as they cannot obtain a good quality data in the presence of bad weather. Under the circumstances where we have passive sensors, are there any techniques that could correct images?</li>
+</ul>
+<p><em>Any considerations?</em></p>
+<p>While free access and publicly availability are the Earth Observation (EO) data’ real power, the EO data should be treated with caution. The analysis based on EO data can be misleading if it does not contain any context data, such as demographic and economic data. Therefore, it seems necessary that we fully understand the context when we do our analysis!!</p>
+<p><em>Any link to policy?</em></p>
+<p>Apart from what I mentioned, there will be more opportunities that remote sensors can come into play in achieving policy goals. The terminology “remote sensing” is not yet appearing in policy documents, but the time will come. Who would not want to make use of freely available data and its numerous advantages??</p>
+</section>
+<section id="references" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="references"><span class="header-section-number">1.4</span> References</h2>
+<p>NASA EarthData. (n.d.) <a href="https://www.earthdata.nasa.gov/" class="uri">https://www.earthdata.nasa.gov/</a> (Accessed: 26.01.2023)</p>
+<p>GIS Geography. (2022) ‘Why the Atmospheric Window Matters in Earth Science’[Online]. Available at: <a href="https://gisgeography.com/atmospheric-window/" class="uri">https://gisgeography.com/atmospheric-window/</a> (Accessed: 26.01.2023)</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-daneshgar2015" class="csl-entry" role="doc-biblioentry">
+Daneshgar, Saba. 2015. <span>“Remote Sensing Observations for Monitoring Coastal Zones, Volturno River Mouth Case Study.”</span> PhD thesis. <a href="https://doi.org/10.13140/RG.2.1.3806.9209">https://doi.org/10.13140/RG.2.1.3806.9209</a>.
+</div>
+<div id="ref-durgante2013" class="csl-entry" role="doc-biblioentry">
+Durgante, Flávia Machado, Niro Higuchi, Ana Almeida, and Alberto Vicentini. 2013. <span>“Species Spectral Signature: Discriminating Closely Related Plant Species in the Amazon with Near-Infrared Leaf-Spectroscopy.”</span> <em>Forest Ecology and Management</em> 291: 240–48. https://doi.org/<a href="https://doi.org/10.1016/j.foreco.2012.10.045">https://doi.org/10.1016/j.foreco.2012.10.045</a>.
+</div>
+<div id="ref-yang2012" class="csl-entry" role="doc-biblioentry">
+Yang, Ce, Won Suk Lee, and Jeffrey G. Williamson. 2012. <span>“Classification of Blueberry Fruit and Leaves Based on Spectral Signatures.”</span> <em>Biosystems Engineering</em> 113 (4): 351–62. https://doi.org/<a href="https://doi.org/10.1016/j.biosystemseng.2012.09.009">https://doi.org/10.1016/j.biosystemseng.2012.09.009</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Hello!</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./week_2.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">SAR Sensor</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
